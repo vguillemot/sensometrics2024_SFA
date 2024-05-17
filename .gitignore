@@ -49,6 +49,7 @@ po/*~
 rsconnect/
 
 /.quarto/
+/_site/
 
 # Mac DS_Store
 *.DS_Store
