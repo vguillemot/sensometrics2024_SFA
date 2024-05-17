@@ -5,6 +5,6 @@ title: "Sparse (generalized) SVD"
 ## Links
 
   * [Shared code]()
-  * [Slides](material/)
-  * [R Markdown](material/)
+  * [Slides](../material/)
+  * [R Markdown](../material/)
   * [Data](../data/turkey.xlsx)
