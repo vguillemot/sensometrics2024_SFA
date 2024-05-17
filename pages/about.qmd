@@ -1,0 +1,9 @@
+---
+title: "About us"
+---
+
+Instructors:
+
+  - Vincent Guillemot (Institut Pasteur, France)
+  - Vincent Le Goff (CNRGH, Evry, France)
+

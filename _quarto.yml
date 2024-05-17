@@ -1,13 +1,19 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "sensometrics2024_SFA"
+  title: "SFA"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: pages/instructions.qmd
+        text: Instructions
+      - href: pages/csvd.qmd
+        text: CSVD
+      - href: pages/about.qmd
+        text: About us
+      - icon: github
+        href: https://github.com/vguillemot/sensometrics2024_SFA
 
 format:
   html:

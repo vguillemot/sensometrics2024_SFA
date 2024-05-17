@@ -1,11 +1,26 @@
 ---
-title: "sensometrics2024_SFA"
+title: "Sparse Factor Analysis"
+subtitle: "Monday June 3, at 9:00 - 12:00"
 ---
 
-This is a Quarto website.
+Instructors:
+  - Vincent Guillemot (Institut Pasteur, France)
+  - Vincent Le Goff (CNRGH, Evry, France)
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.
 
-```{r}
-1 + 1
+This tutorial is designed for sensory and consumer scientists who want to improve their data analysis skills using component-based methods in R. The focus of this training session is to teach participants how to navigate through complex and noisy multivariate sensory datasets to extract relevant observations, assessors, properties, and variables. The main objective is to provide attendees with the expertise to carry out a range of sparse multivariate analyses in R, including sparse PCA, CA, and MCA.
+
+During the course, attendees will work with specific packages created for sparse multivariate analysis (such as SPAFAC). They will be provided with datasets containing both quantitative and qualitative variables to apply sparse MCA, CA, and PCA methods. This hands-on approach will help them determine the optimal degree of sparsity and accurately interpret their findings. All the course materials, including an extensive R script, are open-source and will be available for use after the completion of the tutorial.
+
+This three-hour session is particularly beneficial for sensory and consumer scientists looking to enhance their data visualization skills using R/Rstudio. Participants should have a basic understanding of R/RStudio, including data types, variables, functions, and package management. A fundamental grasp of statistical concepts will also be helpful. Participants must bring a laptop with R and Rstudio pre-installed. 
+
+More instructions [here](pages/instructions.qmd).
+
+## Detailed (proposed) schedule
+
+```{r schedule, echo = FALSE}
+knitr::kable(readxl::read_excel("data/schedule.xlsx"))
 ```
+
+

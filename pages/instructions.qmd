@@ -1,0 +1,35 @@
+---
+title: "Pre-tutorial instructions"
+---
+
+## Softwares
+
+We recommend installing the latest versions of R and Rstudio: 
+
+  * R version 4.4.0, but any version $\geq$ 4.0.0 should work fine,
+  * Rstudio version 2024.04.1, but any version $\geq$ 2022.00.00 should work.
+
+An excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html
+
+
+## Packages
+
+To install packages, you can use `pak`, a great package for easy and comprehensible package installation. First, install `pak` with the usual command
+
+```
+install.packages("pak")
+```
+
+The whole tutorial revolves around the use of two packages: `sGSVD` and `SPAFAC`. Install them with `pak`:
+
+```
+pak::pak(c("vguillemot/sGSVD", "juchiyu/SPAFAC"))
+```
+
+Depending on what is already installed on your machine, `pak` will detect what needs to be installed, and give you a summary.
+
+## Requirements
+
+During the tutorial, we will extensively use `dplyr` and `ggplot2`, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder
+
+

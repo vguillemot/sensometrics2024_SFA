@@ -1,16 +1,51 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "About us",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Instructors:\n\nVincent Guillemot (Institut Pasteur, France)\nVincent Le Goff (CNRGH, Evry, France)"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "sensometrics2024_SFA",
+    "title": "Sparse Factor Analysis",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Instructors: - Vincent Guillemot (Institut Pasteur, France) - Vincent Le Goff (CNRGH, Evry, France)\nThis is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.\nThis tutorial is designed for sensory and consumer scientists who want to improve their data analysis skills using component-based methods in R. The focus of this training session is to teach participants how to navigate through complex and noisy multivariate sensory datasets to extract relevant observations, assessors, properties, and variables. The main objective is to provide attendees with the expertise to carry out a range of sparse multivariate analyses in R, including sparse PCA, CA, and MCA.\nDuring the course, attendees will work with specific packages created for sparse multivariate analysis (such as SPAFAC). They will be provided with datasets containing both quantitative and qualitative variables to apply sparse MCA, CA, and PCA methods. This hands-on approach will help them determine the optimal degree of sparsity and accurately interpret their findings. All the course materials, including an extensive R script, are open-source and will be available for use after the completion of the tutorial.\nThis three-hour session is particularly beneficial for sensory and consumer scientists looking to enhance their data visualization skills using R/Rstudio. Participants should have a basic understanding of R/RStudio, including data types, variables, functions, and package management. A fundamental grasp of statistical concepts will also be helpful. Participants must bring a laptop with R and Rstudio pre-installed.\nMore instructions here."
+  },
+  {
+    "objectID": "index.html#detailed-proposed-schedule",
+    "href": "index.html#detailed-proposed-schedule",
+    "title": "Sparse Factor Analysis",
+    "section": "Detailed (proposed) schedule",
+    "text": "Detailed (proposed) schedule\n\n\n\n\n\nstart\nend\ntopic\noperator\n\n\n\n\n09:00\n9:30\nPresentation and ice breaker\nVG, VLG"
+  },
+  {
+    "objectID": "pages/instructions.html",
+    "href": "pages/instructions.html",
+    "title": "Pre-tutorial instructions",
+    "section": "",
+    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
+  },
+  {
+    "objectID": "pages/instructions.html#softwares",
+    "href": "pages/instructions.html#softwares",
+    "title": "Pre-tutorial instructions",
+    "section": "",
+    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
+  },
+  {
+    "objectID": "pages/instructions.html#packages",
+    "href": "pages/instructions.html#packages",
+    "title": "Pre-tutorial instructions",
+    "section": "Packages",
+    "text": "Packages\nTo install packages, you can use pak, a great package for easy and comprehensible package installation. First, install pak with the usual command\ninstall.packages(\"pak\")\nThe whole tutorial revolves around the use of two packages: sGSVD and SPAFAC. Install them with pak:\npak::pak(c(\"vguillemot/sGSVD\", \"juchiyu/SPAFAC\"))\nDepending on what is already installed on your machine, pak will detect what needs to be installed, and give you a summary."
+  },
+  {
+    "objectID": "pages/instructions.html#requirements",
+    "href": "pages/instructions.html#requirements",
+    "title": "Pre-tutorial instructions",
+    "section": "Requirements",
+    "text": "Requirements\nDuring the tutorial, we will extensively use dplyr and ggplot2, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder"
   }
 ]
