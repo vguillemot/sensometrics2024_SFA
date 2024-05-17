@@ -7,3 +7,4 @@ title: "Sparse (generalized) SVD"
   * [Shared code]()
   * [Slides](material/)
   * [R Markdown](material/)
+  * [Data](../data/turkey.xlsx)

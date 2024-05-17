@@ -19,7 +19,7 @@ More instructions [here](pages/instructions.qmd).
 
 ## Detailed (proposed) schedule
 
-```{r schedule, echo = FALSE, message = FALSE}
+```{r schedule, echo = FALSE, message = FALSE, warning = FALSE}
 library(dplyr)
 knitr::kable(
   readxl::read_excel("data/schedule.xlsx") %>%
