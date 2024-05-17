@@ -1,4 +1,9 @@
 ---
-title: "Sparse SVD"
+title: "Sparse (generalized) SVD"
 ---
 
+## Links
+
+  * [Shared code]()
+  * [Slides](material/)
+  * [R Markdown](material/)
