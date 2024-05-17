@@ -7,6 +7,20 @@
     "text": "Instructors:\n\nVincent Guillemot (Institut Pasteur, France)\nVincent Le Goff (CNRGH, Evry, France)"
   },
   {
+    "objectID": "pages/csvd.html",
+    "href": "pages/csvd.html",
+    "title": "Sparse (generalized) SVD",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown"
+  },
+  {
+    "objectID": "pages/csvd.html#links",
+    "href": "pages/csvd.html#links",
+    "title": "Sparse (generalized) SVD",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Sparse Factor Analysis",
@@ -47,19 +61,5 @@
     "title": "Pre-tutorial instructions",
     "section": "Requirements",
     "text": "Requirements\nDuring the tutorial, we will extensively use dplyr and ggplot2, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder"
-  },
-  {
-    "objectID": "pages/csvd.html",
-    "href": "pages/csvd.html",
-    "title": "Sparse (generalized) SVD",
-    "section": "",
-    "text": "Shared code\nSlides\nR Markdown"
-  },
-  {
-    "objectID": "pages/csvd.html#links",
-    "href": "pages/csvd.html#links",
-    "title": "Sparse (generalized) SVD",
-    "section": "",
-    "text": "Shared code\nSlides\nR Markdown"
   }
 ]
