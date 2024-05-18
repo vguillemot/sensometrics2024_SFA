@@ -1,0 +1,39 @@
+---
+title: "Datasets"
+---
+
+This is the page presenting all the data used during the tutorial.
+
+  * [Beers](data/beers.xlsx): Ten tasters rated the intensity of twelve descriptors for six beers,
+  * [Turkey products](data/turkey.xlsx): A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale
+  * [TV and salad](data/salad_and_tv.xlsx): Data from the INCA 3 study include responses from over 5,800 people on dietary habits, focusing on "hours spent watching TV" and "salad consumption."
+  * [Wines](data/wines.xlsx): 36 wines from Argentina, Canada, and the USA, along with a mystery French wine, are evaluated on descriptors, price, chemistry, and sensory properties, organized into four data blocks.
+
+
+
+## Beers
+
+Ten tasters evaluated the intensity of twelve descriptors for six beers. The data are the averages (computed over the 10 judges) of the intensity ratings of the descriptors for the beers.
+
+A data frame of dimension 6 rows (Beers) by 12 columns (descriptors) with the average intensity ratings performed using a 0 to 7 Likert rating scale.
+
+
+  * Abdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l'Analyse Sensorielle et les Etudes Consommateurs.
+
+## Turkey
+
+A trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables.
+
+
+## TV and salad
+
+Data from the INCA 3 study, where more than 5,800 people (3,157 adults aged 18 to 79 years and 2,698 children aged 0 to 17 years) participated in a national study conducted in 2014 and 2015. Participants answered 150 questions on their habits and lifestyles, resulting in data on 320,000 food items consumed over 13,600 consumption days. The variables retained for this dataset are "hours spent watching TV" and "salad consumption."
+
+ * Carine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896.
+
+## Wines
+
+36 wines from three countries (Argentina, Canada, and the USA) and three colors (Red, Rosé, and White) are evaluated on several dimensions organized into four blocks. An additional mystery wine (a French red pinot noir) is included to be projected as a supplementary observation.
+
+  * Abdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.
+  * Abdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579.

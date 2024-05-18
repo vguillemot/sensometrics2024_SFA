@@ -1,5 +1,5 @@
 ---
-title: "Sparse (generalized) SVD"
+title: "Sparse PLS (Correlation)"
 ---
 
 ## Links
@@ -7,4 +7,4 @@ title: "Sparse (generalized) SVD"
   * [Shared code](https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing)
   * [Slides](../material/)
   * [R Markdown](../material/)
-  * [Data](../data/turkey.xlsx)
+  * [Data](../data/)

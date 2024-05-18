@@ -8,8 +8,16 @@ website:
     left:
       - href: pages/instructions.qmd
         text: Instructions
+      - href: pages/datasets.qmd
+        text: Datasets
       - href: pages/csvd.qmd
         text: CSVD
+      - href: pages/spca.qmd
+        text: Sparse PCA
+      - href: pages/sca.qmd
+        text: Sparse CA
+      - href: pages/splsc.qmd
+        text: Sparse PLSC
       - href: pages/about.qmd
         text: About us
       - icon: github

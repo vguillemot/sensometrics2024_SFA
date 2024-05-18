@@ -2,8 +2,21 @@
 title: "About us"
 ---
 
-Instructors:
 
-  - Vincent Guillemot (Institut Pasteur, France)
-  - Vincent Le Goff (CNRGH, Evry, France)
+## Ju-Chi Yu
+
+I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data).
+
+## Vincent Le Goff
+
+
+
+## Vincent Guillemot 
+
+I am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany).
+
+My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning.
+
+My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization.
+
 
