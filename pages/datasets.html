@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SFA - Sparse Factor Analysis</title>
+<title>SFA - Datasets</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">SFA</span>
     </a>
   </div>
@@ -89,31 +89,31 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./pages/instructions.html"> 
+    <a class="nav-link" href="../pages/instructions.html"> 
 <span class="menu-text">Instructions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/datasets.html"> 
+    <a class="nav-link active" href="../pages/datasets.html" aria-current="page"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/csvd.html"> 
+    <a class="nav-link" href="../pages/csvd.html"> 
 <span class="menu-text">CSVD</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/spca.html"> 
+    <a class="nav-link" href="../pages/spca.html"> 
 <span class="menu-text">Sparse PCA</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/sca.html"> 
+    <a class="nav-link" href="../pages/sca.html"> 
 <span class="menu-text">Sparse CA</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/splsc.html"> 
+    <a class="nav-link" href="../pages/splsc.html"> 
 <span class="menu-text">Sparse PLSC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/about.html"> 
+    <a class="nav-link" href="../pages/about.html"> 
 <span class="menu-text">About us</span></a>
   </li>  
   <li class="nav-item compact">
@@ -137,10 +137,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#detailed-proposed-schedule" id="toc-detailed-proposed-schedule" class="nav-link active" data-scroll-target="#detailed-proposed-schedule">Detailed (proposed) schedule</a></li>
-  <li><a href="#shared-code" id="toc-shared-code" class="nav-link" data-scroll-target="#shared-code">Shared code</a></li>
-  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#beers" id="toc-beers" class="nav-link active" data-scroll-target="#beers">Beers</a></li>
+  <li><a href="#turkey" id="toc-turkey" class="nav-link" data-scroll-target="#turkey">Turkey</a></li>
+  <li><a href="#tv-and-salad" id="toc-tv-and-salad" class="nav-link" data-scroll-target="#tv-and-salad">TV and salad</a></li>
+  <li><a href="#wines" id="toc-wines" class="nav-link" data-scroll-target="#wines">Wines</a></li>
   </ul>
 </nav>
     </div>
@@ -149,8 +149,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sparse Factor Analysis</h1>
-<p class="subtitle lead">Monday June 3, at 9:00 - 12:00</p>
+<h1 class="title">Datasets</h1>
 </div>
 
 
@@ -167,107 +166,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Instructors:</p>
-<ul>
-<li>Vincent Guillemot (Institut Pasteur, France)</li>
-<li>Vincent Le Goff (CNRGH, Evry, France)</li>
-<li>Ju-Chi Yu (CAMH, Toronto, Canada)</li>
-</ul>
-<p>This is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.</p>
-<p>This tutorial is designed for sensory and consumer scientists who want to improve their data analysis skills using component-based methods in R. The focus of this training session is to teach participants how to navigate through complex and noisy multivariate sensory datasets to extract relevant observations, assessors, properties, and variables. The main objective is to provide attendees with the expertise to carry out a range of sparse multivariate analyses in R, including sparse PCA, CA, and MCA.</p>
-<p>During the course, attendees will work with specific packages created for sparse multivariate analysis (such as SPAFAC). They will be provided with datasets containing both quantitative and qualitative variables to apply sparse MCA, CA, and PCA methods. This hands-on approach will help them determine the optimal degree of sparsity and accurately interpret their findings. All the course materials, including an extensive R script, are open-source and will be available for use after the completion of the tutorial.</p>
-<p>This three-hour session is particularly beneficial for sensory and consumer scientists looking to enhance their data visualization skills using R/Rstudio. Participants should have a basic understanding of R/RStudio, including data types, variables, functions, and package management. A fundamental grasp of statistical concepts will also be helpful. Participants must bring a laptop with R and Rstudio pre-installed.</p>
-<p>More instructions <a href="./pages/instructions.html">here</a>.</p>
-<section id="detailed-proposed-schedule" class="level2">
-<h2 class="anchored" data-anchor-id="detailed-proposed-schedule">Detailed (proposed) schedule</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Start</th>
-<th style="text-align: left;">End</th>
-<th style="text-align: left;">Duration</th>
-<th style="text-align: left;">Topic</th>
-<th style="text-align: left;">Operators</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">09:00</td>
-<td style="text-align: left;">09:30</td>
-<td style="text-align: left;">00:30</td>
-<td style="text-align: left;">Presentation and ice breaker</td>
-<td style="text-align: left;">TBA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">09:30</td>
-<td style="text-align: left;">09:50</td>
-<td style="text-align: left;">00:20</td>
-<td style="text-align: left;">R and PCA</td>
-<td style="text-align: left;">TBA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">09:50</td>
-<td style="text-align: left;">10:20</td>
-<td style="text-align: left;">00:30</td>
-<td style="text-align: left;">Sparse SVD</td>
-<td style="text-align: left;">TBA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">10:20</td>
-<td style="text-align: left;">10:35</td>
-<td style="text-align: left;">00:15</td>
-<td style="text-align: left;">Coffee Break</td>
-<td style="text-align: left;">TBA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">10:35</td>
-<td style="text-align: left;">11:05</td>
-<td style="text-align: left;">00:30</td>
-<td style="text-align: left;">Sparse PCA</td>
-<td style="text-align: left;">TBA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">11:05</td>
-<td style="text-align: left;">11:35</td>
-<td style="text-align: left;">00:30</td>
-<td style="text-align: left;">Sparse CA</td>
-<td style="text-align: left;">TBA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">11:35</td>
-<td style="text-align: left;">12:05</td>
-<td style="text-align: left;">00:30</td>
-<td style="text-align: left;">Sparse PLSC</td>
-<td style="text-align: left;">TBA</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="shared-code" class="level2">
-<h2 class="anchored" data-anchor-id="shared-code">Shared code</h2>
-<p>This a link to the shared code that we will use during the tutorial: <a href="https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing">Shared code</a></p>
-</section>
-<section id="datasets" class="level2">
-<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
-<p>The datasets that we will use during the tutorial are detailed <a href="pages/data.qmd">on this page</a>. You can download the datasets with the links below, or the links on the dataset page, or the links at the beginning of each “part” of the tutorial:</p>
+<p>This is the page presenting all the data used during the tutorial.</p>
 <ul>
 <li><a href="data/beers.xlsx">Beers</a>: Ten tasters rated the intensity of twelve descriptors for six beers,</li>
 <li><a href="data/turkey.xlsx">Turkey products</a>: A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale</li>
 <li><a href="data/salad_and_tv.xlsx">TV and salad</a>: Data from the INCA 3 study include responses from over 5,800 people on dietary habits, focusing on “hours spent watching TV” and “salad consumption.”</li>
 <li><a href="data/wines.xlsx">Wines</a>: 36 wines from Argentina, Canada, and the USA, along with a mystery French wine, are evaluated on descriptors, price, chemistry, and sensory properties, organized into four data blocks.</li>
 </ul>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<section id="beers" class="level2">
+<h2 class="anchored" data-anchor-id="beers">Beers</h2>
+<p>Ten tasters evaluated the intensity of twelve descriptors for six beers. The data are the averages (computed over the 10 judges) of the intensity ratings of the descriptors for the beers.</p>
+<p>A data frame of dimension 6 rows (Beers) by 12 columns (descriptors) with the average intensity ratings performed using a 0 to 7 Likert rating scale.</p>
 <ul>
 <li>Abdi, H., Gomez, C., &amp; Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs.</li>
+</ul>
+</section>
+<section id="turkey" class="level2">
+<h2 class="anchored" data-anchor-id="turkey">Turkey</h2>
+<p>A trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables.</p>
+</section>
+<section id="tv-and-salad" class="level2">
+<h2 class="anchored" data-anchor-id="tv-and-salad">TV and salad</h2>
+<p>Data from the INCA 3 study, where more than 5,800 people (3,157 adults aged 18 to 79 years and 2,698 children aged 0 to 17 years) participated in a national study conducted in 2014 and 2015. Participants answered 150 questions on their habits and lifestyles, resulting in data on 320,000 food items consumed over 13,600 consumption days. The variables retained for this dataset are “hours spent watching TV” and “salad consumption.”</p>
+<ul>
+<li>Carine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896.</li>
+</ul>
+</section>
+<section id="wines" class="level2">
+<h2 class="anchored" data-anchor-id="wines">Wines</h2>
+<p>36 wines from three countries (Argentina, Canada, and the USA) and three colors (Red, Rosé, and White) are evaluated on several dimensions organized into four blocks. An additional mystery wine (a French red pinot noir) is included to be projected as a supplementary observation.</p>
+<ul>
 <li>Abdi, H., Eslami, A., &amp; Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.</li>
 <li>Abdi, H., &amp; Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld &amp; A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp.&nbsp;549-579.</li>
-<li>Carine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896.</li>
 </ul>
 
 

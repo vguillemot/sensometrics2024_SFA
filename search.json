@@ -1,10 +1,129 @@
 [
   {
+    "objectID": "pages/datasets.html",
+    "href": "pages/datasets.html",
+    "title": "Datasets",
+    "section": "",
+    "text": "This is the page presenting all the data used during the tutorial."
+  },
+  {
+    "objectID": "pages/datasets.html#beers",
+    "href": "pages/datasets.html#beers",
+    "title": "Datasets",
+    "section": "Beers",
+    "text": "Beers\nTen tasters evaluated the intensity of twelve descriptors for six beers. The data are the averages (computed over the 10 judges) of the intensity ratings of the descriptors for the beers.\nA data frame of dimension 6 rows (Beers) by 12 columns (descriptors) with the average intensity ratings performed using a 0 to 7 Likert rating scale.\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs."
+  },
+  {
+    "objectID": "pages/datasets.html#turkey",
+    "href": "pages/datasets.html#turkey",
+    "title": "Datasets",
+    "section": "Turkey",
+    "text": "Turkey\nA trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables."
+  },
+  {
+    "objectID": "pages/datasets.html#tv-and-salad",
+    "href": "pages/datasets.html#tv-and-salad",
+    "title": "Datasets",
+    "section": "TV and salad",
+    "text": "TV and salad\nData from the INCA 3 study, where more than 5,800 people (3,157 adults aged 18 to 79 years and 2,698 children aged 0 to 17 years) participated in a national study conducted in 2014 and 2015. Participants answered 150 questions on their habits and lifestyles, resulting in data on 320,000 food items consumed over 13,600 consumption days. The variables retained for this dataset are “hours spent watching TV” and “salad consumption.”\n\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
+  },
+  {
+    "objectID": "pages/datasets.html#wines",
+    "href": "pages/datasets.html#wines",
+    "title": "Datasets",
+    "section": "Wines",
+    "text": "Wines\n36 wines from three countries (Argentina, Canada, and the USA) and three colors (Red, Rosé, and White) are evaluated on several dimensions organized into four blocks. An additional mystery wine (a French red pinot noir) is included to be projected as a supplementary observation.\n\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579."
+  },
+  {
     "objectID": "pages/about.html",
     "href": "pages/about.html",
     "title": "About us",
     "section": "",
-    "text": "Instructors:\n\nVincent Guillemot (Institut Pasteur, France)\nVincent Le Goff (CNRGH, Evry, France)"
+    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+  },
+  {
+    "objectID": "pages/about.html#ju-chi-yu",
+    "href": "pages/about.html#ju-chi-yu",
+    "title": "About us",
+    "section": "",
+    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+  },
+  {
+    "objectID": "pages/about.html#vincent-le-goff",
+    "href": "pages/about.html#vincent-le-goff",
+    "title": "About us",
+    "section": "Vincent Le Goff",
+    "text": "Vincent Le Goff"
+  },
+  {
+    "objectID": "pages/about.html#vincent-guillemot",
+    "href": "pages/about.html#vincent-guillemot",
+    "title": "About us",
+    "section": "Vincent Guillemot",
+    "text": "Vincent Guillemot\nI am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany).\nMy fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning.\nMy teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization."
+  },
+  {
+    "objectID": "pages/splsc.html",
+    "href": "pages/splsc.html",
+    "title": "Sparse PLS (Correlation)",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "pages/splsc.html#links",
+    "href": "pages/splsc.html#links",
+    "title": "Sparse PLS (Correlation)",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "pages/spca.html",
+    "href": "pages/spca.html",
+    "title": "Sparse Principal Component Analysis",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "pages/spca.html#links",
+    "href": "pages/spca.html#links",
+    "title": "Sparse Principal Component Analysis",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sparse Factor Analysis",
+    "section": "",
+    "text": "Instructors:\nThis is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.\nThis tutorial is designed for sensory and consumer scientists who want to improve their data analysis skills using component-based methods in R. The focus of this training session is to teach participants how to navigate through complex and noisy multivariate sensory datasets to extract relevant observations, assessors, properties, and variables. The main objective is to provide attendees with the expertise to carry out a range of sparse multivariate analyses in R, including sparse PCA, CA, and MCA.\nDuring the course, attendees will work with specific packages created for sparse multivariate analysis (such as SPAFAC). They will be provided with datasets containing both quantitative and qualitative variables to apply sparse MCA, CA, and PCA methods. This hands-on approach will help them determine the optimal degree of sparsity and accurately interpret their findings. All the course materials, including an extensive R script, are open-source and will be available for use after the completion of the tutorial.\nThis three-hour session is particularly beneficial for sensory and consumer scientists looking to enhance their data visualization skills using R/Rstudio. Participants should have a basic understanding of R/RStudio, including data types, variables, functions, and package management. A fundamental grasp of statistical concepts will also be helpful. Participants must bring a laptop with R and Rstudio pre-installed.\nMore instructions here."
+  },
+  {
+    "objectID": "index.html#detailed-proposed-schedule",
+    "href": "index.html#detailed-proposed-schedule",
+    "title": "Sparse Factor Analysis",
+    "section": "Detailed (proposed) schedule",
+    "text": "Detailed (proposed) schedule\n\n\n\n\n\nStart\nEnd\nDuration\nTopic\nOperators\n\n\n\n\n09:00\n09:30\n00:30\nPresentation and ice breaker\nTBA\n\n\n09:30\n09:50\n00:20\nR and PCA\nTBA\n\n\n09:50\n10:20\n00:30\nSparse SVD\nTBA\n\n\n10:20\n10:35\n00:15\nCoffee Break\nTBA\n\n\n10:35\n11:05\n00:30\nSparse PCA\nTBA\n\n\n11:05\n11:35\n00:30\nSparse CA\nTBA\n\n\n11:35\n12:05\n00:30\nSparse PLSC\nTBA"
+  },
+  {
+    "objectID": "index.html#shared-code",
+    "href": "index.html#shared-code",
+    "title": "Sparse Factor Analysis",
+    "section": "Shared code",
+    "text": "Shared code\nThis a link to the shared code that we will use during the tutorial: Shared code"
+  },
+  {
+    "objectID": "index.html#datasets",
+    "href": "index.html#datasets",
+    "title": "Sparse Factor Analysis",
+    "section": "Datasets",
+    "text": "Datasets\nThe datasets that we will use during the tutorial are detailed on this page. You can download the datasets with the links below, or the links on the dataset page, or the links at the beginning of each “part” of the tutorial:\n\nBeers: Ten tasters rated the intensity of twelve descriptors for six beers,\nTurkey products: A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale\nTV and salad: Data from the INCA 3 study include responses from over 5,800 people on dietary habits, focusing on “hours spent watching TV” and “salad consumption.”\nWines: 36 wines from Argentina, Canada, and the USA, along with a mystery French wine, are evaluated on descriptors, price, chemistry, and sensory properties, organized into four data blocks."
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Sparse Factor Analysis",
+    "section": "References",
+    "text": "References\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs.\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579.\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
   },
   {
     "objectID": "pages/csvd.html",
@@ -19,20 +138,6 @@
     "title": "Sparse (generalized) SVD",
     "section": "",
     "text": "Shared code\nSlides\nR Markdown\nData"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sparse Factor Analysis",
-    "section": "",
-    "text": "Instructors: - Vincent Guillemot (Institut Pasteur, France) - Vincent Le Goff (CNRGH, Evry, France)\nThis is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.\nThis tutorial is designed for sensory and consumer scientists who want to improve their data analysis skills using component-based methods in R. The focus of this training session is to teach participants how to navigate through complex and noisy multivariate sensory datasets to extract relevant observations, assessors, properties, and variables. The main objective is to provide attendees with the expertise to carry out a range of sparse multivariate analyses in R, including sparse PCA, CA, and MCA.\nDuring the course, attendees will work with specific packages created for sparse multivariate analysis (such as SPAFAC). They will be provided with datasets containing both quantitative and qualitative variables to apply sparse MCA, CA, and PCA methods. This hands-on approach will help them determine the optimal degree of sparsity and accurately interpret their findings. All the course materials, including an extensive R script, are open-source and will be available for use after the completion of the tutorial.\nThis three-hour session is particularly beneficial for sensory and consumer scientists looking to enhance their data visualization skills using R/Rstudio. Participants should have a basic understanding of R/RStudio, including data types, variables, functions, and package management. A fundamental grasp of statistical concepts will also be helpful. Participants must bring a laptop with R and Rstudio pre-installed.\nMore instructions here."
-  },
-  {
-    "objectID": "index.html#detailed-proposed-schedule",
-    "href": "index.html#detailed-proposed-schedule",
-    "title": "Sparse Factor Analysis",
-    "section": "Detailed (proposed) schedule",
-    "text": "Detailed (proposed) schedule\n\n\n\n\n\nStart\nEnd\nDuration\nTopic\nOperators\n\n\n\n\n09:00\n09:30\n00:30\nPresentation and ice breaker\nVG, VLG\n\n\n09:30\n09:50\n00:20\nR and PCA\nVG\n\n\n09:50\n10:20\n00:30\nSparse SVD\nNA\n\n\n10:20\n10:35\n00:15\nCoffee Break\nNA\n\n\n10:35\n11:05\n00:30\nSparse PCA\nNA\n\n\n11:05\n11:35\n00:30\nSparse CA\nNA\n\n\n11:35\n12:05\n00:30\nSparse PLSC\nNA"
   },
   {
     "objectID": "pages/instructions.html",
@@ -61,5 +166,19 @@
     "title": "Pre-tutorial instructions",
     "section": "Requirements",
     "text": "Requirements\nDuring the tutorial, we will extensively use dplyr and ggplot2, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder"
+  },
+  {
+    "objectID": "pages/sca.html",
+    "href": "pages/sca.html",
+    "title": "Sparse Correspondence Analysis",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "pages/sca.html#links",
+    "href": "pages/sca.html#links",
+    "title": "Sparse Correspondence Analysis",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
   }
 ]
