@@ -9,14 +9,113 @@ I am a post-doctoral research fellow at Centre for Addiction and Mental Health (
 
 ## Vincent Le Goff
 
+I am a bioinformatics engineer with a degree from INSA Lyon (2022) and a double degree in Life Sciences and Chemistry from UVSQ (2019). In 2023, I worked as a research engineer in bioinformatics at CEA in Évry and completed a seven-month internship at Limagrain Europe, analyzing satellite images to quantify corn water stress. In 2021, I interned at INRAE, studying the performance of wheat variety mixtures. Since late 2023, I have been pursuing a PhD at CNRGH on multi-omics data integration. I am skilled in R and Python, focusing on bioinformatics, biostatistics, and machine learning.
 
 
-## Vincent Guillemot 
+## Vincent Guillemot
 
 I am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany).
 
 My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning.
 
 My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization.
+
+# And now a test with our beautiful faces
+
+:::: {layout="[ 70, 30 ]"}
+
+::: {#first-column}
+
+## Ju-Chi Yu
+
+I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data).
+:::
+
+::: {#second-column}
+![](../img/juchiyu.jpeg)
+:::
+
+::::
+
+
+:::: {layout="[ 30, 70 ]"}
+
+::: {#first-column}
+![](../img/vincentlegoff.jpeg)
+:::
+
+::: {#second-column}
+
+## Vincent Le Goff
+
+I am a bioinformatics engineer with a degree from INSA Lyon (2022) and a double degree in Life Sciences and Chemistry from UVSQ (2019). In 2023, I worked as a research engineer in bioinformatics at CEA in Évry and completed a seven-month internship at Limagrain Europe, analyzing satellite images to quantify corn water stress. In 2021, I interned at INRAE, studying the performance of wheat variety mixtures. Since late 2023, I have been pursuing a PhD at CNRGH on multi-omics data integration. I am skilled in R and Python, focusing on bioinformatics, biostatistics, and machine learning.
+
+:::
+
+::::
+
+
+:::: {layout="[ 70, 30 ]"}
+
+::: {#first-column}
+
+## Vincent Guillemot
+
+I am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany).
+
+My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning.
+
+My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization.
+:::
+
+::: {#second-column}
+![](../img/vincentguillemot.jpeg)
+:::
+
+::::
+
+# The same but with section headers outside the two-column layout
+
+## Ju-Chi Yu
+
+:::: {layout="[ 70, 30 ]"}
+
+::: {#first-column}
+I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data).
+:::
+
+::: {#second-column}
+![](../img/juchiyu.jpeg)
+:::
+
+::::
+
+## Vincent Le Goff
+
+:::: {layout="[ 30, 70 ]"}
+
+::: {#first-column}
+![](../img/vincentlegoff.jpeg)
+:::
+
+::: {#second-column}
+I am a bioinformatics engineer with a degree from INSA Lyon (2022) and a double degree in Life Sciences and Chemistry from UVSQ (2019). In 2023, I worked as a research engineer in bioinformatics at CEA in Évry and completed a seven-month internship at Limagrain Europe, analyzing satellite images to quantify corn water stress. In 2021, I interned at INRAE, studying the performance of wheat variety mixtures. Since late 2023, I have been pursuing a PhD at CNRGH on multi-omics data integration. I am skilled in R and Python, focusing on bioinformatics, biostatistics, and machine learning.
+:::
+
+::::
+
+## Vincent Guillemot
+
+:::: {layout="[ 70, 30 ]"}
+
+::: {#first-column}
+I am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization.
+:::
+
+::: {#second-column}
+![](../img/vincentguillemot.jpeg)
+:::
+
+::::
 
 
