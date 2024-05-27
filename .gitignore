@@ -53,3 +53,9 @@ rsconnect/
 
 # Mac DS_Store
 *.DS_Store
+
+# Office files
+~$*
+
+# Privacy
+data/students.xlsx

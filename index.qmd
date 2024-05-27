@@ -8,6 +8,7 @@ Instructors:
   - Vincent Guillemot (Institut Pasteur, France)
   - Vincent Le Goff (CNRGH, Evry, France)
   - Ju-Chi Yu (CAMH, Toronto, Canada)
+  - Hervé Abdi (UTD, Dallas, USA)
 
 This is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.
 
@@ -34,7 +35,7 @@ This a link to the shared code that we will use during the tutorial: [Shared cod
 
 ## Datasets
 
-The datasets that we will use during the tutorial are detailed [on this page](pages/data.qmd). You can download the datasets with the links below, or the links on the dataset page, or the links at the beginning of each "part" of the tutorial:
+The datasets that we will use during the tutorial are detailed [on this page](pages/datasets.qmd). You can download the datasets with the links below, or the links on the dataset page, or the links at the beginning of each "part" of the tutorial:
 
   * [Beers](data/beers.xlsx): Ten tasters rated the intensity of twelve descriptors for six beers,
   * [Turkey products](data/turkey.xlsx): A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale
