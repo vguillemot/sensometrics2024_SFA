@@ -1,8 +1,29 @@
 ---
 title: "Sparse (generalized) SVD"
+format:
+  html:
+    code-fold: true
+    code-summary: "Solution"
 ---
 
+```{r setup, include = FALSE}
+library(ComplexHeatmap)
+library(FactoMineR)
+library(factoextra)
+library(patchwork)
+library(pheatmap)
+block_colors <- c("Block 1" = "#BF5B17", "Block 2" = "#666666")
+group_colors <- c("A" = "#F8766D", "B" = "#00BA38", "C" = "#619CFF")
+# "#7FC97F" "#BEAED4" "#FDC086" "#FFFF99" "#386CB0" "#F0027F" "#BF5B17" "#666666"
 
+# "#F8766D" #(Red)
+# "#00BA38" #(Green)
+# "#619CFF" #(Blue)
+# "#00C1AA" #(Cyan)
+# "#C77CFF" #(Magenta)
+# "#FF61C3" #(Pink)
+
+```
 
 
 ## Links
@@ -10,29 +31,188 @@ title: "Sparse (generalized) SVD"
   * [Shared code](https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing)
   * [Slides](../material/)
   * [R Markdown](../material/)
-  * [Data](../data/turkey.xlsx)
+  * [Data](../data/simul.xlsx)
   
 Singular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce "sparsity" in SVD.
 
 ## Data
 
-```{r}
-pheatmap::pheatmap(scale(data4PCCAR::mentalImageryOSIQ$OSIQ), clustering_method = "ward.D2")
+```{r load data, echo = FALSE}
+x <- readxl::read_excel("../data/simul.xlsx")
+g <- substr(x$Ind, 1, 1)
+```
 
-x <- data4PCCAR::mentalImageryOSIQ$OSIQ
 
+The simulated data has the following characteristics:
+
+  * $I = `r nrow(x)`$ rows, the simulated observations,
+  * $J = `r ncol(x)`$ columns, the variables,
+  * three groups (A, B and C) of 10 observations each,
+  * two groups of correlated variables.
+
+> **Load the data and make a heatmap[^1]**
+
+[^1]: I used `pheatmap` for simplicity in the solution, but `ComplexHeatmap` to create the actual heatmap.
+
+```{r pheatmap-solution, echo = TRUE, eval = FALSE}
+library(readxl)
+library(pheatmap)
+
+x <- read_excel("../data/simul.xlsx")
+pheatmap(x[,-1], clustering_method = "ward.D2")
+```
+
+```{r pheatmap-show, echo = FALSE, warning = FALSE, message = FALSE, cache = TRUE, fig.height = 8, fig.width = 5}
+xnum <- as.matrix(x[, -1])
+rownames(xnum) <- x$Ind
+
+col_fun <- circlize::colorRamp2(
+  c(-4, 0, 4), 
+  c("darkorchid4", "white", "forestgreen"))
+
+col_ha <- HeatmapAnnotation(
+  Block = sprintf("Block %i", rep(1:2, each = 4)),
+  col = list(Block = block_colors))
+row_ha <- rowAnnotation(
+  Group = g,
+  col = list(Group = group_colors))
+
+hm <- Heatmap(xnum, name = "x", top_annotation = col_ha, right_annotation = row_ha, col = col_fun)
+
+draw(hm, merge_legend = TRUE)
+```
+
+
+> **Run a PCA on the data with your favorite method, and plot the screeplot the individual map, and the correlation circle like below.**
+
+```{r PCA-solution, echo = TRUE, eval = FALSE}
 library(FactoMineR)
 library(factoextra)
 
-res.pca <- PCA(x, scale.unit = TRUE, graph = FALSE)
+g <- substr(x$Ind, 1, 1)
 
-fviz_pca_var(res.pca)
+res.pca <- PCA(x[, -1], scale.unit = TRUE, graph = FALSE)
+
+fviz_screeplot(res.pca)
+fviz_pca_ind(res.pca, geom = "point", col.ind = g, addEllipses = TRUE)
+fviz_pca_var(res.pca, repel = TRUE)
+```
+
+
+
+```{r PCA-show, echo = FALSE, fig.height = 9, fig.width = 9}
+g <- substr(x$Ind, 1, 1)
+res.pca <- PCA(x[, -1], scale.unit = TRUE, graph = FALSE)
+
+p_scree <- fviz_screeplot(res.pca)
+p_ind <- fviz_pca_ind(res.pca, geom = "point", col.ind = g, addEllipses = TRUE)
+p_var <- fviz_pca_var(res.pca, repel = TRUE)
+
+(p_scree + plot_spacer()) / (p_ind + p_var)
 ```
 
 
 ## SVD
 
+Principal Component Analysis is based on the Singular Value Decomposition of the data[^2]. In a nutshell, the data matrix $\mathbf{X}$ is decomposed by the SVD in a product of three matrices:
 
+$$
+  \mathbf{X} = \mathbf{U}\mathbf{D}\mathbf{V}^\top
+$$
+[^2]: depending on how you want to do it, you would need to pre-process the data before applying the SVD
 
+> *Use the R function `svd` to decompose the data, and compare the result with what is given by your favorite PCA function.*
+
+```{r svd-solution}
+I <- nrow(x)
+J <- ncol(x)
+centered.x <- scale(x[, -1], center = TRUE, scale = FALSE)
+std.x <- sqrt(1/I * colSums(centered.x ** 2))
+scaled.x <- 1/sqrt(I) * centered.x %*% diag(1 / std.x)
+
+res.svd <- svd(scaled.x)
+pc <- sqrt(I) * scaled.x %*% res.svd$v
   
+## Compare eigenvalues
+data.frame(PCA = res.pca$eig[, 1], SVD = res.svd$d ** 2)
+## Compare PC1 and PC2
+data.frame(
+  PC1fromPCA = res.pca$ind$coord[, 1], 
+  PC1fromSVD = pc[, 1],
+  U1 = res.svd$u[, 1],
+  PC2fromPCA = res.pca$ind$coord[, 2],
+  PC2fromSVD = pc[, 2],
+  U2 = res.svd$u[, 2]
+  )
+```
+
+Depending on which function we use, the pre-processing steps to apply on the data before SVD, and the post-processing steps to obtain the principal components will slightly differ.
+
+We now also have the opportunity to compare $\mathbf{U}$ to the principal coordinates (do it, just for fun, as homework).
+
+## Constrained SVD
+
+Now, instead of using the regular SVD, we will use its sparse variant [@Guillemot2019]. The goal the CSVD is now to *approximate* the data through a product of "sparse" matrices (i.e. matrices with a lot of zeros). The numbers of zeros are controlled with parameters that we call "radiuses" : 
+
+  * the left radius controls the sparsity of $\mathbf{U}$, and goes from 1 (very sparse) to $\sqrt{I}$ (not sparse),
+  * the right radius controls the sparsity of $\mathbf{V}$, and goes from 1 to $\sqrt{J}$.
+
+> **Apply the function `sGSVD::sparseSVD` to the preprocessed data of your choice to obtain 2 sparse components, and plot them.**
+
+```{r csvd, message = FALSE}
+library(dplyr)
+library(ggplot2)
+library(sGSVD)
+library(patchwork)
+
+res.csvd <- sparseSVD(
+  X = scaled.x, ## I chose to use the scaled data
+  k = 2L,       ## I want only 2 components
+  rdsLeft = sqrt(I) * c(0.5, 0.5), ## ... with medium level of sparsity
+  rdsRight = sqrt(J) * c(0.6, 0.6))
+
+spc <- scaled.x %*% res.csvd$v
+colnames(spc) <- paste0("SPC", 1:ncol(spc))
+
+dat.csvd <- data.frame(
+  spc,
+  Group = g
+)
+
+dat.csvd %>%
+  ggplot(aes(SPC1, SPC2, color = Group)) + 
+  geom_vline(xintercept = 0, color = "grey") + 
+  geom_hline(yintercept = 0, color = "grey") + 
+  geom_point() + 
+  stat_ellipse() + 
+  theme_bw()
+
+
+dat.v <- data.frame(
+  Var = names(x)[-1],
+  V = res.csvd$v,
+  Block = paste0("Block ", rep(1:2, c(4, 4))))
+
+block_colors <- c("Block 1" = "#BF5B17", "Block 2" = "#666666")
+
+p1 <- dat.v %>%
+  ggplot(aes(x = Var, color = Block)) + 
+  geom_point(aes(y = V.1)) + 
+  geom_segment(aes(xend = Var, yend = V.1), y = 0) + 
+  scale_color_manual(values = block_colors) +
+  theme_bw() +
+  labs(x = "")
+
+p2 <- dat.v %>%
+  ggplot(aes(x = Var, color = Block)) + 
+  geom_point(aes(y = V.2)) + 
+  geom_segment(aes(xend = Var, yend = V.2), y = 0) + 
+  scale_color_manual(values = block_colors) +
+  theme_bw() +
+  labs(x = "")
+
+
+p1 / p2
+```
+
   
