@@ -1,101 +1,283 @@
 [
   {
-    "objectID": "pages/datasets.html",
-    "href": "pages/datasets.html",
-    "title": "Datasets",
+    "objectID": "material/01_csvd_20240529.html",
+    "href": "material/01_csvd_20240529.html",
+    "title": "Singular Value Decomposition",
     "section": "",
-    "text": "This is the page presenting all the data used during the tutorial."
+    "text": "Cut the yummiest French fries\n\n\n\n\n\n Artwork by @allison_horst\n\n\n\n Artwork by @allison_horst"
   },
   {
-    "objectID": "pages/datasets.html#beers",
-    "href": "pages/datasets.html#beers",
-    "title": "Datasets",
-    "section": "Beers",
-    "text": "Beers\nTen tasters evaluated the intensity of twelve descriptors for six beers. The data are the averages (computed over the 10 judges) of the intensity ratings of the descriptors for the beers.\nA data frame of dimension 6 rows (Beers) by 12 columns (descriptors) with the average intensity ratings performed using a 0 to 7 Likert rating scale.\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs."
-  },
-  {
-    "objectID": "pages/datasets.html#turkey",
-    "href": "pages/datasets.html#turkey",
-    "title": "Datasets",
-    "section": "Turkey",
-    "text": "Turkey\nA trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables."
-  },
-  {
-    "objectID": "pages/datasets.html#tv-and-salad",
-    "href": "pages/datasets.html#tv-and-salad",
-    "title": "Datasets",
-    "section": "TV and salad",
-    "text": "TV and salad\nData from the INCA 3 study, where more than 5,800 people (3,157 adults aged 18 to 79 years and 2,698 children aged 0 to 17 years) participated in a national study conducted in 2014 and 2015. Participants answered 150 questions on their habits and lifestyles, resulting in data on 320,000 food items consumed over 13,600 consumption days. The variables retained for this dataset are “hours spent watching TV” and “salad consumption.”\n\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
-  },
-  {
-    "objectID": "pages/datasets.html#wines",
-    "href": "pages/datasets.html#wines",
-    "title": "Datasets",
-    "section": "Wines",
-    "text": "Wines\n36 wines from three countries (Argentina, Canada, and the USA) and three colors (Red, Rosé, and White) are evaluated on several dimensions organized into four blocks. An additional mystery wine (a French red pinot noir) is included to be projected as a supplementary observation.\n\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579."
-  },
-  {
-    "objectID": "pages/about.html",
-    "href": "pages/about.html",
-    "title": "About us",
+    "objectID": "material/01_csvd_20240529.html#potato-chips-analysis",
+    "href": "material/01_csvd_20240529.html#potato-chips-analysis",
+    "title": "Singular Value Decomposition",
     "section": "",
-    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+    "text": "Cut the yummiest French fries"
   },
   {
-    "objectID": "pages/about.html#ju-chi-yu",
-    "href": "pages/about.html#ju-chi-yu",
-    "title": "About us",
+    "objectID": "material/01_csvd_20240529.html#whale-versus-krill-this-is-you-credit-allison-horst",
+    "href": "material/01_csvd_20240529.html#whale-versus-krill-this-is-you-credit-allison-horst",
+    "title": "Singular Value Decomposition",
     "section": "",
-    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+    "text": "Artwork by @allison_horst"
   },
   {
-    "objectID": "pages/about.html#vincent-le-goff",
-    "href": "pages/about.html#vincent-le-goff",
-    "title": "About us",
-    "section": "Vincent Le Goff",
-    "text": "Vincent Le Goff\n\n\n\n\n\n\n\n\n\nI am a bioinformatics engineer with a degree from INSA Lyon (2022) and a double degree in Life Sciences and Chemistry from UVSQ (2019). In 2023, I worked as a research engineer in bioinformatics at CEA in Évry and completed a seven-month internship at Limagrain Europe, analyzing satellite images to quantify corn water stress. In 2021, I interned at INRAE, studying the performance of wheat variety mixtures. Since late 2023, I have been pursuing a PhD at CNRGH on multi-omics data integration. I am skilled in R and Python, focusing on bioinformatics, biostatistics, and machine learning."
+    "objectID": "material/01_csvd_20240529.html#whale-versus-krill-this-is-your-data-credit-allison-horst",
+    "href": "material/01_csvd_20240529.html#whale-versus-krill-this-is-your-data-credit-allison-horst",
+    "title": "Singular Value Decomposition",
+    "section": "",
+    "text": "Artwork by @allison_horst"
   },
   {
-    "objectID": "pages/about.html#vincent-guillemot",
-    "href": "pages/about.html#vincent-guillemot",
-    "title": "About us",
-    "section": "Vincent Guillemot",
-    "text": "Vincent Guillemot\n\n\n\n\n\n\nI am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization."
+    "objectID": "material/01_csvd_20240529.html#beautiful-illustration",
+    "href": "material/01_csvd_20240529.html#beautiful-illustration",
+    "title": "Singular Value Decomposition",
+    "section": "Beautiful illustration",
+    "text": "Beautiful illustration\nScreeplot, versus individual map, versus circle of correlation. With the associated theoretical concepts: inertia (multivariate variance), distance between individuals, and angles between"
   },
   {
-    "objectID": "pages/about.html#hervé-abdi",
-    "href": "pages/about.html#hervé-abdi",
-    "title": "About us",
-    "section": "Hervé Abdi",
-    "text": "Hervé Abdi\n\n\n\n\n\n\n\n\n\nI am a Professor at the University of Texas at Dallas in the School of Behavioral and Brain Sciences. My recent work focuses on face and person perception, odor perception, and computational modeling of these processes. I have developed statistical techniques to analyze large data sets, such as those found in genomics, brain imaging, and sensory evaluation, including principal component analysis and multiple factor analysis."
+    "objectID": "material/01_csvd_20240529.html#example-data",
+    "href": "material/01_csvd_20240529.html#example-data",
+    "title": "Singular Value Decomposition",
+    "section": "Example data",
+    "text": "Example data\n\nxtmp &lt;- readxl::read_excel(\"../data/simul.xlsx\")\nx &lt;- as.matrix(xtmp[, -1])\nrownames(x) &lt;- xtmp$Ind"
   },
   {
-    "objectID": "pages/splsc.html",
-    "href": "pages/splsc.html",
-    "title": "Sparse PLS (Correlation)",
+    "objectID": "material/01_csvd_20240529.html#example-screeplot",
+    "href": "material/01_csvd_20240529.html#example-screeplot",
+    "title": "Singular Value Decomposition",
+    "section": "Example screeplot",
+    "text": "Example screeplot"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#example-individual-map",
+    "href": "material/01_csvd_20240529.html#example-individual-map",
+    "title": "Singular Value Decomposition",
+    "section": "Example individual map",
+    "text": "Example individual map"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#example-circle-of-correlation",
+    "href": "material/01_csvd_20240529.html#example-circle-of-correlation",
+    "title": "Singular Value Decomposition",
+    "section": "Example circle of correlation",
+    "text": "Example circle of correlation"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#french-versus-english",
+    "href": "material/01_csvd_20240529.html#french-versus-english",
+    "title": "Singular Value Decomposition",
+    "section": "French versus English",
+    "text": "French versus English\n\n“Aaaaah, mais ACP en fait c’est la PCA !”\n\n(Anonymous student, after 6 hours of teaching PCA in French)\n\n\n\n\n\n\n\nEnglish\nFrench\n\n\n\n\nPCA = principal component analysis\nACP = analyse en composantes principales\n\n\nSVD = singular value decomposition\nSVD = décomposition en valeurs singulières\n\n\nEVD = eigenvalue decomposition\ndécomposition en éléments propres\n\n\nICA = independent component analysis\nICA = analyse en composantes indépendantes\n\n\nMDS = multidimensional scaling\nMDS = multidimensional scaling"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#r-vocabulary",
+    "href": "material/01_csvd_20240529.html#r-vocabulary",
+    "title": "Singular Value Decomposition",
+    "section": "R vocabulary",
+    "text": "R vocabulary\nBase methods:\n\neigen for eigenvalue decomposition, svd for singular value decomposition,\nprcomp and princomp for PCA,\nbiplot\n\nNice packages:\n\nFactoMineR: PCA, MFA, CA, MCA and associates. In earlier versions, the graphs were “crude”…\nfactoextra: “helper” package to make beautiful plots, and much more!\nade4: more than “one block” type of analyses. Made by ecologists so \\(\\Rightarrow\\) PCOA, coinertia analysis, STATIS, etc.\nExPosition: made for psychometricians (they like PLS)"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#and-a-few-nice-books-and-papers",
+    "href": "material/01_csvd_20240529.html#and-a-few-nice-books-and-papers",
+    "title": "Singular Value Decomposition",
+    "section": "And a few nice books and papers",
+    "text": "And a few nice books and papers\nbooks and papers"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#notations",
+    "href": "material/01_csvd_20240529.html#notations",
+    "title": "Singular Value Decomposition",
+    "section": "Notations",
+    "text": "Notations\n(non-universal) Conventions: matrices and vectors are bold\n\n\\(I\\) = number of observations, \\(J\\) = number of variables (only quantitative)\n\\(i\\) for an individual observation, and \\(j\\) for a single variable\n\\(\\mathbf{X}\\) = data matrix, with \\(n\\) rows and \\(p\\) columns, sometimes already centered, and scaled, to make our life easy\n\\(\\mathbf{X}_j\\) = variable \\(j\\), and \\(j\\)th column of \\(\\mathbf X\\)\n\\(\\mathbf{w}\\) a set of weights"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#a-little-detour-matrix-multiplication",
+    "href": "material/01_csvd_20240529.html#a-little-detour-matrix-multiplication",
+    "title": "Singular Value Decomposition",
+    "section": "A little detour: matrix multiplication",
+    "text": "A little detour: matrix multiplication\nTake a pen and paper, and do this multiplication:\n[ ]\nCool video: 5 ways to see matrix multiplication"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#pca",
+    "href": "material/01_csvd_20240529.html#pca",
+    "title": "Singular Value Decomposition",
+    "section": "PCA",
+    "text": "PCA\n\n“Find a linear combination of the columns of the data that would capture the most information.”\n\nIn mathematical words, find\n[ = w_1_1 + + w_p_p ]\nthat maximizes… wait a minute! What are the dimensions?\n\n\\(\\mathbf X\\): \\(I\\) rows and \\(J\\) columns,\n\\(\\mathbf w\\): \\(J\\) rows and \\(1\\) columns,\n\\(\\mathbf{Xw}\\): \\(I\\) rows and \\(1\\) column."
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#most-popular-intuition-of-pca-how-does-it-translate",
+    "href": "material/01_csvd_20240529.html#most-popular-intuition-of-pca-how-does-it-translate",
+    "title": "Singular Value Decomposition",
+    "section": "Most popular intuition of PCA: how does it translate?",
+    "text": "Most popular intuition of PCA: how does it translate?\n\n“PCA creates a linear combination of variables that maximizes variance.”\n\n[ _{||_2^2 = 1} () ]\n\nWhy \\(\\|\\mathbf{w}\\|_2 = 1\\)?\nDirty trick: \\(\\text{var}(\\mathbf{X}\\mathbf{w}) = \\mathbf{w}^\\top\\mathbf{X}^\\top\\mathbf{X}\\mathbf{w}\\)"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#least-well-known-intuition-of-pca-how-does-it-translate",
+    "href": "material/01_csvd_20240529.html#least-well-known-intuition-of-pca-how-does-it-translate",
+    "title": "Singular Value Decomposition",
+    "section": "Least “well-known” intuition of PCA: how does it translate?",
+    "text": "Least “well-known” intuition of PCA: how does it translate?\n\n“PCA creates a linear combination of variables that maximizes correlation.”\n\n[ {w} {j=1}^p (, _j)^2 ]"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#second-least-well-known-intuition-of-pca-how-does-it-translate",
+    "href": "material/01_csvd_20240529.html#second-least-well-known-intuition-of-pca-how-does-it-translate",
+    "title": "Singular Value Decomposition",
+    "section": "Second least “well-known” intuition of PCA: how does it translate?",
+    "text": "Second least “well-known” intuition of PCA: how does it translate?\n\n“PCA creates the best lower rank approximation of the covariance matrix.”\n\n[ _{|w|_2^2 = 1} | ^- ^|_F^2 ]\n\n\\(\\frac{1}{n}\\mathbf{X}^\\top\\mathbf{X}\\)\n\\(\\lambda\\): the [blank] of the covariance matrix\n\\(\\mathbf{w}\\): the [blank] of the covariance matrix"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#a-little-image",
+    "href": "material/01_csvd_20240529.html#a-little-image",
+    "title": "Singular Value Decomposition",
+    "section": "A little image",
+    "text": "A little image"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#rank-1-approximations",
+    "href": "material/01_csvd_20240529.html#rank-1-approximations",
+    "title": "Singular Value Decomposition",
+    "section": "Rank-1 approximations",
+    "text": "Rank-1 approximations"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#increasing-rank-approximations",
+    "href": "material/01_csvd_20240529.html#increasing-rank-approximations",
+    "title": "Singular Value Decomposition",
+    "section": "Increasing rank approximations",
+    "text": "Increasing rank approximations"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#we-can-do-the-same-kind-of-magic-with-the-data-itself",
+    "href": "material/01_csvd_20240529.html#we-can-do-the-same-kind-of-magic-with-the-data-itself",
+    "title": "Singular Value Decomposition",
+    "section": "We can do the same kind of magic with the data itself",
+    "text": "We can do the same kind of magic with the data itself\n\nSingular value decomposition can be used to approximate a rectangular matrix with a lower ranked matrix of the same dimension\n\n[ _{|_2^2=||_2^2=1} | - ^|_F^2 ]\n\n\\(\\delta\\): singular value\n\\(\\mathbf{u}\\): left singular vector\n\\(\\mathbf{w}\\): right singular vector"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#rank-1-approximation",
+    "href": "material/01_csvd_20240529.html#rank-1-approximation",
+    "title": "Singular Value Decomposition",
+    "section": "Rank 1 approximation",
+    "text": "Rank 1 approximation"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#rank-1-approximations-1",
+    "href": "material/01_csvd_20240529.html#rank-1-approximations-1",
+    "title": "Singular Value Decomposition",
+    "section": "Rank-1 approximations",
+    "text": "Rank-1 approximations"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#increasing-rank-approximations-1",
+    "href": "material/01_csvd_20240529.html#increasing-rank-approximations-1",
+    "title": "Singular Value Decomposition",
+    "section": "Increasing rank approximations",
+    "text": "Increasing rank approximations"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#lasso",
+    "href": "material/01_csvd_20240529.html#lasso",
+    "title": "Singular Value Decomposition",
+    "section": "LASSO",
+    "text": "LASSO\nLASSO is a (relatively) recent technique originally intended for regression problems:\n\\[\n  \\arg\\min_{\\boldsymbol{\\beta}} \\left\\| \\mathbf{y} - \\mathbf{X}\\boldsymbol{\\beta} \\right\\|_2^2 \\text{ such that } \\|\\boldsymbol{\\beta}\\|_1 \\leq r\n\\] or the dual form \\[\n  \\arg\\min_{\\boldsymbol{\\beta}} \\left\\| \\mathbf{y} - \\mathbf{X}\\boldsymbol{\\beta} \\right\\|_2^2 + \\lambda \\|\\boldsymbol{\\beta}\\|_1\n\\]\n\nthe obtained weights are sparse (with zeros)\nthe non-zeros coefficients correspond to important variables\nthe result is biased\nselecting \\(\\lambda\\) is done through cross-validation"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#optimization-problem",
+    "href": "material/01_csvd_20240529.html#optimization-problem",
+    "title": "Singular Value Decomposition",
+    "section": "Optimization problem",
+    "text": "Optimization problem\n\\[\n\\begin{aligned}\n  (\\delta_\\ell, \\mathbf{p}_\\ell, \\mathbf{q}_\\ell) = \\arg\\min_{\\boldsymbol{\\beta}} \\left\\| \\mathbf{X} - \\delta\\mathbf{p}^\\top\\mathbf{q} \\right\\|_2^2 \\\\\n  \\text{ such that }\n    \\begin{cases}\n      \\mathbf{p}^\\top\\mathbf{M}\\mathbf{p} = \\mathbf{q}^\\top\\mathbf{W}\\mathbf{q} = 1 \\\\\n      \\mathbf{p}^\\top\\mathbf{M}\\mathbf{p_{\\ell^\\prime}} = \\mathbf{q}^\\top\\mathbf{W}\\mathbf{q_{\\ell^\\prime}} = 0, \\forall \\ell^\\prime &lt; \\ell \\\\\n      \\|\\mathbf{p}\\|_1 \\leq s_{\\mathbf{p},\\ell} \\text{ and } \\|\\mathbf{q}\\|_1 \\leq s_{\\mathbf{q},\\ell}\n    \\end{cases}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "material/01_csvd_20240529.html#what-are-the-parameters",
+    "href": "material/01_csvd_20240529.html#what-are-the-parameters",
+    "title": "Singular Value Decomposition",
+    "section": "What are the parameters?",
+    "text": "What are the parameters?\n\n\\(\\mathbf M\\) and \\(\\mathbf W\\) = masses, weights… so metrics\n\\(s_{\\mathbf{p},\\ell}\\) and \\(s_{\\mathbf{q},\\ell}\\) = sparsity parameters, between 1 (strong sparsity), and \\(\\sqrt{\\text{dimension}}\\) (no sparsity)"
+  },
+  {
+    "objectID": "pages/sca.html",
+    "href": "pages/sca.html",
+    "title": "Sparse Correspondence Analysis",
     "section": "",
     "text": "Shared code\nSlides\nR Markdown\nData"
   },
   {
-    "objectID": "pages/splsc.html#links",
-    "href": "pages/splsc.html#links",
-    "title": "Sparse PLS (Correlation)",
+    "objectID": "pages/sca.html#links",
+    "href": "pages/sca.html#links",
+    "title": "Sparse Correspondence Analysis",
     "section": "",
     "text": "Shared code\nSlides\nR Markdown\nData"
   },
   {
-    "objectID": "pages/spca.html",
-    "href": "pages/spca.html",
-    "title": "Sparse Principal Component Analysis",
+    "objectID": "pages/instructions.html",
+    "href": "pages/instructions.html",
+    "title": "Pre-tutorial instructions",
     "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
   },
   {
-    "objectID": "pages/spca.html#links",
-    "href": "pages/spca.html#links",
-    "title": "Sparse Principal Component Analysis",
+    "objectID": "pages/instructions.html#softwares",
+    "href": "pages/instructions.html#softwares",
+    "title": "Pre-tutorial instructions",
     "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
+  },
+  {
+    "objectID": "pages/instructions.html#packages",
+    "href": "pages/instructions.html#packages",
+    "title": "Pre-tutorial instructions",
+    "section": "Packages",
+    "text": "Packages\nTo install packages, you can use pak, a great package for easy and comprehensible package installation. First, install pak with the usual command\ninstall.packages(\"pak\")\nThe whole tutorial revolves around the use of two packages: sGSVD and SPAFAC. Install them with pak:\npak::pak(c(\"vguillemot/sGSVD\", \"juchiyu/SPAFAC\"))\nDepending on what is already installed on your machine, pak will detect what needs to be installed, and give you a summary."
+  },
+  {
+    "objectID": "pages/instructions.html#requirements",
+    "href": "pages/instructions.html#requirements",
+    "title": "Pre-tutorial instructions",
+    "section": "Requirements",
+    "text": "Requirements\nDuring the tutorial, we will extensively use dplyr and ggplot2, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder"
+  },
+  {
+    "objectID": "pages/csvd.html",
+    "href": "pages/csvd.html",
+    "title": "Sparse (generalized) SVD",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
+  },
+  {
+    "objectID": "pages/csvd.html#links",
+    "href": "pages/csvd.html#links",
+    "title": "Sparse (generalized) SVD",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
+  },
+  {
+    "objectID": "pages/csvd.html#data",
+    "href": "pages/csvd.html#data",
+    "title": "Sparse (generalized) SVD",
+    "section": "Data",
+    "text": "Data\nThe simulated data has the following characteristics:\n\n\\(I = 30\\) rows, the simulated observations,\n\\(J = 9\\) columns, the variables,\nthree groups (A, B and C) of 10 observations each,\ntwo groups of correlated variables.\n\n\nLoad the data and make a heatmap1\n\n\n\nSolution\nlibrary(readxl)\nlibrary(pheatmap)\n\nx &lt;- read_excel(\"../data/simul.xlsx\")\npheatmap(x[,-1], clustering_method = \"ward.D2\")\n\n\n\n\n\n\n\n\n\n\n\n\nRun a PCA on the data with your favorite method, and plot the screeplot the individual map, and the correlation circle like below.\n\n\n\nSolution\nlibrary(FactoMineR)\nlibrary(factoextra)\n\ng &lt;- substr(x$Ind, 1, 1)\n\nres.pca &lt;- PCA(x[, -1], scale.unit = TRUE, graph = FALSE)\n\nfviz_screeplot(res.pca)\nfviz_pca_ind(res.pca, geom = \"point\", col.ind = g, addEllipses = TRUE)\nfviz_pca_var(res.pca, repel = TRUE)"
+  },
+  {
+    "objectID": "pages/csvd.html#svd",
+    "href": "pages/csvd.html#svd",
+    "title": "Sparse (generalized) SVD",
+    "section": "SVD",
+    "text": "SVD\nPrincipal Component Analysis is based on the Singular Value Decomposition of the data[^2]. In a nutshell, the data matrix \\(\\mathbf{X}\\) is decomposed by the SVD in a product of three matrices:\n\\[\n  \\mathbf{X} = \\mathbf{U}\\mathbf{D}\\mathbf{V}^\\top\n\\] [^2]: depending on how you want to do it, you would need to pre-process the data before applying the SVD\n\nUse the R function svd to decompose the data, and compare the result with what is given by your favorite PCA function.\n\n\n\nSolution\nI &lt;- nrow(x)\nJ &lt;- ncol(x)\ncentered.x &lt;- scale(x[, -1], center = TRUE, scale = FALSE)\nstd.x &lt;- sqrt(1/I * colSums(centered.x ** 2))\nscaled.x &lt;- 1/sqrt(I) * centered.x %*% diag(1 / std.x)\n\nres.svd &lt;- svd(scaled.x)\npc &lt;- sqrt(I) * scaled.x %*% res.svd$v\n  \n## Compare eigenvalues\ndata.frame(PCA = res.pca$eig[, 1], SVD = res.svd$d ** 2)\n\n\n              PCA        SVD\ncomp 1 4.90980404 4.90980404\ncomp 2 2.59360190 2.59360190\ncomp 3 0.13915410 0.13915410\ncomp 4 0.11966049 0.11966049\ncomp 5 0.10452009 0.10452009\ncomp 6 0.06607284 0.06607284\ncomp 7 0.03945514 0.03945514\ncomp 8 0.02773141 0.02773141\n\n\nSolution\n## Compare PC1 and PC2\ndata.frame(\n  PC1fromPCA = res.pca$ind$coord[, 1], \n  PC1fromSVD = pc[, 1],\n  U1 = res.svd$u[, 1],\n  PC2fromPCA = res.pca$ind$coord[, 2],\n  PC2fromSVD = pc[, 2],\n  U2 = res.svd$u[, 2]\n  )\n\n\n    PC1fromPCA  PC1fromSVD           U1 PC2fromPCA PC2fromSVD          U2\n1   3.47946475 -3.47946475 -0.286694746 -0.6705783 -0.6705783 -0.07602164\n2   4.88977226 -4.88977226 -0.402898755 -1.5754272 -1.5754272 -0.17860189\n3   1.48440106 -1.48440106 -0.122309038  0.5422259  0.5422259  0.06147068\n4   3.50043608 -3.50043608 -0.288422705  1.5087231  1.5087231  0.17103983\n5   1.76562377 -1.76562377 -0.145480726  0.8595458  0.8595458  0.09744436\n6   1.06242167 -1.06242167 -0.087539530  0.2831030  0.2831030  0.03209461\n7   2.50198189 -2.50198189 -0.206153852  2.1182903  2.1182903  0.24014481\n8   1.16813816 -1.16813816 -0.096250170  0.7419130  0.7419130  0.08410866\n9   2.07356156 -2.07356156 -0.170853636 -0.1642815 -0.1642815 -0.01862415\n10  3.58444405 -3.58444405 -0.295344643 -0.1421849 -0.1421849 -0.01611911\n11 -0.82141771  0.82141771  0.067681715 -0.2266340 -0.2266340 -0.02569288\n12 -2.18664270  2.18664270  0.180171095  2.0535301  2.0535301  0.23280311\n13 -2.93653013  2.93653013  0.241958986 -0.5464232 -0.5464232 -0.06194651\n14 -0.66375621  0.66375621  0.054691003  0.4814394  0.4814394  0.05457948\n15 -1.03245476  1.03245476  0.085070370  3.7299821  3.7299821  0.42285792\n16 -3.83911355  3.83911355  0.316328448  0.6018542  0.6018542  0.06823057\n17 -1.89011572  1.89011572  0.155738392 -0.2835366 -0.2835366 -0.03214377\n18 -2.64446092  2.64446092  0.217893586  1.3511569  1.3511569  0.15317698\n19 -0.62038416  0.62038416  0.051117310  3.5310557  3.5310557  0.40030617\n20 -1.91970878  1.91970878  0.158176748  1.4196341  1.4196341  0.16094006\n21 -2.50957431  2.50957431  0.206779439 -1.8670968 -1.8670968 -0.21166768\n22 -0.65544577  0.65544577  0.054006254 -1.3526894 -1.3526894 -0.15335071\n23 -1.11333699  1.11333699  0.091734761  0.1471727  0.1471727  0.01668457\n24  1.66564984 -1.66564984 -0.137243252 -0.8196610 -0.8196610 -0.09292274\n25 -1.13869274  1.13869274  0.093823978 -2.2951426 -2.2951426 -0.26019407\n26  0.01909334 -0.01909334 -0.001573219 -2.3909485 -2.3909485 -0.27105532\n27 -2.69802677  2.69802677  0.222307210 -2.4531381 -2.4531381 -0.27810558\n28  0.06616711 -0.06616711 -0.005451920 -2.3093735 -2.3093735 -0.26180739\n29 -1.58897654  1.58897654  0.130925662 -1.2139548 -1.2139548 -0.13762275\n30  0.99748221 -0.99748221 -0.082188764 -1.0585559 -1.0585559 -0.12000560\n\n\nDepending on which function we use, the pre-processing steps to apply on the data before SVD, and the post-processing steps to obtain the principal components will slightly differ.\nWe now also have the opportunity to compare \\(\\mathbf{U}\\) to the principal coordinates (do it, just for fun, as homework)."
+  },
+  {
+    "objectID": "pages/csvd.html#constrained-svd",
+    "href": "pages/csvd.html#constrained-svd",
+    "title": "Sparse (generalized) SVD",
+    "section": "Constrained SVD",
+    "text": "Constrained SVD\nNow, instead of using the regular SVD, we will use its sparse variant [@Guillemot2019]. The goal the CSVD is now to approximate the data through a product of “sparse” matrices (i.e. matrices with a lot of zeros). The numbers of zeros are controlled with parameters that we call “radiuses” :\n\nthe left radius controls the sparsity of \\(\\mathbf{U}\\), and goes from 1 (very sparse) to \\(\\sqrt{I}\\) (not sparse),\nthe right radius controls the sparsity of \\(\\mathbf{V}\\), and goes from 1 to \\(\\sqrt{J}\\).\n\n\nApply the function sGSVD::sparseSVD to the preprocessed data of your choice to obtain 2 sparse components, and plot them.\n\n\n\nSolution\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(sGSVD)\nlibrary(patchwork)\n\nres.csvd &lt;- sparseSVD(\n  X = scaled.x, ## I chose to use the scaled data\n  k = 2L,       ## I want only 2 components\n  rdsLeft = sqrt(I) * c(0.5, 0.5), ## ... with medium level of sparsity\n  rdsRight = sqrt(J) * c(0.6, 0.6))\n\nspc &lt;- scaled.x %*% res.csvd$v\ncolnames(spc) &lt;- paste0(\"SPC\", 1:ncol(spc))\n\ndat.csvd &lt;- data.frame(\n  spc,\n  Group = g\n)\n\ndat.csvd %&gt;%\n  ggplot(aes(SPC1, SPC2, color = Group)) + \n  geom_vline(xintercept = 0, color = \"grey\") + \n  geom_hline(yintercept = 0, color = \"grey\") + \n  geom_point() + \n  stat_ellipse() + \n  theme_bw()\n\n\n\n\n\n\n\n\n\nSolution\ndat.v &lt;- data.frame(\n  Var = names(x)[-1],\n  V = res.csvd$v,\n  Block = paste0(\"Block \", rep(1:2, c(4, 4))))\n\nblock_colors &lt;- c(\"Block 1\" = \"#BF5B17\", \"Block 2\" = \"#666666\")\n\np1 &lt;- dat.v %&gt;%\n  ggplot(aes(x = Var, color = Block)) + \n  geom_point(aes(y = V.1)) + \n  geom_segment(aes(xend = Var, yend = V.1), y = 0) + \n  scale_color_manual(values = block_colors) +\n  theme_bw() +\n  labs(x = \"\")\n\np2 &lt;- dat.v %&gt;%\n  ggplot(aes(x = Var, color = Block)) + \n  geom_point(aes(y = V.2)) + \n  geom_segment(aes(xend = Var, yend = V.2), y = 0) + \n  scale_color_manual(values = block_colors) +\n  theme_bw() +\n  labs(x = \"\")\n\n\np1 / p2"
+  },
+  {
+    "objectID": "pages/csvd.html#footnotes",
+    "href": "pages/csvd.html#footnotes",
+    "title": "Sparse (generalized) SVD",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI used pheatmap for simplicity in the solution, but ComplexHeatmap to create the actual heatmap.↩︎"
   },
   {
     "objectID": "index.html",
@@ -133,73 +315,101 @@
     "text": "References\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs.\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579.\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
   },
   {
-    "objectID": "pages/csvd.html",
-    "href": "pages/csvd.html",
-    "title": "Sparse (generalized) SVD",
-    "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
-  },
-  {
-    "objectID": "pages/csvd.html#links",
-    "href": "pages/csvd.html#links",
-    "title": "Sparse (generalized) SVD",
-    "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
-  },
-  {
-    "objectID": "pages/csvd.html#data",
-    "href": "pages/csvd.html#data",
-    "title": "Sparse (generalized) SVD",
-    "section": "Data",
-    "text": "Data\n\npheatmap::pheatmap(scale(data4PCCAR::mentalImageryOSIQ$OSIQ), clustering_method = \"ward.D2\")\n\n\n\n\n\n\n\nx &lt;- data4PCCAR::mentalImageryOSIQ$OSIQ\n\nlibrary(FactoMineR)\nlibrary(factoextra)\n\nLoading required package: ggplot2\n\n\nWelcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa\n\nres.pca &lt;- PCA(x, scale.unit = TRUE, graph = FALSE)\n\nfviz_pca_var(res.pca)"
-  },
-  {
-    "objectID": "pages/csvd.html#svd",
-    "href": "pages/csvd.html#svd",
-    "title": "Sparse (generalized) SVD",
-    "section": "SVD",
-    "text": "SVD"
-  },
-  {
-    "objectID": "pages/instructions.html",
-    "href": "pages/instructions.html",
-    "title": "Pre-tutorial instructions",
-    "section": "",
-    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
-  },
-  {
-    "objectID": "pages/instructions.html#softwares",
-    "href": "pages/instructions.html#softwares",
-    "title": "Pre-tutorial instructions",
-    "section": "",
-    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
-  },
-  {
-    "objectID": "pages/instructions.html#packages",
-    "href": "pages/instructions.html#packages",
-    "title": "Pre-tutorial instructions",
-    "section": "Packages",
-    "text": "Packages\nTo install packages, you can use pak, a great package for easy and comprehensible package installation. First, install pak with the usual command\ninstall.packages(\"pak\")\nThe whole tutorial revolves around the use of two packages: sGSVD and SPAFAC. Install them with pak:\npak::pak(c(\"vguillemot/sGSVD\", \"juchiyu/SPAFAC\"))\nDepending on what is already installed on your machine, pak will detect what needs to be installed, and give you a summary."
-  },
-  {
-    "objectID": "pages/instructions.html#requirements",
-    "href": "pages/instructions.html#requirements",
-    "title": "Pre-tutorial instructions",
-    "section": "Requirements",
-    "text": "Requirements\nDuring the tutorial, we will extensively use dplyr and ggplot2, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder"
-  },
-  {
-    "objectID": "pages/sca.html",
-    "href": "pages/sca.html",
-    "title": "Sparse Correspondence Analysis",
+    "objectID": "pages/spca.html",
+    "href": "pages/spca.html",
+    "title": "Sparse Principal Component Analysis",
     "section": "",
     "text": "Shared code\nSlides\nR Markdown\nData"
   },
   {
-    "objectID": "pages/sca.html#links",
-    "href": "pages/sca.html#links",
-    "title": "Sparse Correspondence Analysis",
+    "objectID": "pages/spca.html#links",
+    "href": "pages/spca.html#links",
+    "title": "Sparse Principal Component Analysis",
     "section": "",
     "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "pages/splsc.html",
+    "href": "pages/splsc.html",
+    "title": "Sparse PLS (Correlation)",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "pages/splsc.html#links",
+    "href": "pages/splsc.html#links",
+    "title": "Sparse PLS (Correlation)",
+    "section": "",
+    "text": "Shared code\nSlides\nR Markdown\nData"
+  },
+  {
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "About us",
+    "section": "",
+    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+  },
+  {
+    "objectID": "pages/about.html#ju-chi-yu",
+    "href": "pages/about.html#ju-chi-yu",
+    "title": "About us",
+    "section": "",
+    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+  },
+  {
+    "objectID": "pages/about.html#vincent-le-goff",
+    "href": "pages/about.html#vincent-le-goff",
+    "title": "About us",
+    "section": "Vincent Le Goff",
+    "text": "Vincent Le Goff\n\n\n\n\n\n\n\n\n\nI am a bioinformatics engineer with a degree from INSA Lyon (2022) and a double degree in Life Sciences and Chemistry from UVSQ (2019). In 2023, I worked as a research engineer in bioinformatics at CEA in Évry and completed a seven-month internship at Limagrain Europe, analyzing satellite images to quantify corn water stress. In 2021, I interned at INRAE, studying the performance of wheat variety mixtures. Since late 2023, I have been pursuing a PhD at CNRGH on multi-omics data integration. I am skilled in R and Python, focusing on bioinformatics, biostatistics, and machine learning."
+  },
+  {
+    "objectID": "pages/about.html#vincent-guillemot",
+    "href": "pages/about.html#vincent-guillemot",
+    "title": "About us",
+    "section": "Vincent Guillemot",
+    "text": "Vincent Guillemot\n\n\n\n\n\n\nI am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization."
+  },
+  {
+    "objectID": "pages/about.html#hervé-abdi",
+    "href": "pages/about.html#hervé-abdi",
+    "title": "About us",
+    "section": "Hervé Abdi",
+    "text": "Hervé Abdi\n\n\n\n\n\n\n\n\n\nI am a Professor at the University of Texas at Dallas in the School of Behavioral and Brain Sciences. My recent work focuses on face and person perception, odor perception, and computational modeling of these processes. I have developed statistical techniques to analyze large data sets, such as those found in genomics, brain imaging, and sensory evaluation, including principal component analysis and multiple factor analysis."
+  },
+  {
+    "objectID": "pages/datasets.html",
+    "href": "pages/datasets.html",
+    "title": "Datasets",
+    "section": "",
+    "text": "This is the page presenting all the data used during the tutorial."
+  },
+  {
+    "objectID": "pages/datasets.html#beers",
+    "href": "pages/datasets.html#beers",
+    "title": "Datasets",
+    "section": "Beers",
+    "text": "Beers\nTen tasters evaluated the intensity of twelve descriptors for six beers. The data are the averages (computed over the 10 judges) of the intensity ratings of the descriptors for the beers.\nA data frame of dimension 6 rows (Beers) by 12 columns (descriptors) with the average intensity ratings performed using a 0 to 7 Likert rating scale.\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs."
+  },
+  {
+    "objectID": "pages/datasets.html#turkey",
+    "href": "pages/datasets.html#turkey",
+    "title": "Datasets",
+    "section": "Turkey",
+    "text": "Turkey\nA trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables."
+  },
+  {
+    "objectID": "pages/datasets.html#tv-and-salad",
+    "href": "pages/datasets.html#tv-and-salad",
+    "title": "Datasets",
+    "section": "TV and salad",
+    "text": "TV and salad\nData from the INCA 3 study, where more than 5,800 people (3,157 adults aged 18 to 79 years and 2,698 children aged 0 to 17 years) participated in a national study conducted in 2014 and 2015. Participants answered 150 questions on their habits and lifestyles, resulting in data on 320,000 food items consumed over 13,600 consumption days. The variables retained for this dataset are “hours spent watching TV” and “salad consumption.”\n\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
+  },
+  {
+    "objectID": "pages/datasets.html#wines",
+    "href": "pages/datasets.html#wines",
+    "title": "Datasets",
+    "section": "Wines",
+    "text": "Wines\n36 wines from three countries (Argentina, Canada, and the USA) and three colors (Red, Rosé, and White) are evaluated on several dimensions organized into four blocks. An additional mystery wine (a French red pinot noir) is included to be projected as a supplementary observation.\n\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579."
   }
 ]
