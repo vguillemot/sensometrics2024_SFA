@@ -1,36 +1,34 @@
 library(dplyr)
 library(ggplot2)
 library(tidyr)
-
-fao <- readxl::read_xls("data/FAOSTAT_data_en_5-17-2024.xls")
-minifao <- fao %>%
-  filter(
-    Survey == "Mexico - 2012",
-    `Population Age Group` != "All") %>%
-  mutate(age = `Population Age Group`, food = `Food Group`) %>%
-  select(age, food, Value) 
-
-tab <- minifao %>% 
-  group_by(age, food) %>%
-  summarize(
-    value = round(sum(Value)))  %>%
-  pivot_wider(
-    id_cols = age, 
-    names_from = food, 
-    values_from = value, 
-    values_fill = 0) 
-
-
-tabmat <- data.frame(tab[, -1], row.names = tab$age)
-
-library(pheatmap)
-pheatmap(t(tabmat))
-
+library(inca3)
 library(FactoMineR)
 library(factoextra)
+library(pheatmap)
 
-CA(tabmat)
+# fao <- readxl::read_xls("data/FAOSTAT_data_en_5-17-2024.xls")
+# minifao <- fao %>%
+#   filter(
+#     Survey == "Mexico - 2012",
+#     `Population Age Group` != "All") %>%
+#   mutate(age = `Population Age Group`, food = `Food Group`) %>%
+#   select(age, food, Value) 
+# 
+# tab <- minifao %>% 
+#   group_by(age, food) %>%
+#   summarize(
+#     value = round(sum(Value)))  %>%
+#   pivot_wider(
+#     id_cols = age, 
+#     names_from = food, 
+#     values_from = value, 
+#     values_fill = 0) 
+# 
+# tabmat <- data.frame(tab[, -1], row.names = tab$age)
+# pheatmap(t(tabmat))
+# CA(tabmat)
 
+data("actphys_sedent_decode")
 
 consotab <- actphys_sedent_decode %>%
   mutate(TV = cut(tv_duree, c(0:5, 10))) %>%
@@ -73,6 +71,14 @@ consotab <- actphys_sedent_decode %>%
 consotabmat <- data.frame(consotab[, -1], row.names = consotab$TV)
 CA(consotabmat)
 
-writexl::write_xlsx(consotabmat, path = "data/salad_and_tv.xlsx")
+writexl::write_xlsx(
+  consotabmat %>% 
+    as_tibble(rownames = "HoursTV") %>%
+    rename(
+      Rarely = X.0.10.,
+      Sometimes = X.10.20., 
+      Often = X.20.25., 
+      EveryDay = X.25.35.),
+  path = "data/salad_and_tv.xlsx")
 
 

@@ -1,10 +1,34 @@
 ---
 title: "Sparse PLS (Correlation)"
+format:
+  html:
+    code-fold: true
+    code-summary: "Solution"
 ---
+
+```{r preambule}
+library(readxl)
+```
 
 ## Links
 
   * [Shared code](https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing)
-  * [Slides](../material/)
-  * [R Markdown](../material/)
-  * [Data](../data/)
+  * [Data](../data/wines.xlsx)
+  
+## Data
+
+
+> **Load the Wines dataset.**
+
+```{r wines}
+wines <- read_excel("../data/wines.xlsx")
+knitr::kable(wines)
+```
+  
+## Regular PLS-C
+
+
+
+
+
+  

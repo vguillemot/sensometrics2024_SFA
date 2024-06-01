@@ -16,17 +16,33 @@ An excellent resource for R and Rstudio will be found here: https://swcarpentry.
 
 To install packages, you can use `pak`, a great package for easy and comprehensible package installation. First, install `pak` with the usual command
 
-```
+```{r, eval = FALSE}
 install.packages("pak")
 ```
 
 The whole tutorial revolves around the use of two packages: `sGSVD` and `SPAFAC`. Install them with `pak`:
 
-```
+```{r, eval = FALSE}
 pak::pak(c("vguillemot/sGSVD", "juchiyu/SPAFAC"))
 ```
 
 Depending on what is already installed on your machine, `pak` will detect what needs to be installed, and give you a summary.
+
+
+### Other useful packages
+
+> **TL;DR -- here is a one liner to install the packages detailed below.**
+
+```{r install packages, eval = FALSE}
+pak::pak(c("TExPosition", "factoextra", "FactoMineR", "tidyverse", "ggrepel", "pheatmap"))
+```
+
+  * `TExPosition` for PLS-C, install with `pak::pak("TExPosition")`
+  * `FactoMineR` and `factoextra` for PCA, CA, MCA and much much more, install with `pak::pak(c("factoextra", "FactoMineR"))`
+  * `tidyverse` for plotting, data wrangling and so much more, install with `pak::pak("tidyverse")`
+  * `ggrepel` for adding labels to ggplots, install with `pak::pak("ggrepel")`
+  * `pheatmap` for nice heatmaps (but you might prefer `ComplexHeatmap`), install with `pak::pak("pheatmap")`
+
 
 ## Requirements
 

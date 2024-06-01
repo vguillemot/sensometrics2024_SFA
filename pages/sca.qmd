@@ -1,10 +1,67 @@
 ---
 title: "Sparse Correspondence Analysis"
+format:
+  html:
+    code-fold: true
+    code-summary: "Solution"
 ---
+
+```{r preambule}
+library(readxl)
+```
 
 ## Links
 
   * [Shared code](https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing)
-  * [Slides](../material/)
-  * [R Markdown](../material/)
-  * [Data](../data/)
+  * [Data](../data/salad_and_tv.xlsx)
+  
+## Salad and TV
+
+> **Load the "salad and TV" dataset.**
+
+```{r salad_and_TV}
+tv <- read_excel("../data/salad_and_tv.xlsx")
+knitr::kable(tv)
+## Make it into a matrix
+tvmat <- as.matrix(tv[, -1])
+rownames(tvmat) <- tv$HoursTV
+```
+
+  * the first column shows how many hours of TV the respondent watches (split into intervals),
+  * the other column names are the frequency of "salad consumption" in the household,
+  * the data is a contingency table, meaning that each cell is a count.
+  
+  
+## Regular CA
+
+> **Run a regular CA.**
+
+```{r ca, message = FALSE}
+library(FactoMineR)
+res.ca <- CA(tvmat)
+```
+
+
+## Sparse CA
+
+> **Use the function `sparseCA` from the package `SPAFAC` to run a sparse CA.**
+
+```{r sparse CA, message = FALSE}
+library(sGSVD)
+library(SPAFAC)
+
+I <- nrow(tv)
+J <- ncol(tv) - 1
+res.sca <- sparseCA(
+  DATA = tvmat,
+  components = 3L,
+  rdsLeft = 0.5 * sqrt(I) * c(1, 1, 1),
+  rdsRight = 0.6 * sqrt(J) * c(1, 1, 1)
+  )
+
+knitr::kable(data.frame(Fi = res.sca$fi))
+knitr::kable(data.frame(Fj = res.sca$fj))
+```
+
+
+
