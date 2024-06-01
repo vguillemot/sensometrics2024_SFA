@@ -6,8 +6,15 @@ format:
     code-summary: "Solution"
 ---
 
-```{r preambule}
+```{r preambule, include = FALSE}
+library(dplyr)
+library(ggplot2)
+library(patchwork)
 library(readxl)
+library(TExPosition)
+library(sGSVD)
+library(SPAFAC)
+winecolors <- c(red = 'indianred4', white = 'gold', rose = 'lightpink2')
 ```
 
 ## Links
@@ -18,17 +25,161 @@ library(readxl)
 ## Data
 
 
-> **Load the Wines dataset.**
+> **Load the Wines dataset, and create two different blocks of data, one block containing only the "chemical" attributes (Acidity, Alcohol, Sugar, Tannin), and the other one containing only the sensory attributes (fruity, floral, vegetal, spicy, woody, sweet, astringent).**
 
-```{r wines}
+```{r wines-solution}
 wines <- read_excel("../data/wines.xlsx")
+chemi <- wines %>% select(Acidity, Alcohol, Sugar, Tannin)
+senso <- wines %>% select(fruity, floral, vegetal, 
+           spicy, woody, sweet, astringent)
+```
+
+The whole dataset is displayed below.
+
+```{r wines-show, echo = FALSE}
 knitr::kable(wines)
 ```
-  
+
 ## Regular PLS-C
 
+The goal of PLS-C is to create components that are the most correlation to one another while summing up the information in each block. 
+
+> **Use the function `tepPLS` from package `TExPosition` to build a PLS-C model of the relationship between the sensory and chemical properties of the wines. Plot the first dimension of each block.**
+
+```{r plsc-solution, eval = FALSE}
+library(TExPosition)
+
+res.pls <- tepPLS(senso, chemi, graph = FALSE)
+
+dat.plsc <- data.frame(
+  wines %>% select(Wine, color),
+  Lx = res.pls$TExPosition.Data$lx,
+  Ly = res.pls$TExPosition.Data$ly)
+
+dat.plsc %>%
+  ggplot(aes(Lx.1, Ly.1, color = color)) + 
+  geom_point()
+```
+
+```{r plsc-show, echo = FALSE}
+library(TExPosition)
+
+res.pls <- tepPLS(senso, chemi, graph = FALSE)
+
+dat.plsc <- data.frame(
+  wines %>% select(Wine, color, origin),
+  Lx = res.pls$TExPosition.Data$lx,
+  Ly = res.pls$TExPosition.Data$ly)
+
+dat.plsc %>%
+  ggplot(aes(Lx.1, Ly.1, color = color)) + 
+  geom_hline(yintercept = 0, color = "grey") +
+  geom_vline(xintercept = 0, color = "grey") +
+  geom_point(aes(shape = origin), size = 3) + 
+  scale_color_manual(values = winecolors) +
+  theme_minimal() + 
+  stat_ellipse(show.legend = FALSE) + 
+  labs(
+    x = "First sensory dimension",
+    y = "First chemical dimension")
+
+```
 
 
+## Sparse PLS-C
 
 
-  
+> **Use the function `sparsePLSC` from package `SPAFAC` to build a sparse PLS-C model to explain the link between the sensory and chemical descriptors of the wines. Has the factor map map drastically changed? What are the main descriptors?**
+
+```{r splsc-solution, eval = FALSE}
+library(sGSVD)
+library(SPAFAC)
+
+J1 <- ncol(senso)
+J2 <- ncol(chemi)
+
+res.spls <- sparsePLSC(
+  X = senso, # First block
+  Y = chemi, # Second block
+  components = 2L, # Number of dimensions
+  rdsLeft = 0.6 * sqrt(J1) * c(1, 1), # Medium sparsity
+  rdsRight = 0.6 * sqrt(J2) * c(1, 1) # Medium sparsity
+  )
+
+dat.splsc <- data.frame(
+  wines %>% select(Wine, color, origin),
+  Lx = res.spls$lx,
+  Ly = res.spls$ly)
+
+dat.splsc %>%
+  ggplot(aes(Lx.1, Ly.1, color = color)) + 
+  geom_point() + 
+  labs(
+    x = "First sparse sensory dimension",
+    y = "First sparse chemical dimension")
+
+res.spls$fi
+res.spls$fj
+
+```
+
+```{r splsc-show, echo = FALSE}
+J1 <- ncol(senso)
+J2 <- ncol(chemi)
+
+sensomat <- as.matrix(senso)
+chemimat <- as.matrix(chemi)
+rownames(sensomat) <- rownames(chemimat) <- wines$Wine
+
+res.spls <- sparsePLSC(
+  X = senso, # First block
+  Y = chemi, # Second block
+  components = 2L, 
+  rdsLeft = 0.6 * sqrt(J1) * c(1, 1),
+  rdsRight = 0.6 * sqrt(J2) * c(1, 1)
+  )
+
+dat.splsc <- data.frame(
+  wines %>% select(Wine, color, origin),
+  Lx = res.spls$lx,
+  Ly = res.spls$ly)
+
+dat.splsc %>%
+  ggplot(aes(Lx.1, Ly.1, color = color)) + 
+  geom_hline(yintercept = 0, color = "grey") +
+  geom_vline(xintercept = 0, color = "grey") +
+  geom_point(aes(shape = origin), size = 3) + 
+  scale_color_manual(values = winecolors) +
+  theme_minimal() + 
+  stat_ellipse(show.legend = FALSE) + 
+  labs(
+    x = "First sparse sensory dimension",
+    y = "First sparse chemical dimension")
+
+
+senso.lolli <- data.frame(
+  Var = colnames(senso),
+  Fi = res.spls$fi) %>%
+  ggplot(aes(x = Var, y = Fi.1)) +
+  geom_hline(color = "steelblue", yintercept = 0) +
+  geom_point(color = "steelblue") + 
+  geom_segment(aes(xend = Var, yend = Fi.1), y = 0, color = "steelblue") + 
+  theme_minimal() + 
+  labs(x = "", y = "Sensory pseudo\nfactor scores")
+
+
+chemi.lolli <- data.frame(
+  Var = colnames(chemi),
+  Fj = res.spls$fj) %>%
+  ggplot(aes(x = Var, y = Fj.1)) +
+  geom_hline(color = "steelblue", yintercept = 0) +
+  geom_point(color = "steelblue") + 
+  geom_segment(aes(xend = Var, yend = Fj.1), y = 0, color = "steelblue") + 
+  theme_minimal() + 
+  labs(x = "", y = "Chemical pseudo\nfactor scores")
+
+senso.lolli / 
+  chemi.lolli
+
+```
+
