@@ -243,9 +243,13 @@ window.Quarto = {
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <p>To install packages, you can use <code>pak</code>, a great package for easy and comprehensible package installation. First, install <code>pak</code> with the usual command</p>
-<pre><code>install.packages("pak")</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>The whole tutorial revolves around the use of two packages: <code>sGSVD</code> and <code>SPAFAC</code>. Install them with <code>pak</code>:</p>
-<pre><code>pak::pak(c("vguillemot/sGSVD", "juchiyu/SPAFAC"))</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="fu">c</span>(<span class="st">"vguillemot/sGSVD"</span>, <span class="st">"juchiyu/SPAFAC"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Depending on what is already installed on your machine, <code>pak</code> will detect what needs to be installed, and give you a summary.</p>
 <section id="other-useful-packages" class="level3">
 <h3 class="anchored" data-anchor-id="other-useful-packages">Other useful packages</h3>

@@ -174,6 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#links" id="toc-links" class="nav-link active" data-scroll-target="#links">Links</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#regular-pls-c" id="toc-regular-pls-c" class="nav-link" data-scroll-target="#regular-pls-c">Regular PLS-C</a></li>
+  <li><a href="#sparse-pls-c" id="toc-sparse-pls-c" class="nav-link" data-scroll-target="#sparse-pls-c">Sparse PLS-C</a></li>
   </ul>
 </nav>
     </div>
@@ -199,12 +200,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="cell">
-<details class="code-fold">
-<summary>Solution</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 <section id="links" class="level2">
 <h2 class="anchored" data-anchor-id="links">Links</h2>
 <ul>
@@ -215,14 +210,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <blockquote class="blockquote">
-<p><strong>Load the Wines dataset.</strong></p>
+<p><strong>Load the Wines dataset, and create two different blocks of data, one block containing only the “chemical” attributes (Acidity, Alcohol, Sugar, Tannin), and the other one containing only the sensory attributes (fruity, floral, vegetal, spicy, woody, sweet, astringent).</strong></p>
 </blockquote>
 <div class="cell">
 <details class="code-fold">
 <summary>Solution</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>wines <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"../data/wines.xlsx"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(wines)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>wines <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"../data/wines.xlsx"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>chemi <span class="ot">&lt;-</span> wines <span class="sc">%&gt;%</span> <span class="fu">select</span>(Acidity, Alcohol, Sugar, Tannin)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>senso <span class="ot">&lt;-</span> wines <span class="sc">%&gt;%</span> <span class="fu">select</span>(fruity, floral, vegetal, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>           spicy, woody, sweet, astringent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+</div>
+<p>The whole dataset is displayed below.</p>
+<div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
@@ -995,6 +995,91 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="regular-pls-c" class="level2">
 <h2 class="anchored" data-anchor-id="regular-pls-c">Regular PLS-C</h2>
+<p>The goal of PLS-C is to create components that are the most correlation to one another while summing up the information in each block.</p>
+<blockquote class="blockquote">
+<p><strong>Use the function <code>tepPLS</code> from package <code>TExPosition</code> to build a PLS-C model of the relationship between the sensory and chemical properties of the wines. Plot the first dimension of each block.</strong></p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Solution</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TExPosition)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>res.pls <span class="ot">&lt;-</span> <span class="fu">tepPLS</span>(senso, chemi, <span class="at">graph =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>dat.plsc <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  wines <span class="sc">%&gt;%</span> <span class="fu">select</span>(Wine, color),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lx =</span> res.pls<span class="sc">$</span>TExPosition.Data<span class="sc">$</span>lx,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ly =</span> res.pls<span class="sc">$</span>TExPosition.Data<span class="sc">$</span>ly)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>dat.plsc <span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Lx<span class="fl">.1</span>, Ly<span class="fl">.1</span>, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="splsc_files/figure-html/plsc-show-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sparse-pls-c" class="level2">
+<h2 class="anchored" data-anchor-id="sparse-pls-c">Sparse PLS-C</h2>
+<blockquote class="blockquote">
+<p><strong>Use the function <code>sparsePLSC</code> from package <code>SPAFAC</code> to build a sparse PLS-C model to explain the link between the sensory and chemical descriptors of the wines. Has the factor map map drastically changed? What are the main descriptors?</strong></p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Solution</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sGSVD)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SPAFAC)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>J1 <span class="ot">&lt;-</span> <span class="fu">ncol</span>(senso)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>J2 <span class="ot">&lt;-</span> <span class="fu">ncol</span>(chemi)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>res.spls <span class="ot">&lt;-</span> <span class="fu">sparsePLSC</span>(</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">X =</span> senso, <span class="co"># First block</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Y =</span> chemi, <span class="co"># Second block</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">components =</span> <span class="dv">2</span>L, <span class="co"># Number of dimensions</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">rdsLeft =</span> <span class="fl">0.6</span> <span class="sc">*</span> <span class="fu">sqrt</span>(J1) <span class="sc">*</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), <span class="co"># Medium sparsity</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">rdsRight =</span> <span class="fl">0.6</span> <span class="sc">*</span> <span class="fu">sqrt</span>(J2) <span class="sc">*</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>) <span class="co"># Medium sparsity</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>dat.splsc <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  wines <span class="sc">%&gt;%</span> <span class="fu">select</span>(Wine, color, origin),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lx =</span> res.spls<span class="sc">$</span>lx,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ly =</span> res.spls<span class="sc">$</span>ly)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>dat.splsc <span class="sc">%&gt;%</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Lx<span class="fl">.1</span>, Ly<span class="fl">.1</span>, <span class="at">color =</span> color)) <span class="sc">+</span> </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"First sparse sensory dimension"</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"First sparse chemical dimension"</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>res.spls<span class="sc">$</span>fi</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>res.spls<span class="sc">$</span>fj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="splsc_files/figure-html/splsc-show-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="splsc_files/figure-html/splsc-show-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>
