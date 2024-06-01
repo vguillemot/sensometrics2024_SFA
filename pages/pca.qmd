@@ -1,0 +1,255 @@
+---
+title: "PCA: Principal Components Analysis"
+format:
+    html:
+        code-fold: true
+        code-summary: solution
+---
+
+# Turkey Dataset Example
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(ggpubr)
+library(ggrepel)
+theme_set(theme_bw())
+#library(devEMF)
+#knitr::opts_chunk$set(echo = FALSE, dev = "emf", fig.ext = "emf")
+```
+
+## The dataset
+
+A trained sensory panel of 8 persons rated the same 8 turkey breast products
+from Mexico on 12 attributes. These panelists had been trained to identify and
+measure specific attributes of products. These attributes were rated on a 0 to 9
+10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid,
+umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds
+to a panelist and describes the 8 products (rows) by the 12 attributes
+(columns), with rows and columns organized in the same order across tables.
+
+> **Load the dataset**
+
+```{r load_data, echo=TRUE}
+library(readxl)
+turkey <- read_excel("../data/turkey.xlsx")
+head(turkey)
+```
+
+Formatted as it is, the dataset contains a lot of different variables, as each
+one corresponds to a combination of an attribute and a panelist. To analyze
+this, let us format this dataset in "long form": each line will correspond a
+combination of product and panelist (an "observation") and we will then have 12
+variables.
+
+> **Format the dataset in long form**
+
+```{r format, echo=TRUE}
+turkey %<>%
+    pivot_longer(cols=-Product,
+        names_to=c("tmp_var", "Panelist"),
+        names_pattern="(.*)\\.(.*)",
+        values_to="tmp_value") %>%
+    pivot_wider(names_from="tmp_var",
+        values_from="tmp_value")
+head(turkey)
+```
+
+## Principal Components Analysis
+
+### A small reminder
+
+PCA is a dimension reduction methods which like other dimension reductions, aims
+to find a space of smaller dimension that summarizes the dataset in an
+informative way. 
+
+More precisely, PCA is linear, which means it finds a linear combination of
+variables. For a dataset $\mathbf{X}$ containing $n$ samples (rows) and $p$
+variables (columns), and if we want a reduced space of dimension one (a line),
+this means finding weights $w_i$ such that $\mathbf{X}_{\cdot 1} w_1 + \ldots +
+\mathbf{X}_{\cdot p}w_p = \mathbf{Xw}$ contains information about the original
+dataset. If we wish to find a reduced space of dimension $r$ (an hyperplane), we
+can make the $\mathbf{w}\in\mathbb{R}^p$ vector a matrix
+$\mathbf{W}\in\mathbb{R}^{r\times p}$
+
+There are several ways to present how weights are determined in the PCA (see
+Vincent's presentation later), but the most common one is that PCA finds an
+hyperplane that maximizes the variance of the reduced space: for one dimension,
+the weights maximize $\mathrm{var}(\mathbf{Xw})$. For multiple dimensions, this
+is done iteratively, by "removing" the previously determined weights from the
+dataset (in technical terms it is done through an orthogonal projection). As an
+interesting last note, this is equivalent to computing the eigendecomposition of
+the variance-covariance matrix $\mathbf{X}^\top\mathbf{X}$
+
+## PCA of the Turkey dataset
+
+> **Compute the PCA of the dataset**
+
+```{r pca, echo = TRUE, message = FALSE}
+library(FactoMineR)
+library(factoextra)
+turkey.pca <- PCA(turkey[, -c(1, 2)], # the first 2 columns do not contain numerical data
+    scale.unit = TRUE,
+    graph = FALSE
+    ) 
+```
+
+> **Plot the scree plot of the PCA**
+
+```{r screeplot, echo = TRUE}
+# raw values are also accessible in turkey.pca$eig
+fviz_screeplot(turkey.pca, addlabels = TRUE)
+```
+
+The scree plot is a plot of the variance of the original dataset explained by
+each new dimension added. There is several methods to determine how many
+dimensions to keep from the scree plot, the most well known being the "elbow
+method": taking the inflection point or "elbow" of the scree plot as the number
+of dimensions to keep. Another method is to set a variance threshold (for
+instance 95%) and keeping the minimal number of dimensions that exceeds this
+threshold. Here, as we are concerned by visual representation, we will keep the
+first 3 dimensions.
+
+### Coordinates of the variable in the new space
+
+We can also plot the coordinates of the original variables in the new space, by
+plotting a correlation circle: a type of plot where each variable is drawn in
+the unit circle of the new, reduced variables. The closer the variables on this
+plot, the more correlated they are.
+
+> **Plot the corcircles of the first 3 dimensions**
+
+```{r corcircle12}
+fviz_pca_var(turkey.pca, repel = TRUE) # axes 1 and 2 by default
+fviz_pca_var(turkey.pca, axes = c(2, 3), repel = TRUE)
+```
+
+### Coordinates of the "individuals" in the new space
+
+> **Plot the position of the "individuals" (i.e. rows of the datasets) in the new reduced space**
+
+```{r plotind}
+p1 <- turkey.pca$ind$coord %>% # coordinates of the individuals
+    ggplot(aes(x=Dim.1, y=Dim.2)) +
+    geom_point()
+p2 <- turkey.pca$ind$coord %>%
+    ggplot(aes(x=Dim.2, y=Dim.3)) +
+    geom_point()
+ggarrange(p1, p2)
+```
+
+As each row corresponds to a product - panelist, these are hard to interpret and not really insightful.
+Let us color them by products and panelists.
+
+> **Color the plot by product and panelist**
+
+```{r plotcolor_old, echo = FALSE, eval = FALSE}
+p1 <- fviz_pca_ind(turkey.pca,
+    repel = TRUE,
+    geom = "point",
+    col.ind = turkey$Product,
+    addEllipses = TRUE,
+    ellipse.level = 0.95,
+    ellipse.type = "confidence",
+    mean.point = FALSE,
+    pointshape = 19) +
+    theme(text=element_text(size = 7))
+p2 <- fviz_pca_ind(turkey.pca, 
+    axes = c(2, 3),
+    repel = TRUE,
+    geom = "point",
+    col.ind = turkey$Product,
+    addEllipses = TRUE, 
+    ellipse.type = "confidence",
+    ellipse.level = 0.95,
+    mean.point = FALSE,
+    pointshape = 19) +
+    theme(text=element_text(size = 7))
+ggarrange(p1, p2, common.legend = TRUE, legend.position = "none")
+```
+
+```{r plotprod, fig.width = 7, fig.height = 5}
+p1 <- turkey.pca$ind$coord %>% # coordinates of the individuals
+    as.data.frame() %>%
+    mutate(Product = str_sub(turkey$Product, 17L, 28L)) %>% # cut for representation
+    ggscatter(x = "Dim.1", y = "Dim.2", color = "Product",
+        ellipse = TRUE, ellipse.type = "confidence") +
+    theme_bw()
+p2 <- turkey.pca$ind$coord %>% # coordinates of the individuals
+    as.data.frame() %>%
+    mutate(Product = str_sub(turkey$Product, 17L, 28L)) %>%
+    ggscatter(x = "Dim.2", y = "Dim.3", color = "Product",
+        ellipse = TRUE, ellipse.type = "confidence") +
+    theme_bw()
+ggarrange(p1, p2, common.legend = TRUE, legend = "bottom")
+```
+
+```{r plotpanel, fig.width = 7, fig.height = 5}
+p1 <- turkey.pca$ind$coord %>% # coordinates of the individuals
+    as.data.frame() %>%
+    mutate(Panelist = turkey$Panelist) %>%
+    ggscatter(x = "Dim.1", y = "Dim.2", color = "Panelist",
+        ellipse = TRUE, ellipse.type = "confidence") +
+    theme_bw()
+p2 <- turkey.pca$ind$coord %>% # coordinates of the individuals
+    as.data.frame() %>%
+    mutate(Panelist = turkey$Panelist) %>%
+    ggscatter(x = "Dim.2", y = "Dim.3", color = "Panelist",
+        ellipse = TRUE, ellipse.type = "confidence") +
+    theme_bw()
+ggarrange(p1, p2, common.legend = TRUE, legend = "bottom")
+```
+
+### Biplot
+
+We can also combine all this information on a single plot, a biplot.
+
+> **Draw the biplots associated to the previous plots**
+
+```{r biplotprod, echo = TRUE}
+Product2 <- str_sub(turkey$Product, 17L, 28L)
+p1 <- fviz_pca_biplot(turkey.pca,
+    repel = TRUE,
+    geom = "point",
+    col.ind = Product2,
+    addEllipses = TRUE,
+    ellipse.level = 0.95,
+    ellipse.type = "confidence",
+    mean.point = FALSE,
+    pointshape = 19)
+p1
+p2 <- fviz_pca_biplot(turkey.pca, 
+    axes = c(2, 3),
+    repel = TRUE,
+    geom = "point",
+    col.ind = Product2,
+    addEllipses = TRUE, 
+    ellipse.type = "confidence",
+    ellipse.level = 0.95,
+    mean.point = FALSE,
+    pointshape = 19)
+p2
+```
+
+```{r biplotpanel, echo = TRUE}
+p1 <- fviz_pca_biplot(turkey.pca,
+    repel = TRUE,
+    geom = "point",
+    col.ind = turkey$Panelist,
+    addEllipses = TRUE,
+    ellipse.level = 0.95,
+    ellipse.type = "confidence",
+    mean.point = FALSE,
+    pointshape = 19)
+p1
+p2 <- fviz_pca_biplot(turkey.pca, 
+    axes = c(2, 3),
+    repel = TRUE,
+    geom = "point",
+    col.ind = turkey$Panelist,
+    addEllipses = TRUE, 
+    ellipse.type = "confidence",
+    ellipse.level = 0.95,
+    mean.point = FALSE,
+    pointshape = 19)
+p2
+```

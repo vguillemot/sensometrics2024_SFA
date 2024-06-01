@@ -11,6 +11,8 @@ website:
       - href: pages/datasets.qmd
         text: Datasets
       - href: pages/csvd.qmd
+        text: PCA
+      - href: pages/pca.qmd
         text: CSVD
       - href: pages/spca.qmd
         text: Sparse PCA
