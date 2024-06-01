@@ -1,10 +1,91 @@
 ---
 title: "Sparse Principal Component Analysis"
+format:
+  html:
+    code-fold: true
+    code-summary: "Solution"
 ---
+
+```{r preambule}
+library(readxl)
+```
+
 
 ## Links
 
   * [Shared code](https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing)
-  * [Slides](../material/)
-  * [R Markdown](../material/)
-  * [Data](../data/)
+  * [Data](../data/beers.xlsx)
+  
+## Beers
+
+> **Load the Beers dataset.**
+
+
+```{r beers-solution, eval = FALSE}
+library(readxl)
+beers <- read_excel("beers.xlsx")
+```
+
+```{r beers-show, echo = FALSE}
+beers <- read_excel("../data/beers.xlsx")
+knitr::kable(beers)
+```
+
+The beers data has the following characteristics: 
+
+  * there are $I = `r nrow(beers)`$ products,
+  * there are $J = `r ncol(beers)-1`$ descriptors.
+
+## Regular PCA
+
+> **Run a PCA on the data and show the first two components.**
+
+```{r pca, message = FALSE}
+library(dplyr)
+library(FactoMineR)
+library(ggplot2)
+library(ggrepel)
+
+res.pca <- PCA(beers[, -1], graph = FALSE)
+
+dat.pca <- data.frame(
+  Beer = beers$Beer,
+  res.pca$ind$coord
+)
+
+dat.pca %>%
+  ggplot(aes(Dim.1, Dim.2)) +
+  geom_hline(yintercept = 0) + 
+  geom_vline(xintercept = 0) +
+  geom_point() + 
+  geom_text_repel(aes(label = Beer)) + 
+  labs(x = "PC1", y = "PC2") +
+  theme_bw()
+
+
+```
+
+## Sparse PCA
+
+> **Run a sparse PCA on the data by following these steps.**
+>
+>   1. **center the data,**
+>   2. **run a sparse SVD with 2 components, with no "left" sparsity ($\sqrt{I}$), and right sparsity equal to $0.5\sqrt{J}$,**
+>   3. **plot the components obtained by multiplying the data by the sparse singular vectors.**
+>
+> **What are the descriptors that are selected?**
+
+```{r sparse PCA, message = FALSE, warning = FALSE}
+library(sGSVD)
+
+I <- nrow(beers)
+J <- ncol(beers)
+
+centered.beers <- scale(beers[, -1])
+res.spca <- sparseSVD(X = centered.beers, k = 2L, rdsLeft = sqrt(I)*c(1, 1), rdsRight = 0.5*sqrt(J)*c(1, 1))
+
+# centered.beers %*% res.spca$v
+# res.spca$u
+```
+
+

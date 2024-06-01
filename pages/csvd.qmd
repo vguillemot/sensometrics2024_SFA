@@ -4,6 +4,7 @@ format:
   html:
     code-fold: true
     code-summary: "Solution"
+bibliography: refs.bib
 ---
 
 ```{r setup, include = FALSE}
@@ -30,7 +31,6 @@ group_colors <- c("A" = "#F8766D", "B" = "#00BA38", "C" = "#619CFF")
 
   * [Shared code](https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing)
   * [Slides](../material/)
-  * [R Markdown](../material/)
   * [Data](../data/simul.xlsx)
   
 Singular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce "sparsity" in SVD.
@@ -119,9 +119,10 @@ Principal Component Analysis is based on the Singular Value Decomposition of the
 $$
   \mathbf{X} = \mathbf{U}\mathbf{D}\mathbf{V}^\top
 $$
+
 [^2]: depending on how you want to do it, you would need to pre-process the data before applying the SVD
 
-> *Use the R function `svd` to decompose the data, and compare the result with what is given by your favorite PCA function.*
+> **Use the R function `svd` to decompose the data, and compare the result with what is given by your favorite PCA function.**
 
 ```{r svd-solution}
 I <- nrow(x)
