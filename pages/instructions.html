@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -167,7 +201,10 @@ window.Quarto = {
    
   <ul>
   <li><a href="#softwares" id="toc-softwares" class="nav-link active" data-scroll-target="#softwares">Softwares</a></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a>
+  <ul class="collapse">
+  <li><a href="#other-useful-packages" id="toc-other-useful-packages" class="nav-link" data-scroll-target="#other-useful-packages">Other useful packages</a></li>
+  </ul></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   </ul>
 </nav>
@@ -210,6 +247,22 @@ window.Quarto = {
 <p>The whole tutorial revolves around the use of two packages: <code>sGSVD</code> and <code>SPAFAC</code>. Install them with <code>pak</code>:</p>
 <pre><code>pak::pak(c("vguillemot/sGSVD", "juchiyu/SPAFAC"))</code></pre>
 <p>Depending on what is already installed on your machine, <code>pak</code> will detect what needs to be installed, and give you a summary.</p>
+<section id="other-useful-packages" class="level3">
+<h3 class="anchored" data-anchor-id="other-useful-packages">Other useful packages</h3>
+<blockquote class="blockquote">
+<p><strong>TL;DR – here is a one liner to install the packages detailed below.</strong></p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="fu">c</span>(<span class="st">"TExPosition"</span>, <span class="st">"factoextra"</span>, <span class="st">"FactoMineR"</span>, <span class="st">"tidyverse"</span>, <span class="st">"ggrepel"</span>, <span class="st">"pheatmap"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><code>TExPosition</code> for PLS-C, install with <code>pak::pak("TExPosition")</code></li>
+<li><code>FactoMineR</code> and <code>factoextra</code> for PCA, CA, MCA and much much more, install with <code>pak::pak(c("factoextra", "FactoMineR"))</code></li>
+<li><code>tidyverse</code> for plotting, data wrangling and so much more, install with <code>pak::pak("tidyverse")</code></li>
+<li><code>ggrepel</code> for adding labels to ggplots, install with <code>pak::pak("ggrepel")</code></li>
+<li><code>pheatmap</code> for nice heatmaps (but you might prefer <code>ComplexHeatmap</code>), install with <code>pak::pak("pheatmap")</code></li>
+</ul>
+</section>
 </section>
 <section id="requirements" class="level2">
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>

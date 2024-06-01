@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -67,6 +101,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -138,6 +201,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#links" id="toc-links" class="nav-link active" data-scroll-target="#links">Links</a></li>
+  <li><a href="#beers" id="toc-beers" class="nav-link" data-scroll-target="#beers">Beers</a></li>
+  <li><a href="#regular-pca" id="toc-regular-pca" class="nav-link" data-scroll-target="#regular-pca">Regular PCA</a></li>
+  <li><a href="#sparse-pca" id="toc-sparse-pca" class="nav-link" data-scroll-target="#sparse-pca">Sparse PCA</a></li>
   </ul>
 </nav>
     </div>
@@ -163,14 +229,231 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="cell">
+<details class="code-fold">
+<summary>Solution</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <section id="links" class="level2">
 <h2 class="anchored" data-anchor-id="links">Links</h2>
 <ul>
 <li><a href="https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing">Shared code</a></li>
-<li><a href="../material/">Slides</a></li>
-<li><a href="../material/">R Markdown</a></li>
-<li><a href="../data/">Data</a></li>
+<li><a href="../data/beers.xlsx">Data</a></li>
 </ul>
+</section>
+<section id="beers" class="level2">
+<h2 class="anchored" data-anchor-id="beers">Beers</h2>
+<blockquote class="blockquote">
+<p><strong>Load the Beers dataset.</strong></p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Solution</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>beers <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"beers.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Beer</th>
+<th style="text-align: right;">Bitter</th>
+<th style="text-align: right;">Acid</th>
+<th style="text-align: right;">Sweet</th>
+<th style="text-align: right;">Astringent</th>
+<th style="text-align: right;">Alcoholic</th>
+<th style="text-align: right;">Hop</th>
+<th style="text-align: right;">Cereal</th>
+<th style="text-align: right;">Toasted</th>
+<th style="text-align: right;">Yeast</th>
+<th style="text-align: right;">Hay</th>
+<th style="text-align: right;">Malt</th>
+<th style="text-align: right;">Fermented</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Bruxelles</td>
+<td style="text-align: right;">3.190103</td>
+<td style="text-align: right;">2.250000</td>
+<td style="text-align: right;">2.002791</td>
+<td style="text-align: right;">2.486309</td>
+<td style="text-align: right;">3.237597</td>
+<td style="text-align: right;">3.813985</td>
+<td style="text-align: right;">3.341958</td>
+<td style="text-align: right;">2.858587</td>
+<td style="text-align: right;">3.305860</td>
+<td style="text-align: right;">2.774995</td>
+<td style="text-align: right;">3.693717</td>
+<td style="text-align: right;">3.314378</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FranzDunkel</td>
+<td style="text-align: right;">3.898867</td>
+<td style="text-align: right;">2.116649</td>
+<td style="text-align: right;">2.690365</td>
+<td style="text-align: right;">3.419777</td>
+<td style="text-align: right;">4.316269</td>
+<td style="text-align: right;">4.480046</td>
+<td style="text-align: right;">3.718364</td>
+<td style="text-align: right;">2.958749</td>
+<td style="text-align: right;">3.419777</td>
+<td style="text-align: right;">2.970115</td>
+<td style="text-align: right;">3.685813</td>
+<td style="text-align: right;">3.505336</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FranzNatur</td>
+<td style="text-align: right;">4.277778</td>
+<td style="text-align: right;">2.075397</td>
+<td style="text-align: right;">3.085289</td>
+<td style="text-align: right;">3.426917</td>
+<td style="text-align: right;">4.407831</td>
+<td style="text-align: right;">4.536122</td>
+<td style="text-align: right;">4.138244</td>
+<td style="text-align: right;">3.895192</td>
+<td style="text-align: right;">3.496122</td>
+<td style="text-align: right;">3.261656</td>
+<td style="text-align: right;">3.940780</td>
+<td style="text-align: right;">2.805860</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hofbrau</td>
+<td style="text-align: right;">4.399007</td>
+<td style="text-align: right;">3.087549</td>
+<td style="text-align: right;">0.000000</td>
+<td style="text-align: right;">3.158053</td>
+<td style="text-align: right;">3.984467</td>
+<td style="text-align: right;">4.674603</td>
+<td style="text-align: right;">3.706632</td>
+<td style="text-align: right;">3.395192</td>
+<td style="text-align: right;">3.630654</td>
+<td style="text-align: right;">3.616398</td>
+<td style="text-align: right;">4.023809</td>
+<td style="text-align: right;">3.731262</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Paulaner</td>
+<td style="text-align: right;">3.697283</td>
+<td style="text-align: right;">2.404388</td>
+<td style="text-align: right;">1.028142</td>
+<td style="text-align: right;">3.326382</td>
+<td style="text-align: right;">3.910490</td>
+<td style="text-align: right;">4.749270</td>
+<td style="text-align: right;">3.786054</td>
+<td style="text-align: right;">3.144253</td>
+<td style="text-align: right;">3.444692</td>
+<td style="text-align: right;">3.278671</td>
+<td style="text-align: right;">3.792303</td>
+<td style="text-align: right;">3.281101</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BlueMoon</td>
+<td style="text-align: right;">3.200000</td>
+<td style="text-align: right;">3.300000</td>
+<td style="text-align: right;">4.600000</td>
+<td style="text-align: right;">3.300000</td>
+<td style="text-align: right;">5.200000</td>
+<td style="text-align: right;">5.200000</td>
+<td style="text-align: right;">2.500000</td>
+<td style="text-align: right;">2.500000</td>
+<td style="text-align: right;">2.100000</td>
+<td style="text-align: right;">2.900000</td>
+<td style="text-align: right;">4.200000</td>
+<td style="text-align: right;">4.100000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The beers data has the following characteristics:</p>
+<ul>
+<li>there are <span class="math inline">\(I = 6\)</span> products,</li>
+<li>there are <span class="math inline">\(J = 12\)</span> descriptors.</li>
+</ul>
+</section>
+<section id="regular-pca" class="level2">
+<h2 class="anchored" data-anchor-id="regular-pca">Regular PCA</h2>
+<blockquote class="blockquote">
+<p><strong>Run a PCA on the data and show the first two components.</strong></p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Solution</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(FactoMineR)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>res.pca <span class="ot">&lt;-</span> <span class="fu">PCA</span>(beers[, <span class="sc">-</span><span class="dv">1</span>], <span class="at">graph =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>dat.pca <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Beer =</span> beers<span class="sc">$</span>Beer,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  res.pca<span class="sc">$</span>ind<span class="sc">$</span>coord</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>dat.pca <span class="sc">%&gt;%</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Dim<span class="fl">.1</span>, Dim<span class="fl">.2</span>)) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>) <span class="sc">+</span> </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> Beer)) <span class="sc">+</span> </span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"PC1"</span>, <span class="at">y =</span> <span class="st">"PC2"</span>) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="spca_files/figure-html/pca-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sparse-pca" class="level2">
+<h2 class="anchored" data-anchor-id="sparse-pca">Sparse PCA</h2>
+<blockquote class="blockquote">
+<p><strong>Run a sparse PCA on the data by following these steps.</strong></p>
+<ol type="1">
+<li><strong>center the data,</strong></li>
+<li><strong>run a sparse SVD with 2 components, with no “left” sparsity (<span class="math inline">\(\sqrt{I}\)</span>), and right sparsity equal to <span class="math inline">\(0.5\sqrt{J}\)</span>,</strong></li>
+<li><strong>plot the components obtained by multiplying the data by the sparse singular vectors.</strong></li>
+</ol>
+<p><strong>What are the descriptors that are selected?</strong></p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Solution</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sGSVD)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>I <span class="ot">&lt;-</span> <span class="fu">nrow</span>(beers)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>J <span class="ot">&lt;-</span> <span class="fu">ncol</span>(beers)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>centered.beers <span class="ot">&lt;-</span> <span class="fu">scale</span>(beers[, <span class="sc">-</span><span class="dv">1</span>])</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>res.spca <span class="ot">&lt;-</span> <span class="fu">sparseSVD</span>(<span class="at">X =</span> centered.beers, <span class="at">k =</span> <span class="dv">2</span>L, <span class="at">rdsLeft =</span> <span class="fu">sqrt</span>(I)<span class="sc">*</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), <span class="at">rdsRight =</span> <span class="fl">0.5</span><span class="sc">*</span><span class="fu">sqrt</span>(J)<span class="sc">*</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># centered.beers %*% res.spca$v</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># res.spca$u</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 
 </section>

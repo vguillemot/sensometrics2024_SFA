@@ -200,14 +200,35 @@
     "href": "pages/sca.html",
     "title": "Sparse Correspondence Analysis",
     "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "text": "Solution\nlibrary(readxl)"
   },
   {
     "objectID": "pages/sca.html#links",
     "href": "pages/sca.html#links",
     "title": "Sparse Correspondence Analysis",
-    "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "section": "Links",
+    "text": "Links\n\nShared code\nData"
+  },
+  {
+    "objectID": "pages/sca.html#salad-and-tv",
+    "href": "pages/sca.html#salad-and-tv",
+    "title": "Sparse Correspondence Analysis",
+    "section": "Salad and TV",
+    "text": "Salad and TV\n\nLoad the “salad and TV” dataset.\n\n\n\nSolution\ntv &lt;- read_excel(\"../data/salad_and_tv.xlsx\")\nknitr::kable(tv)\n\n\n\n\n\nHoursTV\nRarely\nSometimes\nOften\nEveryDay\n\n\n\n\n(0,1]\n337\n271\n83\n43\n\n\n(1,2]\n408\n331\n123\n75\n\n\n(2,3]\n283\n268\n116\n79\n\n\n(3,4]\n182\n194\n64\n51\n\n\n(4,5]\n104\n109\n36\n30\n\n\n(5,10]\n124\n102\n28\n46\n\n\n\n\n\nSolution\n## Make it into a matrix\ntvmat &lt;- as.matrix(tv[, -1])\nrownames(tvmat) &lt;- tv$HoursTV\n\n\n\nthe first column shows how many hours of TV the respondent watches (split into intervals),\nthe other column names are the frequency of “salad consumption” in the household,\nthe data is a contingency table, meaning that each cell is a count."
+  },
+  {
+    "objectID": "pages/sca.html#regular-ca",
+    "href": "pages/sca.html#regular-ca",
+    "title": "Sparse Correspondence Analysis",
+    "section": "Regular CA",
+    "text": "Regular CA\n\nRun a regular CA.\n\n\n\nSolution\nlibrary(FactoMineR)\nres.ca &lt;- CA(tvmat)"
+  },
+  {
+    "objectID": "pages/sca.html#sparse-ca",
+    "href": "pages/sca.html#sparse-ca",
+    "title": "Sparse Correspondence Analysis",
+    "section": "Sparse CA",
+    "text": "Sparse CA\n\nUse the function sparseCA from the package SPAFAC to run a sparse CA.\n\n\n\nSolution\nlibrary(sGSVD)\nlibrary(SPAFAC)\n\nI &lt;- nrow(tv)\nJ &lt;- ncol(tv) - 1\nres.sca &lt;- sparseCA(\n  DATA = tvmat,\n  components = 3L,\n  rdsLeft = 0.5 * sqrt(I) * c(1, 1, 1),\n  rdsRight = 0.6 * sqrt(J) * c(1, 1, 1)\n  )\n\nknitr::kable(data.frame(Fi = res.sca$fi))\n\n\n\n\n\n\nFi.1\nFi.2\nFi.3\n\n\n\n\n(0,1]\n-0.1485171\n-0.0048933\n-0.0007687\n\n\n(1,2]\n0.0000000\n0.0000000\n0.0000000\n\n\n(2,3]\n0.0000000\n0.0918728\n-0.0006014\n\n\n(3,4]\n0.0000000\n0.0000000\n0.0545455\n\n\n(4,5]\n0.0000000\n0.0000000\n0.0000000\n\n\n(5,10]\n0.0622467\n-0.0285650\n-0.0044875\n\n\n\n\n\nSolution\nknitr::kable(data.frame(Fj = res.sca$fj))\n\n\n\n\n\n\nFj.1\nFj.2\nFj.3\n\n\n\n\nRarely\n-0.0248080\n-0.0118642\n-0.0303188\n\n\nSometimes\n0.0000000\n0.0000000\n0.0000000\n\n\nOften\n0.0000000\n0.1187506\n-0.0101999\n\n\nEveryDay\n0.2254452\n-0.0057943\n-0.0148073"
   },
   {
     "objectID": "pages/instructions.html",
@@ -228,7 +249,7 @@
     "href": "pages/instructions.html#packages",
     "title": "Pre-tutorial instructions",
     "section": "Packages",
-    "text": "Packages\nTo install packages, you can use pak, a great package for easy and comprehensible package installation. First, install pak with the usual command\ninstall.packages(\"pak\")\nThe whole tutorial revolves around the use of two packages: sGSVD and SPAFAC. Install them with pak:\npak::pak(c(\"vguillemot/sGSVD\", \"juchiyu/SPAFAC\"))\nDepending on what is already installed on your machine, pak will detect what needs to be installed, and give you a summary."
+    "text": "Packages\nTo install packages, you can use pak, a great package for easy and comprehensible package installation. First, install pak with the usual command\ninstall.packages(\"pak\")\nThe whole tutorial revolves around the use of two packages: sGSVD and SPAFAC. Install them with pak:\npak::pak(c(\"vguillemot/sGSVD\", \"juchiyu/SPAFAC\"))\nDepending on what is already installed on your machine, pak will detect what needs to be installed, and give you a summary.\n\nOther useful packages\n\nTL;DR – here is a one liner to install the packages detailed below.\n\n\npak::pak(c(\"TExPosition\", \"factoextra\", \"FactoMineR\", \"tidyverse\", \"ggrepel\", \"pheatmap\"))\n\n\nTExPosition for PLS-C, install with pak::pak(\"TExPosition\")\nFactoMineR and factoextra for PCA, CA, MCA and much much more, install with pak::pak(c(\"factoextra\", \"FactoMineR\"))\ntidyverse for plotting, data wrangling and so much more, install with pak::pak(\"tidyverse\")\nggrepel for adding labels to ggplots, install with pak::pak(\"ggrepel\")\npheatmap for nice heatmaps (but you might prefer ComplexHeatmap), install with pak::pak(\"pheatmap\")"
   },
   {
     "objectID": "pages/instructions.html#requirements",
@@ -242,14 +263,14 @@
     "href": "pages/csvd.html",
     "title": "Sparse (generalized) SVD",
     "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
+    "text": "Shared code\nSlides\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
   },
   {
     "objectID": "pages/csvd.html#links",
     "href": "pages/csvd.html#links",
     "title": "Sparse (generalized) SVD",
     "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
+    "text": "Shared code\nSlides\nData\n\nSingular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD."
   },
   {
     "objectID": "pages/csvd.html#data",
@@ -263,7 +284,7 @@
     "href": "pages/csvd.html#svd",
     "title": "Sparse (generalized) SVD",
     "section": "SVD",
-    "text": "SVD\nPrincipal Component Analysis is based on the Singular Value Decomposition of the data[^2]. In a nutshell, the data matrix \\(\\mathbf{X}\\) is decomposed by the SVD in a product of three matrices:\n\\[\n  \\mathbf{X} = \\mathbf{U}\\mathbf{D}\\mathbf{V}^\\top\n\\] [^2]: depending on how you want to do it, you would need to pre-process the data before applying the SVD\n\nUse the R function svd to decompose the data, and compare the result with what is given by your favorite PCA function.\n\n\n\nSolution\nI &lt;- nrow(x)\nJ &lt;- ncol(x)\ncentered.x &lt;- scale(x[, -1], center = TRUE, scale = FALSE)\nstd.x &lt;- sqrt(1/I * colSums(centered.x ** 2))\nscaled.x &lt;- 1/sqrt(I) * centered.x %*% diag(1 / std.x)\n\nres.svd &lt;- svd(scaled.x)\npc &lt;- sqrt(I) * scaled.x %*% res.svd$v\n  \n## Compare eigenvalues\ndata.frame(PCA = res.pca$eig[, 1], SVD = res.svd$d ** 2)\n\n\n              PCA        SVD\ncomp 1 4.90980404 4.90980404\ncomp 2 2.59360190 2.59360190\ncomp 3 0.13915410 0.13915410\ncomp 4 0.11966049 0.11966049\ncomp 5 0.10452009 0.10452009\ncomp 6 0.06607284 0.06607284\ncomp 7 0.03945514 0.03945514\ncomp 8 0.02773141 0.02773141\n\n\nSolution\n## Compare PC1 and PC2\ndata.frame(\n  PC1fromPCA = res.pca$ind$coord[, 1], \n  PC1fromSVD = pc[, 1],\n  U1 = res.svd$u[, 1],\n  PC2fromPCA = res.pca$ind$coord[, 2],\n  PC2fromSVD = pc[, 2],\n  U2 = res.svd$u[, 2]\n  )\n\n\n    PC1fromPCA  PC1fromSVD           U1 PC2fromPCA PC2fromSVD          U2\n1   3.47946475 -3.47946475 -0.286694746 -0.6705783 -0.6705783 -0.07602164\n2   4.88977226 -4.88977226 -0.402898755 -1.5754272 -1.5754272 -0.17860189\n3   1.48440106 -1.48440106 -0.122309038  0.5422259  0.5422259  0.06147068\n4   3.50043608 -3.50043608 -0.288422705  1.5087231  1.5087231  0.17103983\n5   1.76562377 -1.76562377 -0.145480726  0.8595458  0.8595458  0.09744436\n6   1.06242167 -1.06242167 -0.087539530  0.2831030  0.2831030  0.03209461\n7   2.50198189 -2.50198189 -0.206153852  2.1182903  2.1182903  0.24014481\n8   1.16813816 -1.16813816 -0.096250170  0.7419130  0.7419130  0.08410866\n9   2.07356156 -2.07356156 -0.170853636 -0.1642815 -0.1642815 -0.01862415\n10  3.58444405 -3.58444405 -0.295344643 -0.1421849 -0.1421849 -0.01611911\n11 -0.82141771  0.82141771  0.067681715 -0.2266340 -0.2266340 -0.02569288\n12 -2.18664270  2.18664270  0.180171095  2.0535301  2.0535301  0.23280311\n13 -2.93653013  2.93653013  0.241958986 -0.5464232 -0.5464232 -0.06194651\n14 -0.66375621  0.66375621  0.054691003  0.4814394  0.4814394  0.05457948\n15 -1.03245476  1.03245476  0.085070370  3.7299821  3.7299821  0.42285792\n16 -3.83911355  3.83911355  0.316328448  0.6018542  0.6018542  0.06823057\n17 -1.89011572  1.89011572  0.155738392 -0.2835366 -0.2835366 -0.03214377\n18 -2.64446092  2.64446092  0.217893586  1.3511569  1.3511569  0.15317698\n19 -0.62038416  0.62038416  0.051117310  3.5310557  3.5310557  0.40030617\n20 -1.91970878  1.91970878  0.158176748  1.4196341  1.4196341  0.16094006\n21 -2.50957431  2.50957431  0.206779439 -1.8670968 -1.8670968 -0.21166768\n22 -0.65544577  0.65544577  0.054006254 -1.3526894 -1.3526894 -0.15335071\n23 -1.11333699  1.11333699  0.091734761  0.1471727  0.1471727  0.01668457\n24  1.66564984 -1.66564984 -0.137243252 -0.8196610 -0.8196610 -0.09292274\n25 -1.13869274  1.13869274  0.093823978 -2.2951426 -2.2951426 -0.26019407\n26  0.01909334 -0.01909334 -0.001573219 -2.3909485 -2.3909485 -0.27105532\n27 -2.69802677  2.69802677  0.222307210 -2.4531381 -2.4531381 -0.27810558\n28  0.06616711 -0.06616711 -0.005451920 -2.3093735 -2.3093735 -0.26180739\n29 -1.58897654  1.58897654  0.130925662 -1.2139548 -1.2139548 -0.13762275\n30  0.99748221 -0.99748221 -0.082188764 -1.0585559 -1.0585559 -0.12000560\n\n\nDepending on which function we use, the pre-processing steps to apply on the data before SVD, and the post-processing steps to obtain the principal components will slightly differ.\nWe now also have the opportunity to compare \\(\\mathbf{U}\\) to the principal coordinates (do it, just for fun, as homework)."
+    "text": "SVD\nPrincipal Component Analysis is based on the Singular Value Decomposition of the data2. In a nutshell, the data matrix \\(\\mathbf{X}\\) is decomposed by the SVD in a product of three matrices:\n\\[\n  \\mathbf{X} = \\mathbf{U}\\mathbf{D}\\mathbf{V}^\\top\n\\]\n\nUse the R function svd to decompose the data, and compare the result with what is given by your favorite PCA function.\n\n\n\nSolution\nI &lt;- nrow(x)\nJ &lt;- ncol(x)\ncentered.x &lt;- scale(x[, -1], center = TRUE, scale = FALSE)\nstd.x &lt;- sqrt(1/I * colSums(centered.x ** 2))\nscaled.x &lt;- 1/sqrt(I) * centered.x %*% diag(1 / std.x)\n\nres.svd &lt;- svd(scaled.x)\npc &lt;- sqrt(I) * scaled.x %*% res.svd$v\n  \n## Compare eigenvalues\ndata.frame(PCA = res.pca$eig[, 1], SVD = res.svd$d ** 2)\n\n\n              PCA        SVD\ncomp 1 4.90980404 4.90980404\ncomp 2 2.59360190 2.59360190\ncomp 3 0.13915410 0.13915410\ncomp 4 0.11966049 0.11966049\ncomp 5 0.10452009 0.10452009\ncomp 6 0.06607284 0.06607284\ncomp 7 0.03945514 0.03945514\ncomp 8 0.02773141 0.02773141\n\n\nSolution\n## Compare PC1 and PC2\ndata.frame(\n  PC1fromPCA = res.pca$ind$coord[, 1], \n  PC1fromSVD = pc[, 1],\n  U1 = res.svd$u[, 1],\n  PC2fromPCA = res.pca$ind$coord[, 2],\n  PC2fromSVD = pc[, 2],\n  U2 = res.svd$u[, 2]\n  )\n\n\n    PC1fromPCA  PC1fromSVD           U1 PC2fromPCA PC2fromSVD          U2\n1   3.47946475 -3.47946475 -0.286694746 -0.6705783 -0.6705783 -0.07602164\n2   4.88977226 -4.88977226 -0.402898755 -1.5754272 -1.5754272 -0.17860189\n3   1.48440106 -1.48440106 -0.122309038  0.5422259  0.5422259  0.06147068\n4   3.50043608 -3.50043608 -0.288422705  1.5087231  1.5087231  0.17103983\n5   1.76562377 -1.76562377 -0.145480726  0.8595458  0.8595458  0.09744436\n6   1.06242167 -1.06242167 -0.087539530  0.2831030  0.2831030  0.03209461\n7   2.50198189 -2.50198189 -0.206153852  2.1182903  2.1182903  0.24014481\n8   1.16813816 -1.16813816 -0.096250170  0.7419130  0.7419130  0.08410866\n9   2.07356156 -2.07356156 -0.170853636 -0.1642815 -0.1642815 -0.01862415\n10  3.58444405 -3.58444405 -0.295344643 -0.1421849 -0.1421849 -0.01611911\n11 -0.82141771  0.82141771  0.067681715 -0.2266340 -0.2266340 -0.02569288\n12 -2.18664270  2.18664270  0.180171095  2.0535301  2.0535301  0.23280311\n13 -2.93653013  2.93653013  0.241958986 -0.5464232 -0.5464232 -0.06194651\n14 -0.66375621  0.66375621  0.054691003  0.4814394  0.4814394  0.05457948\n15 -1.03245476  1.03245476  0.085070370  3.7299821  3.7299821  0.42285792\n16 -3.83911355  3.83911355  0.316328448  0.6018542  0.6018542  0.06823057\n17 -1.89011572  1.89011572  0.155738392 -0.2835366 -0.2835366 -0.03214377\n18 -2.64446092  2.64446092  0.217893586  1.3511569  1.3511569  0.15317698\n19 -0.62038416  0.62038416  0.051117310  3.5310557  3.5310557  0.40030617\n20 -1.91970878  1.91970878  0.158176748  1.4196341  1.4196341  0.16094006\n21 -2.50957431  2.50957431  0.206779439 -1.8670968 -1.8670968 -0.21166768\n22 -0.65544577  0.65544577  0.054006254 -1.3526894 -1.3526894 -0.15335071\n23 -1.11333699  1.11333699  0.091734761  0.1471727  0.1471727  0.01668457\n24  1.66564984 -1.66564984 -0.137243252 -0.8196610 -0.8196610 -0.09292274\n25 -1.13869274  1.13869274  0.093823978 -2.2951426 -2.2951426 -0.26019407\n26  0.01909334 -0.01909334 -0.001573219 -2.3909485 -2.3909485 -0.27105532\n27 -2.69802677  2.69802677  0.222307210 -2.4531381 -2.4531381 -0.27810558\n28  0.06616711 -0.06616711 -0.005451920 -2.3093735 -2.3093735 -0.26180739\n29 -1.58897654  1.58897654  0.130925662 -1.2139548 -1.2139548 -0.13762275\n30  0.99748221 -0.99748221 -0.082188764 -1.0585559 -1.0585559 -0.12000560\n\n\nDepending on which function we use, the pre-processing steps to apply on the data before SVD, and the post-processing steps to obtain the principal components will slightly differ.\nWe now also have the opportunity to compare \\(\\mathbf{U}\\) to the principal coordinates (do it, just for fun, as homework)."
   },
   {
     "objectID": "pages/csvd.html#constrained-svd",
@@ -277,7 +298,7 @@
     "href": "pages/csvd.html#footnotes",
     "title": "Sparse (generalized) SVD",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nI used pheatmap for simplicity in the solution, but ComplexHeatmap to create the actual heatmap.↩︎"
+    "text": "Footnotes\n\n\nI used pheatmap for simplicity in the solution, but ComplexHeatmap to create the actual heatmap.↩︎\ndepending on how you want to do it, you would need to pre-process the data before applying the SVD↩︎"
   },
   {
     "objectID": "index.html",
@@ -319,28 +340,63 @@
     "href": "pages/spca.html",
     "title": "Sparse Principal Component Analysis",
     "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "text": "Solution\nlibrary(readxl)"
   },
   {
     "objectID": "pages/spca.html#links",
     "href": "pages/spca.html#links",
     "title": "Sparse Principal Component Analysis",
-    "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "section": "Links",
+    "text": "Links\n\nShared code\nData"
+  },
+  {
+    "objectID": "pages/spca.html#beers",
+    "href": "pages/spca.html#beers",
+    "title": "Sparse Principal Component Analysis",
+    "section": "Beers",
+    "text": "Beers\n\nLoad the Beers dataset.\n\n\n\nSolution\nlibrary(readxl)\nbeers &lt;- read_excel(\"beers.xlsx\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeer\nBitter\nAcid\nSweet\nAstringent\nAlcoholic\nHop\nCereal\nToasted\nYeast\nHay\nMalt\nFermented\n\n\n\n\nBruxelles\n3.190103\n2.250000\n2.002791\n2.486309\n3.237597\n3.813985\n3.341958\n2.858587\n3.305860\n2.774995\n3.693717\n3.314378\n\n\nFranzDunkel\n3.898867\n2.116649\n2.690365\n3.419777\n4.316269\n4.480046\n3.718364\n2.958749\n3.419777\n2.970115\n3.685813\n3.505336\n\n\nFranzNatur\n4.277778\n2.075397\n3.085289\n3.426917\n4.407831\n4.536122\n4.138244\n3.895192\n3.496122\n3.261656\n3.940780\n2.805860\n\n\nHofbrau\n4.399007\n3.087549\n0.000000\n3.158053\n3.984467\n4.674603\n3.706632\n3.395192\n3.630654\n3.616398\n4.023809\n3.731262\n\n\nPaulaner\n3.697283\n2.404388\n1.028142\n3.326382\n3.910490\n4.749270\n3.786054\n3.144253\n3.444692\n3.278671\n3.792303\n3.281101\n\n\nBlueMoon\n3.200000\n3.300000\n4.600000\n3.300000\n5.200000\n5.200000\n2.500000\n2.500000\n2.100000\n2.900000\n4.200000\n4.100000\n\n\n\n\n\nThe beers data has the following characteristics:\n\nthere are \\(I = 6\\) products,\nthere are \\(J = 12\\) descriptors."
+  },
+  {
+    "objectID": "pages/spca.html#regular-pca",
+    "href": "pages/spca.html#regular-pca",
+    "title": "Sparse Principal Component Analysis",
+    "section": "Regular PCA",
+    "text": "Regular PCA\n\nRun a PCA on the data and show the first two components.\n\n\n\nSolution\nlibrary(dplyr)\nlibrary(FactoMineR)\nlibrary(ggplot2)\nlibrary(ggrepel)\n\nres.pca &lt;- PCA(beers[, -1], graph = FALSE)\n\ndat.pca &lt;- data.frame(\n  Beer = beers$Beer,\n  res.pca$ind$coord\n)\n\ndat.pca %&gt;%\n  ggplot(aes(Dim.1, Dim.2)) +\n  geom_hline(yintercept = 0) + \n  geom_vline(xintercept = 0) +\n  geom_point() + \n  geom_text_repel(aes(label = Beer)) + \n  labs(x = \"PC1\", y = \"PC2\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "pages/spca.html#sparse-pca",
+    "href": "pages/spca.html#sparse-pca",
+    "title": "Sparse Principal Component Analysis",
+    "section": "Sparse PCA",
+    "text": "Sparse PCA\n\nRun a sparse PCA on the data by following these steps.\n\ncenter the data,\nrun a sparse SVD with 2 components, with no “left” sparsity (\\(\\sqrt{I}\\)), and right sparsity equal to \\(0.5\\sqrt{J}\\),\nplot the components obtained by multiplying the data by the sparse singular vectors.\n\nWhat are the descriptors that are selected?\n\n\n\nSolution\nlibrary(sGSVD)\n\nI &lt;- nrow(beers)\nJ &lt;- ncol(beers)\n\ncentered.beers &lt;- scale(beers[, -1])\nres.spca &lt;- sparseSVD(X = centered.beers, k = 2L, rdsLeft = sqrt(I)*c(1, 1), rdsRight = 0.5*sqrt(J)*c(1, 1))\n\n# centered.beers %*% res.spca$v\n# res.spca$u"
   },
   {
     "objectID": "pages/splsc.html",
     "href": "pages/splsc.html",
     "title": "Sparse PLS (Correlation)",
     "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "text": "Solution\nlibrary(readxl)"
   },
   {
     "objectID": "pages/splsc.html#links",
     "href": "pages/splsc.html#links",
     "title": "Sparse PLS (Correlation)",
-    "section": "",
-    "text": "Shared code\nSlides\nR Markdown\nData"
+    "section": "Links",
+    "text": "Links\n\nShared code\nData"
+  },
+  {
+    "objectID": "pages/splsc.html#data",
+    "href": "pages/splsc.html#data",
+    "title": "Sparse PLS (Correlation)",
+    "section": "Data",
+    "text": "Data\n\nLoad the Wines dataset.\n\n\n\nSolution\nwines &lt;- read_excel(\"../data/wines.xlsx\")\nknitr::kable(wines)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWine\norigin\ncolor\nvarietal\nPrice\nAcidity\nAlcohol\nSugar\nTannin\nfruity\nfloral\nvegetal\nspicy\nwoody\nsweet\nastringent\nacidic\nhedonic\n\n\n\n\nA1\nArgentina\nred\nmerlot\n11\n5.33\n13.8\n2.75\n559\n6\n2\n1\n4\n5\n3\n5\n4\n2\n\n\nA2\nArgentina\nred\ncabernet\n5\n5.14\n13.9\n2.41\n672\n5\n3\n2\n3\n4\n2\n6\n3\n2\n\n\nA3\nArgentina\nred\nshiraz\n7\n5.16\n14.3\n2.20\n455\n7\n1\n2\n6\n5\n3\n4\n2\n2\n\n\nA4\nArgentina\nred\npinot\n16\n4.37\n13.5\n3.00\n348\n5\n3\n2\n2\n4\n1\n3\n4\n4\n\n\nA5\nArgentina\nwhite\nchardonnay\n14\n4.34\n13.3\n2.61\n46\n5\n4\n1\n3\n4\n2\n1\n4\n6\n\n\nA6\nArgentina\nwhite\nsauvignon\n8\n6.60\n13.3\n3.17\n54\n7\n5\n6\n1\n1\n4\n1\n5\n8\n\n\nA7\nArgentina\nwhite\nriesling\n9\n7.70\n12.3\n2.15\n42\n6\n7\n2\n2\n2\n3\n1\n6\n9\n\n\nA8\nArgentina\nwhite\ngewurzt\n11\n6.70\n12.5\n2.51\n51\n5\n8\n2\n1\n1\n4\n1\n4\n9\n\n\nA9\nArgentina\nrose\nmalbec\n4\n6.50\n13.0\n7.24\n84\n8\n4\n3\n2\n2\n6\n2\n3\n8\n\n\nA10\nArgentina\nrose\ncabernet\n3\n4.39\n12.0\n4.50\n90\n6\n3\n2\n1\n1\n5\n2\n3\n8\n\n\nA11\nArgentina\nrose\npinot\n6\n4.89\n12.0\n6.37\n76\n7\n2\n1\n1\n1\n4\n1\n4\n9\n\n\nA12\nArgentina\nrose\nsyrah\n5\n5.90\n13.5\n4.20\n80\n8\n4\n1\n3\n2\n5\n2\n3\n7\n\n\nC1\nCanada\nred\nmerlot\n20\n7.42\n14.9\n2.10\n483\n5\n3\n2\n3\n4\n3\n4\n4\n3\n\n\nC2\nCanada\nred\ncabernet\n15\n7.35\n14.5\n1.90\n698\n6\n3\n2\n2\n5\n2\n5\n4\n2\n\n\nC3\nCanada\nred\nshiraz\n20\n7.50\n14.5\n1.50\n413\n6\n2\n3\n4\n3\n3\n5\n1\n2\n\n\nC4\nCanada\nred\npinot\n25\n5.70\n13.3\n1.70\n320\n4\n2\n3\n1\n3\n2\n4\n4\n4\n\n\nC5\nCanada\nwhite\nchardonnay\n20\n6.00\n13.5\n3.00\n35\n4\n3\n2\n1\n3\n2\n2\n3\n5\n\n\nC6\nCanada\nwhite\nsauvignon\n15\n7.50\n12.0\n3.50\n40\n8\n4\n3\n2\n1\n3\n1\n4\n8\n\n\nC7\nCanada\nwhite\nriesling\n15\n7.00\n11.9\n3.40\n48\n7\n5\n1\n1\n3\n3\n1\n7\n8\n\n\nC8\nCanada\nwhite\ngewurzt\n18\n6.30\n13.9\n2.80\n39\n6\n5\n2\n2\n2\n3\n2\n5\n6\n\n\nC9\nCanada\nrose\nmalbec\n8\n5.90\n12.0\n5.50\n90\n6\n3\n3\n3\n2\n4\n2\n4\n8\n\n\nC10\nCanada\nrose\ncabernet\n6\n5.60\n12.5\n4.00\n85\n5\n4\n1\n3\n2\n4\n2\n4\n7\n\n\nC11\nCanada\nrose\npinot\n9\n6.20\n13.0\n6.00\n75\n5\n3\n2\n1\n2\n3\n2\n3\n7\n\n\nC12\nCanada\nrose\nsyrah\n9\n5.80\n13.0\n3.50\n83\n7\n3\n2\n3\n3\n4\n1\n4\n7\n\n\nU1\nUSA\nred\nmerlot\n25\n6.00\n13.6\n3.50\n578\n7\n2\n2\n5\n6\n3\n4\n3\n2\n\n\nU2\nUSA\nred\ncabernet\n15\n6.50\n14.6\n3.50\n710\n8\n3\n1\n4\n5\n3\n5\n3\n2\n\n\nU3\nUSA\nred\nshiraz\n25\n5.30\n13.9\n1.99\n610\n8\n2\n3\n7\n6\n4\n5\n3\n1\n\n\nU4\nUSA\nred\npinot\n28\n6.10\n14.0\n0.00\n340\n6\n3\n2\n2\n5\n2\n4\n4\n2\n\n\nU5\nUSA\nwhite\nchardonnay\n15\n7.20\n13.3\n1.10\n41\n6\n4\n2\n3\n6\n3\n2\n4\n5\n\n\nU6\nUSA\nwhite\nsauvignon\n8\n7.20\n13.5\n1.00\n50\n6\n5\n5\n1\n2\n4\n2\n4\n7\n\n\nU7\nUSA\nwhite\nriesling\n10\n8.60\n12.0\n1.65\n47\n5\n5\n3\n2\n2\n4\n2\n5\n8\n\n\nU8\nUSA\nwhite\ngewurzt\n20\n9.60\n12.0\n0.00\n45\n6\n6\n3\n2\n2\n4\n2\n3\n8\n\n\nU9\nUSA\nrose\nmalbec\n3\n6.20\n12.5\n4.00\n84\n8\n2\n1\n4\n3\n5\n2\n4\n7\n\n\nU10\nUSA\nrose\ncabernet\n4\n5.71\n12.5\n4.30\n93\n8\n3\n3\n3\n2\n6\n2\n3\n8\n\n\nU11\nUSA\nrose\npinot\n8\n5.40\n13.0\n3.10\n79\n6\n1\n1\n2\n3\n4\n1\n3\n6\n\n\nU12\nUSA\nrose\nsyrah\n6\n6.50\n13.5\n3.00\n89\n9\n3\n2\n5\n4\n3\n2\n3\n5"
+  },
+  {
+    "objectID": "pages/splsc.html#regular-pls-c",
+    "href": "pages/splsc.html#regular-pls-c",
+    "title": "Sparse PLS (Correlation)",
+    "section": "Regular PLS-C",
+    "text": "Regular PLS-C"
   },
   {
     "objectID": "pages/about.html",

@@ -234,7 +234,6 @@ window.Quarto = {
 <ul>
 <li><a href="https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing">Shared code</a></li>
 <li><a href="../material/">Slides</a></li>
-<li><a href="../material/">R Markdown</a></li>
 <li><a href="../data/simul.xlsx">Data</a></li>
 </ul>
 <p>Singular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce “sparsity” in SVD.</p>
@@ -300,12 +299,12 @@ window.Quarto = {
 </section>
 <section id="svd" class="level2">
 <h2 class="anchored" data-anchor-id="svd">SVD</h2>
-<p>Principal Component Analysis is based on the Singular Value Decomposition of the data[^2]. In a nutshell, the data matrix <span class="math inline">\(\mathbf{X}\)</span> is decomposed by the SVD in a product of three matrices:</p>
+<p>Principal Component Analysis is based on the Singular Value Decomposition of the data<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. In a nutshell, the data matrix <span class="math inline">\(\mathbf{X}\)</span> is decomposed by the SVD in a product of three matrices:</p>
 <p><span class="math display">\[
   \mathbf{X} = \mathbf{U}\mathbf{D}\mathbf{V}^\top
-\]</span> [^2]: depending on how you want to do it, you would need to pre-process the data before applying the SVD</p>
+\]</span></p>
 <blockquote class="blockquote">
-<p><em>Use the R function <code>svd</code> to decompose the data, and compare the result with what is given by your favorite PCA function.</em></p>
+<p><strong>Use the R function <code>svd</code> to decompose the data, and compare the result with what is given by your favorite PCA function.</strong></p>
 </blockquote>
 <div class="cell">
 <details class="code-fold">
@@ -474,6 +473,7 @@ comp 8 0.02773141 0.02773141</code></pre>
 
 <ol>
 <li id="fn1"><p>I used <code>pheatmap</code> for simplicity in the solution, but <code>ComplexHeatmap</code> to create the actual heatmap.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>depending on how you want to do it, you would need to pre-process the data before applying the SVD<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
