@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -383,7 +403,7 @@ comp 8 0.02773141 0.02773141</code></pre>
 </section>
 <section id="constrained-svd" class="level2">
 <h2 class="anchored" data-anchor-id="constrained-svd">Constrained SVD</h2>
-<p>Now, instead of using the regular SVD, we will use its sparse variant <span class="citation" data-cites="Guillemot2019">[@Guillemot2019]</span>. The goal the CSVD is now to <em>approximate</em> the data through a product of “sparse” matrices (i.e.&nbsp;matrices with a lot of zeros). The numbers of zeros are controlled with parameters that we call “radiuses” :</p>
+<p>Now, instead of using the regular SVD, we will use its sparse variant <span class="citation" data-cites="Guillemot2019">(<a href="#ref-Guillemot2019" role="doc-biblioref">Guillemot et al. 2019</a>)</span>. The goal the CSVD is now to <em>approximate</em> the data through a product of “sparse” matrices (i.e.&nbsp;matrices with a lot of zeros). The numbers of zeros are controlled with parameters that we call “radiuses” :</p>
 <ul>
 <li>the left radius controls the sparsity of <span class="math inline">\(\mathbf{U}\)</span>, and goes from 1 (very sparse) to <span class="math inline">\(\sqrt{I}\)</span> (not sparse),</li>
 <li>the right radius controls the sparsity of <span class="math inline">\(\mathbf{V}\)</span>, and goes from 1 to <span class="math inline">\(\sqrt{J}\)</span>.</li>
@@ -466,10 +486,15 @@ comp 8 0.02773141 0.02773141</code></pre>
 </div>
 
 
+
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Guillemot2019" class="csl-entry" role="listitem">
+Guillemot, Vincent, Derek Beaton, Arnaud Gloaguen, Tommy Löfstedt, Brian Levine, Nicolas Raymond, Arthur Tenenhaus, and Hervé Abdi. 2019. <span>“<span class="nocase">A constrained singular value decomposition method that integrates sparsity and orthogonality</span>.”</span> Edited by Shyamal D Peddada. <em>PLOS ONE</em> 14 (3): e0211463. <a href="https://doi.org/10.1371/journal.pone.0211463">https://doi.org/10.1371/journal.pone.0211463</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>I used <code>pheatmap</code> for simplicity in the solution, but <code>ComplexHeatmap</code> to create the actual heatmap.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
