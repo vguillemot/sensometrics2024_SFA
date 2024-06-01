@@ -13,8 +13,8 @@ library(tidyverse)
 library(ggpubr)
 library(ggrepel)
 theme_set(theme_bw())
-#library(devEMF)
-#knitr::opts_chunk$set(echo = FALSE, dev = "emf", fig.ext = "emf")
+library(devEMF)
+knitr::opts_chunk$set(echo = FALSE, dev = "emf", fig.ext = "emf")
 ```
 
 ## The dataset
