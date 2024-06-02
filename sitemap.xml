@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/material/01_csvd_20240529.html</loc>
-    <lastmod>2024-05-29T12:19:16.890Z</lastmod>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/material/SparseGSVD_equations_andCo.html</loc>
+    <lastmod>2024-06-02T10:56:32.237Z</lastmod>
   </url>
   <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/sca.html</loc>
-    <lastmod>2024-05-31T15:45:52.257Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/instructions.html</loc>
-    <lastmod>2024-06-01T09:31:34.819Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/csvd.html</loc>
-    <lastmod>2024-06-01T15:39:52.493Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/index.html</loc>
-    <lastmod>2024-05-22T10:39:18.751Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/spca.html</loc>
-    <lastmod>2024-05-31T09:45:34.057Z</lastmod>
-  </url>
-  <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/splsc.html</loc>
-    <lastmod>2024-06-01T15:34:42.948Z</lastmod>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/datasets.html</loc>
+    <lastmod>2024-05-18T21:14:47.938Z</lastmod>
   </url>
   <url>
     <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/about.html</loc>
     <lastmod>2024-05-21T14:44:55.977Z</lastmod>
   </url>
   <url>
-    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/datasets.html</loc>
-    <lastmod>2024-05-18T21:14:47.938Z</lastmod>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/splsc.html</loc>
+    <lastmod>2024-06-01T15:34:42.948Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/spca.html</loc>
+    <lastmod>2024-06-02T11:09:37.067Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/index.html</loc>
+    <lastmod>2024-05-22T10:39:18.751Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/csvd.html</loc>
+    <lastmod>2024-06-02T10:59:06.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/instructions.html</loc>
+    <lastmod>2024-06-01T09:31:34.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/sca.html</loc>
+    <lastmod>2024-06-02T11:09:42.166Z</lastmod>
+  </url>
+  <url>
+    <loc>https://vguillemot.github.io/sensometrics2024_SFA/pages/pca.html</loc>
+    <lastmod>2024-06-02T11:14:07.001Z</lastmod>
   </url>
 </urlset>

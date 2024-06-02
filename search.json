@@ -1,262 +1,374 @@
 [
   {
-    "objectID": "material/01_csvd_20240529.html",
-    "href": "material/01_csvd_20240529.html",
+    "objectID": "material/SparseGSVD_equations_andCo.html",
+    "href": "material/SparseGSVD_equations_andCo.html",
     "title": "Singular Value Decomposition",
     "section": "",
     "text": "Cut the yummiest French fries\n\n\n\n\n\n Artwork by @allison_horst\n\n\n\n Artwork by @allison_horst"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#potato-chips-analysis",
-    "href": "material/01_csvd_20240529.html#potato-chips-analysis",
+    "objectID": "material/SparseGSVD_equations_andCo.html#potato-chips-analysis",
+    "href": "material/SparseGSVD_equations_andCo.html#potato-chips-analysis",
     "title": "Singular Value Decomposition",
     "section": "",
     "text": "Cut the yummiest French fries"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#whale-versus-krill-this-is-you-credit-allison-horst",
-    "href": "material/01_csvd_20240529.html#whale-versus-krill-this-is-you-credit-allison-horst",
+    "objectID": "material/SparseGSVD_equations_andCo.html#whale-versus-krill-this-is-you-credit-allison-horst",
+    "href": "material/SparseGSVD_equations_andCo.html#whale-versus-krill-this-is-you-credit-allison-horst",
     "title": "Singular Value Decomposition",
     "section": "",
     "text": "Artwork by @allison_horst"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#whale-versus-krill-this-is-your-data-credit-allison-horst",
-    "href": "material/01_csvd_20240529.html#whale-versus-krill-this-is-your-data-credit-allison-horst",
+    "objectID": "material/SparseGSVD_equations_andCo.html#whale-versus-krill-this-is-your-data-credit-allison-horst",
+    "href": "material/SparseGSVD_equations_andCo.html#whale-versus-krill-this-is-your-data-credit-allison-horst",
     "title": "Singular Value Decomposition",
     "section": "",
     "text": "Artwork by @allison_horst"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#beautiful-illustration",
-    "href": "material/01_csvd_20240529.html#beautiful-illustration",
+    "objectID": "material/SparseGSVD_equations_andCo.html#beautiful-illustration",
+    "href": "material/SparseGSVD_equations_andCo.html#beautiful-illustration",
     "title": "Singular Value Decomposition",
     "section": "Beautiful illustration",
     "text": "Beautiful illustration\nScreeplot, versus individual map, versus circle of correlation. With the associated theoretical concepts: inertia (multivariate variance), distance between individuals, and angles between"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#example-data",
-    "href": "material/01_csvd_20240529.html#example-data",
+    "objectID": "material/SparseGSVD_equations_andCo.html#example-data",
+    "href": "material/SparseGSVD_equations_andCo.html#example-data",
     "title": "Singular Value Decomposition",
     "section": "Example data",
     "text": "Example data\n\nxtmp &lt;- readxl::read_excel(\"../data/simul.xlsx\")\nx &lt;- as.matrix(xtmp[, -1])\nrownames(x) &lt;- xtmp$Ind"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#example-screeplot",
-    "href": "material/01_csvd_20240529.html#example-screeplot",
+    "objectID": "material/SparseGSVD_equations_andCo.html#example-screeplot",
+    "href": "material/SparseGSVD_equations_andCo.html#example-screeplot",
     "title": "Singular Value Decomposition",
     "section": "Example screeplot",
     "text": "Example screeplot"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#example-individual-map",
-    "href": "material/01_csvd_20240529.html#example-individual-map",
+    "objectID": "material/SparseGSVD_equations_andCo.html#example-individual-map",
+    "href": "material/SparseGSVD_equations_andCo.html#example-individual-map",
     "title": "Singular Value Decomposition",
     "section": "Example individual map",
     "text": "Example individual map"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#example-circle-of-correlation",
-    "href": "material/01_csvd_20240529.html#example-circle-of-correlation",
+    "objectID": "material/SparseGSVD_equations_andCo.html#example-circle-of-correlation",
+    "href": "material/SparseGSVD_equations_andCo.html#example-circle-of-correlation",
     "title": "Singular Value Decomposition",
     "section": "Example circle of correlation",
     "text": "Example circle of correlation"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#french-versus-english",
-    "href": "material/01_csvd_20240529.html#french-versus-english",
+    "objectID": "material/SparseGSVD_equations_andCo.html#french-versus-english",
+    "href": "material/SparseGSVD_equations_andCo.html#french-versus-english",
     "title": "Singular Value Decomposition",
     "section": "French versus English",
     "text": "French versus English\n\n“Aaaaah, mais ACP en fait c’est la PCA !”\n\n(Anonymous student, after 6 hours of teaching PCA in French)\n\n\n\n\n\n\n\nEnglish\nFrench\n\n\n\n\nPCA = principal component analysis\nACP = analyse en composantes principales\n\n\nSVD = singular value decomposition\nSVD = décomposition en valeurs singulières\n\n\nEVD = eigenvalue decomposition\ndécomposition en éléments propres\n\n\nICA = independent component analysis\nICA = analyse en composantes indépendantes\n\n\nMDS = multidimensional scaling\nMDS = multidimensional scaling"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#r-vocabulary",
-    "href": "material/01_csvd_20240529.html#r-vocabulary",
+    "objectID": "material/SparseGSVD_equations_andCo.html#r-vocabulary",
+    "href": "material/SparseGSVD_equations_andCo.html#r-vocabulary",
     "title": "Singular Value Decomposition",
     "section": "R vocabulary",
     "text": "R vocabulary\nBase methods:\n\neigen for eigenvalue decomposition, svd for singular value decomposition,\nprcomp and princomp for PCA,\nbiplot\n\nNice packages:\n\nFactoMineR: PCA, MFA, CA, MCA and associates. In earlier versions, the graphs were “crude”…\nfactoextra: “helper” package to make beautiful plots, and much more!\nade4: more than “one block” type of analyses. Made by ecologists so \\(\\Rightarrow\\) PCOA, coinertia analysis, STATIS, etc.\nExPosition: made for psychometricians (they like PLS)"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#and-a-few-nice-books-and-papers",
-    "href": "material/01_csvd_20240529.html#and-a-few-nice-books-and-papers",
+    "objectID": "material/SparseGSVD_equations_andCo.html#and-a-few-nice-books-and-papers",
+    "href": "material/SparseGSVD_equations_andCo.html#and-a-few-nice-books-and-papers",
     "title": "Singular Value Decomposition",
     "section": "And a few nice books and papers",
     "text": "And a few nice books and papers\nbooks and papers"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#notations",
-    "href": "material/01_csvd_20240529.html#notations",
+    "objectID": "material/SparseGSVD_equations_andCo.html#notations",
+    "href": "material/SparseGSVD_equations_andCo.html#notations",
     "title": "Singular Value Decomposition",
     "section": "Notations",
     "text": "Notations\n(non-universal) Conventions: matrices and vectors are bold\n\n\\(I\\) = number of observations, \\(J\\) = number of variables (only quantitative)\n\\(i\\) for an individual observation, and \\(j\\) for a single variable\n\\(\\mathbf{X}\\) = data matrix, with \\(n\\) rows and \\(p\\) columns, sometimes already centered, and scaled, to make our life easy\n\\(\\mathbf{X}_j\\) = variable \\(j\\), and \\(j\\)th column of \\(\\mathbf X\\)\n\\(\\mathbf{w}\\) a set of weights"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#a-little-detour-matrix-multiplication",
-    "href": "material/01_csvd_20240529.html#a-little-detour-matrix-multiplication",
+    "objectID": "material/SparseGSVD_equations_andCo.html#a-little-detour-matrix-multiplication",
+    "href": "material/SparseGSVD_equations_andCo.html#a-little-detour-matrix-multiplication",
     "title": "Singular Value Decomposition",
     "section": "A little detour: matrix multiplication",
     "text": "A little detour: matrix multiplication\nTake a pen and paper, and do this multiplication:\n[ ]\nCool video: 5 ways to see matrix multiplication"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#pca",
-    "href": "material/01_csvd_20240529.html#pca",
+    "objectID": "material/SparseGSVD_equations_andCo.html#pca",
+    "href": "material/SparseGSVD_equations_andCo.html#pca",
     "title": "Singular Value Decomposition",
     "section": "PCA",
     "text": "PCA\n\n“Find a linear combination of the columns of the data that would capture the most information.”\n\nIn mathematical words, find\n[ = w_1_1 + + w_p_p ]\nthat maximizes… wait a minute! What are the dimensions?\n\n\\(\\mathbf X\\): \\(I\\) rows and \\(J\\) columns,\n\\(\\mathbf w\\): \\(J\\) rows and \\(1\\) columns,\n\\(\\mathbf{Xw}\\): \\(I\\) rows and \\(1\\) column."
   },
   {
-    "objectID": "material/01_csvd_20240529.html#most-popular-intuition-of-pca-how-does-it-translate",
-    "href": "material/01_csvd_20240529.html#most-popular-intuition-of-pca-how-does-it-translate",
+    "objectID": "material/SparseGSVD_equations_andCo.html#most-popular-intuition-of-pca-how-does-it-translate",
+    "href": "material/SparseGSVD_equations_andCo.html#most-popular-intuition-of-pca-how-does-it-translate",
     "title": "Singular Value Decomposition",
     "section": "Most popular intuition of PCA: how does it translate?",
     "text": "Most popular intuition of PCA: how does it translate?\n\n“PCA creates a linear combination of variables that maximizes variance.”\n\n[ _{||_2^2 = 1} () ]\n\nWhy \\(\\|\\mathbf{w}\\|_2 = 1\\)?\nDirty trick: \\(\\text{var}(\\mathbf{X}\\mathbf{w}) = \\mathbf{w}^\\top\\mathbf{X}^\\top\\mathbf{X}\\mathbf{w}\\)"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#least-well-known-intuition-of-pca-how-does-it-translate",
-    "href": "material/01_csvd_20240529.html#least-well-known-intuition-of-pca-how-does-it-translate",
+    "objectID": "material/SparseGSVD_equations_andCo.html#least-well-known-intuition-of-pca-how-does-it-translate",
+    "href": "material/SparseGSVD_equations_andCo.html#least-well-known-intuition-of-pca-how-does-it-translate",
     "title": "Singular Value Decomposition",
     "section": "Least “well-known” intuition of PCA: how does it translate?",
     "text": "Least “well-known” intuition of PCA: how does it translate?\n\n“PCA creates a linear combination of variables that maximizes correlation.”\n\n[ {w} {j=1}^p (, _j)^2 ]"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#second-least-well-known-intuition-of-pca-how-does-it-translate",
-    "href": "material/01_csvd_20240529.html#second-least-well-known-intuition-of-pca-how-does-it-translate",
+    "objectID": "material/SparseGSVD_equations_andCo.html#second-least-well-known-intuition-of-pca-how-does-it-translate",
+    "href": "material/SparseGSVD_equations_andCo.html#second-least-well-known-intuition-of-pca-how-does-it-translate",
     "title": "Singular Value Decomposition",
     "section": "Second least “well-known” intuition of PCA: how does it translate?",
     "text": "Second least “well-known” intuition of PCA: how does it translate?\n\n“PCA creates the best lower rank approximation of the covariance matrix.”\n\n[ _{|w|_2^2 = 1} | ^- ^|_F^2 ]\n\n\\(\\frac{1}{n}\\mathbf{X}^\\top\\mathbf{X}\\)\n\\(\\lambda\\): the [blank] of the covariance matrix\n\\(\\mathbf{w}\\): the [blank] of the covariance matrix"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#a-little-image",
-    "href": "material/01_csvd_20240529.html#a-little-image",
+    "objectID": "material/SparseGSVD_equations_andCo.html#a-little-image",
+    "href": "material/SparseGSVD_equations_andCo.html#a-little-image",
     "title": "Singular Value Decomposition",
     "section": "A little image",
     "text": "A little image"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#rank-1-approximations",
-    "href": "material/01_csvd_20240529.html#rank-1-approximations",
+    "objectID": "material/SparseGSVD_equations_andCo.html#rank-1-approximations",
+    "href": "material/SparseGSVD_equations_andCo.html#rank-1-approximations",
     "title": "Singular Value Decomposition",
     "section": "Rank-1 approximations",
     "text": "Rank-1 approximations"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#increasing-rank-approximations",
-    "href": "material/01_csvd_20240529.html#increasing-rank-approximations",
+    "objectID": "material/SparseGSVD_equations_andCo.html#increasing-rank-approximations",
+    "href": "material/SparseGSVD_equations_andCo.html#increasing-rank-approximations",
     "title": "Singular Value Decomposition",
     "section": "Increasing rank approximations",
     "text": "Increasing rank approximations"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#we-can-do-the-same-kind-of-magic-with-the-data-itself",
-    "href": "material/01_csvd_20240529.html#we-can-do-the-same-kind-of-magic-with-the-data-itself",
+    "objectID": "material/SparseGSVD_equations_andCo.html#we-can-do-the-same-kind-of-magic-with-the-data-itself",
+    "href": "material/SparseGSVD_equations_andCo.html#we-can-do-the-same-kind-of-magic-with-the-data-itself",
     "title": "Singular Value Decomposition",
     "section": "We can do the same kind of magic with the data itself",
     "text": "We can do the same kind of magic with the data itself\n\nSingular value decomposition can be used to approximate a rectangular matrix with a lower ranked matrix of the same dimension\n\n[ _{|_2^2=||_2^2=1} | - ^|_F^2 ]\n\n\\(\\delta\\): singular value\n\\(\\mathbf{u}\\): left singular vector\n\\(\\mathbf{w}\\): right singular vector"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#rank-1-approximation",
-    "href": "material/01_csvd_20240529.html#rank-1-approximation",
+    "objectID": "material/SparseGSVD_equations_andCo.html#rank-1-approximation",
+    "href": "material/SparseGSVD_equations_andCo.html#rank-1-approximation",
     "title": "Singular Value Decomposition",
     "section": "Rank 1 approximation",
     "text": "Rank 1 approximation"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#rank-1-approximations-1",
-    "href": "material/01_csvd_20240529.html#rank-1-approximations-1",
+    "objectID": "material/SparseGSVD_equations_andCo.html#rank-1-approximations-1",
+    "href": "material/SparseGSVD_equations_andCo.html#rank-1-approximations-1",
     "title": "Singular Value Decomposition",
     "section": "Rank-1 approximations",
     "text": "Rank-1 approximations"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#increasing-rank-approximations-1",
-    "href": "material/01_csvd_20240529.html#increasing-rank-approximations-1",
+    "objectID": "material/SparseGSVD_equations_andCo.html#increasing-rank-approximations-1",
+    "href": "material/SparseGSVD_equations_andCo.html#increasing-rank-approximations-1",
     "title": "Singular Value Decomposition",
     "section": "Increasing rank approximations",
     "text": "Increasing rank approximations"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#lasso",
-    "href": "material/01_csvd_20240529.html#lasso",
+    "objectID": "material/SparseGSVD_equations_andCo.html#lasso",
+    "href": "material/SparseGSVD_equations_andCo.html#lasso",
     "title": "Singular Value Decomposition",
     "section": "LASSO",
     "text": "LASSO\nLASSO is a (relatively) recent technique originally intended for regression problems:\n\\[\n  \\arg\\min_{\\boldsymbol{\\beta}} \\left\\| \\mathbf{y} - \\mathbf{X}\\boldsymbol{\\beta} \\right\\|_2^2 \\text{ such that } \\|\\boldsymbol{\\beta}\\|_1 \\leq r\n\\] or the dual form \\[\n  \\arg\\min_{\\boldsymbol{\\beta}} \\left\\| \\mathbf{y} - \\mathbf{X}\\boldsymbol{\\beta} \\right\\|_2^2 + \\lambda \\|\\boldsymbol{\\beta}\\|_1\n\\]\n\nthe obtained weights are sparse (with zeros)\nthe non-zeros coefficients correspond to important variables\nthe result is biased\nselecting \\(\\lambda\\) is done through cross-validation"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#optimization-problem",
-    "href": "material/01_csvd_20240529.html#optimization-problem",
+    "objectID": "material/SparseGSVD_equations_andCo.html#optimization-problem",
+    "href": "material/SparseGSVD_equations_andCo.html#optimization-problem",
     "title": "Singular Value Decomposition",
     "section": "Optimization problem",
     "text": "Optimization problem\n\\[\n\\begin{aligned}\n  (\\delta_\\ell, \\mathbf{p}_\\ell, \\mathbf{q}_\\ell) = \\arg\\min_{\\boldsymbol{\\beta}} \\left\\| \\mathbf{X} - \\delta\\mathbf{p}^\\top\\mathbf{q} \\right\\|_2^2 \\\\\n  \\text{ such that }\n    \\begin{cases}\n      \\mathbf{p}^\\top\\mathbf{M}\\mathbf{p} = \\mathbf{q}^\\top\\mathbf{W}\\mathbf{q} = 1 \\\\\n      \\mathbf{p}^\\top\\mathbf{M}\\mathbf{p_{\\ell^\\prime}} = \\mathbf{q}^\\top\\mathbf{W}\\mathbf{q_{\\ell^\\prime}} = 0, \\forall \\ell^\\prime &lt; \\ell \\\\\n      \\|\\mathbf{p}\\|_1 \\leq s_{\\mathbf{p},\\ell} \\text{ and } \\|\\mathbf{q}\\|_1 \\leq s_{\\mathbf{q},\\ell}\n    \\end{cases}\n\\end{aligned}\n\\]"
   },
   {
-    "objectID": "material/01_csvd_20240529.html#what-are-the-parameters",
-    "href": "material/01_csvd_20240529.html#what-are-the-parameters",
+    "objectID": "material/SparseGSVD_equations_andCo.html#what-are-the-parameters",
+    "href": "material/SparseGSVD_equations_andCo.html#what-are-the-parameters",
     "title": "Singular Value Decomposition",
     "section": "What are the parameters?",
     "text": "What are the parameters?\n\n\\(\\mathbf M\\) and \\(\\mathbf W\\) = masses, weights… so metrics\n\\(s_{\\mathbf{p},\\ell}\\) and \\(s_{\\mathbf{q},\\ell}\\) = sparsity parameters, between 1 (strong sparsity), and \\(\\sqrt{\\text{dimension}}\\) (no sparsity)"
   },
   {
-    "objectID": "pages/sca.html",
-    "href": "pages/sca.html",
-    "title": "Sparse Correspondence Analysis",
+    "objectID": "pages/datasets.html",
+    "href": "pages/datasets.html",
+    "title": "Datasets",
     "section": "",
-    "text": "Solution\nlibrary(readxl)"
+    "text": "This is the page presenting all the data used during the tutorial."
   },
   {
-    "objectID": "pages/sca.html#links",
-    "href": "pages/sca.html#links",
-    "title": "Sparse Correspondence Analysis",
-    "section": "Links",
-    "text": "Links\n\nShared code\nData"
+    "objectID": "pages/datasets.html#beers",
+    "href": "pages/datasets.html#beers",
+    "title": "Datasets",
+    "section": "Beers",
+    "text": "Beers\nTen tasters evaluated the intensity of twelve descriptors for six beers. The data are the averages (computed over the 10 judges) of the intensity ratings of the descriptors for the beers.\nA data frame of dimension 6 rows (Beers) by 12 columns (descriptors) with the average intensity ratings performed using a 0 to 7 Likert rating scale.\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs."
   },
   {
-    "objectID": "pages/sca.html#salad-and-tv",
-    "href": "pages/sca.html#salad-and-tv",
-    "title": "Sparse Correspondence Analysis",
-    "section": "Salad and TV",
-    "text": "Salad and TV\n\nLoad the “salad and TV” dataset.\n\n\n\nSolution\ntv &lt;- read_excel(\"../data/salad_and_tv.xlsx\")\nknitr::kable(tv)\n\n\n\n\n\nHoursTV\nRarely\nSometimes\nOften\nEveryDay\n\n\n\n\n(0,1]\n337\n271\n83\n43\n\n\n(1,2]\n408\n331\n123\n75\n\n\n(2,3]\n283\n268\n116\n79\n\n\n(3,4]\n182\n194\n64\n51\n\n\n(4,5]\n104\n109\n36\n30\n\n\n(5,10]\n124\n102\n28\n46\n\n\n\n\n\nSolution\n## Make it into a matrix\ntvmat &lt;- as.matrix(tv[, -1])\nrownames(tvmat) &lt;- tv$HoursTV\n\n\n\nthe first column shows how many hours of TV the respondent watches (split into intervals),\nthe other column names are the frequency of “salad consumption” in the household,\nthe data is a contingency table, meaning that each cell is a count."
+    "objectID": "pages/datasets.html#turkey",
+    "href": "pages/datasets.html#turkey",
+    "title": "Datasets",
+    "section": "Turkey",
+    "text": "Turkey\nA trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables."
   },
   {
-    "objectID": "pages/sca.html#regular-ca",
-    "href": "pages/sca.html#regular-ca",
-    "title": "Sparse Correspondence Analysis",
-    "section": "Regular CA",
-    "text": "Regular CA\n\nRun a regular CA.\n\n\n\nSolution\nlibrary(FactoMineR)\nres.ca &lt;- CA(tvmat)"
+    "objectID": "pages/datasets.html#tv-and-salad",
+    "href": "pages/datasets.html#tv-and-salad",
+    "title": "Datasets",
+    "section": "TV and salad",
+    "text": "TV and salad\nData from the INCA 3 study, where more than 5,800 people (3,157 adults aged 18 to 79 years and 2,698 children aged 0 to 17 years) participated in a national study conducted in 2014 and 2015. Participants answered 150 questions on their habits and lifestyles, resulting in data on 320,000 food items consumed over 13,600 consumption days. The variables retained for this dataset are “hours spent watching TV” and “salad consumption.”\n\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
   },
   {
-    "objectID": "pages/sca.html#sparse-ca",
-    "href": "pages/sca.html#sparse-ca",
-    "title": "Sparse Correspondence Analysis",
-    "section": "Sparse CA",
-    "text": "Sparse CA\n\nUse the function sparseCA from the package SPAFAC to run a sparse CA.\n\n\n\nSolution\nlibrary(sGSVD)\nlibrary(SPAFAC)\n\nI &lt;- nrow(tv)\nJ &lt;- ncol(tv) - 1\nres.sca &lt;- sparseCA(\n  DATA = tvmat,\n  components = 3L,\n  rdsLeft = 0.5 * sqrt(I) * c(1, 1, 1),\n  rdsRight = 0.6 * sqrt(J) * c(1, 1, 1)\n  )\n\nknitr::kable(data.frame(Fi = res.sca$fi))\n\n\n\n\n\n\nFi.1\nFi.2\nFi.3\n\n\n\n\n(0,1]\n-0.1485171\n-0.0048933\n-0.0007687\n\n\n(1,2]\n0.0000000\n0.0000000\n0.0000000\n\n\n(2,3]\n0.0000000\n0.0918728\n-0.0006014\n\n\n(3,4]\n0.0000000\n0.0000000\n0.0545455\n\n\n(4,5]\n0.0000000\n0.0000000\n0.0000000\n\n\n(5,10]\n0.0622467\n-0.0285650\n-0.0044875\n\n\n\n\n\nSolution\nknitr::kable(data.frame(Fj = res.sca$fj))\n\n\n\n\n\n\nFj.1\nFj.2\nFj.3\n\n\n\n\nRarely\n-0.0248080\n-0.0118642\n-0.0303188\n\n\nSometimes\n0.0000000\n0.0000000\n0.0000000\n\n\nOften\n0.0000000\n0.1187506\n-0.0101999\n\n\nEveryDay\n0.2254452\n-0.0057943\n-0.0148073"
+    "objectID": "pages/datasets.html#wines",
+    "href": "pages/datasets.html#wines",
+    "title": "Datasets",
+    "section": "Wines",
+    "text": "Wines\n36 wines from three countries (Argentina, Canada, and the USA) and three colors (Red, Rosé, and White) are evaluated on several dimensions organized into four blocks. An additional mystery wine (a French red pinot noir) is included to be projected as a supplementary observation.\n\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579."
   },
   {
-    "objectID": "pages/instructions.html",
-    "href": "pages/instructions.html",
-    "title": "Pre-tutorial instructions",
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "About us",
     "section": "",
-    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
+    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
   },
   {
-    "objectID": "pages/instructions.html#softwares",
-    "href": "pages/instructions.html#softwares",
-    "title": "Pre-tutorial instructions",
+    "objectID": "pages/about.html#ju-chi-yu",
+    "href": "pages/about.html#ju-chi-yu",
+    "title": "About us",
     "section": "",
-    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
+    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
   },
   {
-    "objectID": "pages/instructions.html#packages",
-    "href": "pages/instructions.html#packages",
-    "title": "Pre-tutorial instructions",
-    "section": "Packages",
-    "text": "Packages\nTo install packages, you can use pak, a great package for easy and comprehensible package installation. First, install pak with the usual command\n\ninstall.packages(\"pak\")\n\nThe whole tutorial revolves around the use of two packages: sGSVD and SPAFAC. Install them with pak:\n\npak::pak(c(\"vguillemot/sGSVD\", \"juchiyu/SPAFAC\"))\n\nDepending on what is already installed on your machine, pak will detect what needs to be installed, and give you a summary.\n\nOther useful packages\n\nTL;DR – here is a one liner to install the packages detailed below.\n\n\npak::pak(c(\"TExPosition\", \"factoextra\", \"FactoMineR\", \"tidyverse\", \"ggrepel\", \"pheatmap\"))\n\n\nTExPosition for PLS-C, install with pak::pak(\"TExPosition\")\nFactoMineR and factoextra for PCA, CA, MCA and much much more, install with pak::pak(c(\"factoextra\", \"FactoMineR\"))\ntidyverse for plotting, data wrangling and so much more, install with pak::pak(\"tidyverse\")\nggrepel for adding labels to ggplots, install with pak::pak(\"ggrepel\")\npheatmap for nice heatmaps (but you might prefer ComplexHeatmap), install with pak::pak(\"pheatmap\")"
+    "objectID": "pages/about.html#vincent-le-goff",
+    "href": "pages/about.html#vincent-le-goff",
+    "title": "About us",
+    "section": "Vincent Le Goff",
+    "text": "Vincent Le Goff\n\n\n\n\n\n\n\n\n\nI am a bioinformatics engineer with a degree from INSA Lyon (2022) and a double degree in Life Sciences and Chemistry from UVSQ (2019). In 2023, I worked as a research engineer in bioinformatics at CEA in Évry and completed a seven-month internship at Limagrain Europe, analyzing satellite images to quantify corn water stress. In 2021, I interned at INRAE, studying the performance of wheat variety mixtures. Since late 2023, I have been pursuing a PhD at CNRGH on multi-omics data integration. I am skilled in R and Python, focusing on bioinformatics, biostatistics, and machine learning."
   },
   {
-    "objectID": "pages/instructions.html#requirements",
-    "href": "pages/instructions.html#requirements",
-    "title": "Pre-tutorial instructions",
-    "section": "Requirements",
-    "text": "Requirements\nDuring the tutorial, we will extensively use dplyr and ggplot2, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder"
+    "objectID": "pages/about.html#vincent-guillemot",
+    "href": "pages/about.html#vincent-guillemot",
+    "title": "About us",
+    "section": "Vincent Guillemot",
+    "text": "Vincent Guillemot\n\n\n\n\n\n\nI am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization."
+  },
+  {
+    "objectID": "pages/about.html#hervé-abdi",
+    "href": "pages/about.html#hervé-abdi",
+    "title": "About us",
+    "section": "Hervé Abdi",
+    "text": "Hervé Abdi\n\n\n\n\n\n\n\n\n\nI am a Professor at the University of Texas at Dallas in the School of Behavioral and Brain Sciences. My recent work focuses on face and person perception, odor perception, and computational modeling of these processes. I have developed statistical techniques to analyze large data sets, such as those found in genomics, brain imaging, and sensory evaluation, including principal component analysis and multiple factor analysis."
+  },
+  {
+    "objectID": "pages/splsc.html",
+    "href": "pages/splsc.html",
+    "title": "Sparse PLS (Correlation)",
+    "section": "",
+    "text": "Shared code\nData"
+  },
+  {
+    "objectID": "pages/splsc.html#links",
+    "href": "pages/splsc.html#links",
+    "title": "Sparse PLS (Correlation)",
+    "section": "",
+    "text": "Shared code\nData"
+  },
+  {
+    "objectID": "pages/splsc.html#data",
+    "href": "pages/splsc.html#data",
+    "title": "Sparse PLS (Correlation)",
+    "section": "Data",
+    "text": "Data\n\nLoad the Wines dataset, and create two different blocks of data, one block containing only the “chemical” attributes (Acidity, Alcohol, Sugar, Tannin), and the other one containing only the sensory attributes (fruity, floral, vegetal, spicy, woody, sweet, astringent).\n\n\n\nSolution\nwines &lt;- read_excel(\"../data/wines.xlsx\")\nchemi &lt;- wines %&gt;% select(Acidity, Alcohol, Sugar, Tannin)\nsenso &lt;- wines %&gt;% select(fruity, floral, vegetal, \n           spicy, woody, sweet, astringent)\n\n\nThe whole dataset is displayed below.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWine\norigin\ncolor\nvarietal\nPrice\nAcidity\nAlcohol\nSugar\nTannin\nfruity\nfloral\nvegetal\nspicy\nwoody\nsweet\nastringent\nacidic\nhedonic\n\n\n\n\nA1\nArgentina\nred\nmerlot\n11\n5.33\n13.8\n2.75\n559\n6\n2\n1\n4\n5\n3\n5\n4\n2\n\n\nA2\nArgentina\nred\ncabernet\n5\n5.14\n13.9\n2.41\n672\n5\n3\n2\n3\n4\n2\n6\n3\n2\n\n\nA3\nArgentina\nred\nshiraz\n7\n5.16\n14.3\n2.20\n455\n7\n1\n2\n6\n5\n3\n4\n2\n2\n\n\nA4\nArgentina\nred\npinot\n16\n4.37\n13.5\n3.00\n348\n5\n3\n2\n2\n4\n1\n3\n4\n4\n\n\nA5\nArgentina\nwhite\nchardonnay\n14\n4.34\n13.3\n2.61\n46\n5\n4\n1\n3\n4\n2\n1\n4\n6\n\n\nA6\nArgentina\nwhite\nsauvignon\n8\n6.60\n13.3\n3.17\n54\n7\n5\n6\n1\n1\n4\n1\n5\n8\n\n\nA7\nArgentina\nwhite\nriesling\n9\n7.70\n12.3\n2.15\n42\n6\n7\n2\n2\n2\n3\n1\n6\n9\n\n\nA8\nArgentina\nwhite\ngewurzt\n11\n6.70\n12.5\n2.51\n51\n5\n8\n2\n1\n1\n4\n1\n4\n9\n\n\nA9\nArgentina\nrose\nmalbec\n4\n6.50\n13.0\n7.24\n84\n8\n4\n3\n2\n2\n6\n2\n3\n8\n\n\nA10\nArgentina\nrose\ncabernet\n3\n4.39\n12.0\n4.50\n90\n6\n3\n2\n1\n1\n5\n2\n3\n8\n\n\nA11\nArgentina\nrose\npinot\n6\n4.89\n12.0\n6.37\n76\n7\n2\n1\n1\n1\n4\n1\n4\n9\n\n\nA12\nArgentina\nrose\nsyrah\n5\n5.90\n13.5\n4.20\n80\n8\n4\n1\n3\n2\n5\n2\n3\n7\n\n\nC1\nCanada\nred\nmerlot\n20\n7.42\n14.9\n2.10\n483\n5\n3\n2\n3\n4\n3\n4\n4\n3\n\n\nC2\nCanada\nred\ncabernet\n15\n7.35\n14.5\n1.90\n698\n6\n3\n2\n2\n5\n2\n5\n4\n2\n\n\nC3\nCanada\nred\nshiraz\n20\n7.50\n14.5\n1.50\n413\n6\n2\n3\n4\n3\n3\n5\n1\n2\n\n\nC4\nCanada\nred\npinot\n25\n5.70\n13.3\n1.70\n320\n4\n2\n3\n1\n3\n2\n4\n4\n4\n\n\nC5\nCanada\nwhite\nchardonnay\n20\n6.00\n13.5\n3.00\n35\n4\n3\n2\n1\n3\n2\n2\n3\n5\n\n\nC6\nCanada\nwhite\nsauvignon\n15\n7.50\n12.0\n3.50\n40\n8\n4\n3\n2\n1\n3\n1\n4\n8\n\n\nC7\nCanada\nwhite\nriesling\n15\n7.00\n11.9\n3.40\n48\n7\n5\n1\n1\n3\n3\n1\n7\n8\n\n\nC8\nCanada\nwhite\ngewurzt\n18\n6.30\n13.9\n2.80\n39\n6\n5\n2\n2\n2\n3\n2\n5\n6\n\n\nC9\nCanada\nrose\nmalbec\n8\n5.90\n12.0\n5.50\n90\n6\n3\n3\n3\n2\n4\n2\n4\n8\n\n\nC10\nCanada\nrose\ncabernet\n6\n5.60\n12.5\n4.00\n85\n5\n4\n1\n3\n2\n4\n2\n4\n7\n\n\nC11\nCanada\nrose\npinot\n9\n6.20\n13.0\n6.00\n75\n5\n3\n2\n1\n2\n3\n2\n3\n7\n\n\nC12\nCanada\nrose\nsyrah\n9\n5.80\n13.0\n3.50\n83\n7\n3\n2\n3\n3\n4\n1\n4\n7\n\n\nU1\nUSA\nred\nmerlot\n25\n6.00\n13.6\n3.50\n578\n7\n2\n2\n5\n6\n3\n4\n3\n2\n\n\nU2\nUSA\nred\ncabernet\n15\n6.50\n14.6\n3.50\n710\n8\n3\n1\n4\n5\n3\n5\n3\n2\n\n\nU3\nUSA\nred\nshiraz\n25\n5.30\n13.9\n1.99\n610\n8\n2\n3\n7\n6\n4\n5\n3\n1\n\n\nU4\nUSA\nred\npinot\n28\n6.10\n14.0\n0.00\n340\n6\n3\n2\n2\n5\n2\n4\n4\n2\n\n\nU5\nUSA\nwhite\nchardonnay\n15\n7.20\n13.3\n1.10\n41\n6\n4\n2\n3\n6\n3\n2\n4\n5\n\n\nU6\nUSA\nwhite\nsauvignon\n8\n7.20\n13.5\n1.00\n50\n6\n5\n5\n1\n2\n4\n2\n4\n7\n\n\nU7\nUSA\nwhite\nriesling\n10\n8.60\n12.0\n1.65\n47\n5\n5\n3\n2\n2\n4\n2\n5\n8\n\n\nU8\nUSA\nwhite\ngewurzt\n20\n9.60\n12.0\n0.00\n45\n6\n6\n3\n2\n2\n4\n2\n3\n8\n\n\nU9\nUSA\nrose\nmalbec\n3\n6.20\n12.5\n4.00\n84\n8\n2\n1\n4\n3\n5\n2\n4\n7\n\n\nU10\nUSA\nrose\ncabernet\n4\n5.71\n12.5\n4.30\n93\n8\n3\n3\n3\n2\n6\n2\n3\n8\n\n\nU11\nUSA\nrose\npinot\n8\n5.40\n13.0\n3.10\n79\n6\n1\n1\n2\n3\n4\n1\n3\n6\n\n\nU12\nUSA\nrose\nsyrah\n6\n6.50\n13.5\n3.00\n89\n9\n3\n2\n5\n4\n3\n2\n3\n5"
+  },
+  {
+    "objectID": "pages/splsc.html#regular-pls-c",
+    "href": "pages/splsc.html#regular-pls-c",
+    "title": "Sparse PLS (Correlation)",
+    "section": "Regular PLS-C",
+    "text": "Regular PLS-C\nThe goal of PLS-C is to create components that are the most correlation to one another while summing up the information in each block.\n\nUse the function tepPLS from package TExPosition to build a PLS-C model of the relationship between the sensory and chemical properties of the wines. Plot the first dimension of each block.\n\n\n\nSolution\nlibrary(TExPosition)\n\nres.pls &lt;- tepPLS(senso, chemi, graph = FALSE)\n\ndat.plsc &lt;- data.frame(\n  wines %&gt;% select(Wine, color),\n  Lx = res.pls$TExPosition.Data$lx,\n  Ly = res.pls$TExPosition.Data$ly)\n\ndat.plsc %&gt;%\n  ggplot(aes(Lx.1, Ly.1, color = color)) + \n  geom_point()"
+  },
+  {
+    "objectID": "pages/splsc.html#sparse-pls-c",
+    "href": "pages/splsc.html#sparse-pls-c",
+    "title": "Sparse PLS (Correlation)",
+    "section": "Sparse PLS-C",
+    "text": "Sparse PLS-C\n\nUse the function sparsePLSC from package SPAFAC to build a sparse PLS-C model to explain the link between the sensory and chemical descriptors of the wines. Has the factor map map drastically changed? What are the main descriptors?\n\n\n\nSolution\nlibrary(sGSVD)\nlibrary(SPAFAC)\n\nJ1 &lt;- ncol(senso)\nJ2 &lt;- ncol(chemi)\n\nres.spls &lt;- sparsePLSC(\n  X = senso, # First block\n  Y = chemi, # Second block\n  components = 2L, # Number of dimensions\n  rdsLeft = 0.6 * sqrt(J1) * c(1, 1), # Medium sparsity\n  rdsRight = 0.6 * sqrt(J2) * c(1, 1) # Medium sparsity\n  )\n\ndat.splsc &lt;- data.frame(\n  wines %&gt;% select(Wine, color, origin),\n  Lx = res.spls$lx,\n  Ly = res.spls$ly)\n\ndat.splsc %&gt;%\n  ggplot(aes(Lx.1, Ly.1, color = color)) + \n  geom_point() + \n  labs(\n    x = \"First sparse sensory dimension\",\n    y = \"First sparse chemical dimension\")\n\nres.spls$fi\nres.spls$fj"
+  },
+  {
+    "objectID": "pages/spca.html",
+    "href": "pages/spca.html",
+    "title": "Sparse Principal Component Analysis",
+    "section": "",
+    "text": "Shared code\nData"
+  },
+  {
+    "objectID": "pages/spca.html#links",
+    "href": "pages/spca.html#links",
+    "title": "Sparse Principal Component Analysis",
+    "section": "",
+    "text": "Shared code\nData"
+  },
+  {
+    "objectID": "pages/spca.html#beers",
+    "href": "pages/spca.html#beers",
+    "title": "Sparse Principal Component Analysis",
+    "section": "Beers",
+    "text": "Beers\n\nLoad the Beers dataset.\n\n\n\nSolution\nlibrary(readxl)\nbeers &lt;- read_excel(\"beers.xlsx\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeer\nBitter\nAcid\nSweet\nAstringent\nAlcoholic\nHop\nCereal\nToasted\nYeast\nHay\nMalt\nFermented\n\n\n\n\nBruxelles\n3.190103\n2.250000\n2.002791\n2.486309\n3.237597\n3.813985\n3.341958\n2.858587\n3.305860\n2.774995\n3.693717\n3.314378\n\n\nFranzDunkel\n3.898867\n2.116649\n2.690365\n3.419777\n4.316269\n4.480046\n3.718364\n2.958749\n3.419777\n2.970115\n3.685813\n3.505336\n\n\nFranzNatur\n4.277778\n2.075397\n3.085289\n3.426917\n4.407831\n4.536122\n4.138244\n3.895192\n3.496122\n3.261656\n3.940780\n2.805860\n\n\nHofbrau\n4.399007\n3.087549\n0.000000\n3.158053\n3.984467\n4.674603\n3.706632\n3.395192\n3.630654\n3.616398\n4.023809\n3.731262\n\n\nPaulaner\n3.697283\n2.404388\n1.028142\n3.326382\n3.910490\n4.749270\n3.786054\n3.144253\n3.444692\n3.278671\n3.792303\n3.281101\n\n\nBlueMoon\n3.200000\n3.300000\n4.600000\n3.300000\n5.200000\n5.200000\n2.500000\n2.500000\n2.100000\n2.900000\n4.200000\n4.100000\n\n\n\n\n\nThe beers data has the following characteristics:\n\nthere are \\(I = 6\\) products,\nthere are \\(J = 12\\) descriptors."
+  },
+  {
+    "objectID": "pages/spca.html#regular-pca",
+    "href": "pages/spca.html#regular-pca",
+    "title": "Sparse Principal Component Analysis",
+    "section": "Regular PCA",
+    "text": "Regular PCA\n\nRun a PCA on the data and show the first two components.\n\n\n\nSolution\nlibrary(dplyr)\nlibrary(FactoMineR)\nlibrary(ggplot2)\nlibrary(ggrepel)\n\nres.pca &lt;- PCA(beers[, -1], graph = FALSE)\n\ndat.pca &lt;- data.frame(\n  Beer = beers$Beer,\n  res.pca$ind$coord\n)\n\ndat.pca %&gt;%\n  ggplot(aes(Dim.1, Dim.2)) +\n  geom_hline(yintercept = 0) + \n  geom_vline(xintercept = 0) +\n  geom_point() + \n  geom_text_repel(aes(label = Beer)) + \n  labs(x = \"PC1\", y = \"PC2\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "pages/spca.html#sparse-pca",
+    "href": "pages/spca.html#sparse-pca",
+    "title": "Sparse Principal Component Analysis",
+    "section": "Sparse PCA",
+    "text": "Sparse PCA\n\nRun a sparse PCA on the data by following these steps.\n\ncenter the data,\nrun a sparse SVD with 2 components, with no “left” sparsity (\\(\\sqrt{I}\\)), and right sparsity equal to \\(0.5\\sqrt{J}\\),\nplot the components obtained by multiplying the data by the sparse singular vectors.\n\nWhat are the descriptors that are selected?\n\n\n\nSolution\nlibrary(sGSVD)\n\nI &lt;- nrow(beers)\nJ &lt;- ncol(beers)\n\ncentered.beers &lt;- scale(beers[, -1])\nres.spca &lt;- sparseSVD(X = centered.beers, k = 2L, rdsLeft = sqrt(I)*c(1, 1), rdsRight = 0.5*sqrt(J)*c(1, 1))\n\n# centered.beers %*% res.spca$v\n# res.spca$u"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sparse Factor Analysis",
+    "section": "",
+    "text": "Instructors:\nThis is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.\nThis tutorial is designed for sensory and consumer scientists who want to improve their data analysis skills using component-based methods in R. The focus of this training session is to teach participants how to navigate through complex and noisy multivariate sensory datasets to extract relevant observations, assessors, properties, and variables. The main objective is to provide attendees with the expertise to carry out a range of sparse multivariate analyses in R, including sparse PCA, CA, and MCA.\nDuring the course, attendees will work with specific packages created for sparse multivariate analysis (such as SPAFAC). They will be provided with datasets containing both quantitative and qualitative variables to apply sparse MCA, CA, and PCA methods. This hands-on approach will help them determine the optimal degree of sparsity and accurately interpret their findings. All the course materials, including an extensive R script, are open-source and will be available for use after the completion of the tutorial.\nThis three-hour session is particularly beneficial for sensory and consumer scientists looking to enhance their data visualization skills using R/Rstudio. Participants should have a basic understanding of R/RStudio, including data types, variables, functions, and package management. A fundamental grasp of statistical concepts will also be helpful. Participants must bring a laptop with R and Rstudio pre-installed.\nMore instructions here."
+  },
+  {
+    "objectID": "index.html#detailed-proposed-schedule",
+    "href": "index.html#detailed-proposed-schedule",
+    "title": "Sparse Factor Analysis",
+    "section": "Detailed (proposed) schedule",
+    "text": "Detailed (proposed) schedule\n\n\n\n\n\nStart\nEnd\nDuration\nTopic\nOperators\n\n\n\n\n09:00\n09:30\n00:30\nPresentation and ice breaker\nTBA\n\n\n09:30\n09:50\n00:20\nR and PCA\nTBA\n\n\n09:50\n10:20\n00:30\nSparse SVD\nTBA\n\n\n10:20\n10:35\n00:15\nCoffee Break\nTBA\n\n\n10:35\n11:05\n00:30\nSparse PCA\nTBA\n\n\n11:05\n11:35\n00:30\nSparse CA\nTBA\n\n\n11:35\n12:05\n00:30\nSparse PLSC\nTBA"
+  },
+  {
+    "objectID": "index.html#shared-code",
+    "href": "index.html#shared-code",
+    "title": "Sparse Factor Analysis",
+    "section": "Shared code",
+    "text": "Shared code\nThis a link to the shared code that we will use during the tutorial: Shared code"
+  },
+  {
+    "objectID": "index.html#datasets",
+    "href": "index.html#datasets",
+    "title": "Sparse Factor Analysis",
+    "section": "Datasets",
+    "text": "Datasets\nThe datasets that we will use during the tutorial are detailed on this page. You can download the datasets with the links below, or the links on the dataset page, or the links at the beginning of each “part” of the tutorial:\n\nBeers: Ten tasters rated the intensity of twelve descriptors for six beers,\nTurkey products: A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale\nTV and salad: Data from the INCA 3 study include responses from over 5,800 people on dietary habits, focusing on “hours spent watching TV” and “salad consumption.”\nWines: 36 wines from Argentina, Canada, and the USA, along with a mystery French wine, are evaluated on descriptors, price, chemistry, and sensory properties, organized into four data blocks."
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Sparse Factor Analysis",
+    "section": "References",
+    "text": "References\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs.\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579.\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
   },
   {
     "objectID": "pages/csvd.html",
@@ -301,178 +413,94 @@
     "text": "Footnotes\n\n\nI used pheatmap for simplicity in the solution, but ComplexHeatmap to create the actual heatmap.↩︎\ndepending on how you want to do it, you would need to pre-process the data before applying the SVD↩︎"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sparse Factor Analysis",
+    "objectID": "pages/instructions.html",
+    "href": "pages/instructions.html",
+    "title": "Pre-tutorial instructions",
     "section": "",
-    "text": "Instructors:\nThis is the companion website of the Sensometrics 2024 tutorial on sparse factor analysis.\nThis tutorial is designed for sensory and consumer scientists who want to improve their data analysis skills using component-based methods in R. The focus of this training session is to teach participants how to navigate through complex and noisy multivariate sensory datasets to extract relevant observations, assessors, properties, and variables. The main objective is to provide attendees with the expertise to carry out a range of sparse multivariate analyses in R, including sparse PCA, CA, and MCA.\nDuring the course, attendees will work with specific packages created for sparse multivariate analysis (such as SPAFAC). They will be provided with datasets containing both quantitative and qualitative variables to apply sparse MCA, CA, and PCA methods. This hands-on approach will help them determine the optimal degree of sparsity and accurately interpret their findings. All the course materials, including an extensive R script, are open-source and will be available for use after the completion of the tutorial.\nThis three-hour session is particularly beneficial for sensory and consumer scientists looking to enhance their data visualization skills using R/Rstudio. Participants should have a basic understanding of R/RStudio, including data types, variables, functions, and package management. A fundamental grasp of statistical concepts will also be helpful. Participants must bring a laptop with R and Rstudio pre-installed.\nMore instructions here."
+    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
   },
   {
-    "objectID": "index.html#detailed-proposed-schedule",
-    "href": "index.html#detailed-proposed-schedule",
-    "title": "Sparse Factor Analysis",
-    "section": "Detailed (proposed) schedule",
-    "text": "Detailed (proposed) schedule\n\n\n\n\n\nStart\nEnd\nDuration\nTopic\nOperators\n\n\n\n\n09:00\n09:30\n00:30\nPresentation and ice breaker\nTBA\n\n\n09:30\n09:50\n00:20\nR and PCA\nTBA\n\n\n09:50\n10:20\n00:30\nSparse SVD\nTBA\n\n\n10:20\n10:35\n00:15\nCoffee Break\nTBA\n\n\n10:35\n11:05\n00:30\nSparse PCA\nTBA\n\n\n11:05\n11:35\n00:30\nSparse CA\nTBA\n\n\n11:35\n12:05\n00:30\nSparse PLSC\nTBA"
-  },
-  {
-    "objectID": "index.html#shared-code",
-    "href": "index.html#shared-code",
-    "title": "Sparse Factor Analysis",
-    "section": "Shared code",
-    "text": "Shared code\nThis a link to the shared code that we will use during the tutorial: Shared code"
-  },
-  {
-    "objectID": "index.html#datasets",
-    "href": "index.html#datasets",
-    "title": "Sparse Factor Analysis",
-    "section": "Datasets",
-    "text": "Datasets\nThe datasets that we will use during the tutorial are detailed on this page. You can download the datasets with the links below, or the links on the dataset page, or the links at the beginning of each “part” of the tutorial:\n\nBeers: Ten tasters rated the intensity of twelve descriptors for six beers,\nTurkey products: A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale\nTV and salad: Data from the INCA 3 study include responses from over 5,800 people on dietary habits, focusing on “hours spent watching TV” and “salad consumption.”\nWines: 36 wines from Argentina, Canada, and the USA, along with a mystery French wine, are evaluated on descriptors, price, chemistry, and sensory properties, organized into four data blocks."
-  },
-  {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Sparse Factor Analysis",
-    "section": "References",
-    "text": "References\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs.\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579.\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
-  },
-  {
-    "objectID": "pages/spca.html",
-    "href": "pages/spca.html",
-    "title": "Sparse Principal Component Analysis",
+    "objectID": "pages/instructions.html#softwares",
+    "href": "pages/instructions.html#softwares",
+    "title": "Pre-tutorial instructions",
     "section": "",
-    "text": "Solution\nlibrary(readxl)"
+    "text": "We recommend installing the latest versions of R and Rstudio:\n\nR version 4.4.0, but any version \\(\\geq\\) 4.0.0 should work fine,\nRstudio version 2024.04.1, but any version \\(\\geq\\) 2022.00.00 should work.\n\nAn excellent resource for R and Rstudio will be found here: https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro.html"
   },
   {
-    "objectID": "pages/spca.html#links",
-    "href": "pages/spca.html#links",
-    "title": "Sparse Principal Component Analysis",
-    "section": "Links",
-    "text": "Links\n\nShared code\nData"
+    "objectID": "pages/instructions.html#packages",
+    "href": "pages/instructions.html#packages",
+    "title": "Pre-tutorial instructions",
+    "section": "Packages",
+    "text": "Packages\nTo install packages, you can use pak, a great package for easy and comprehensible package installation. First, install pak with the usual command\n\ninstall.packages(\"pak\")\n\nThe whole tutorial revolves around the use of two packages: sGSVD and SPAFAC. Install them with pak:\n\npak::pak(c(\"vguillemot/sGSVD\", \"juchiyu/SPAFAC\"))\n\nDepending on what is already installed on your machine, pak will detect what needs to be installed, and give you a summary.\n\nOther useful packages\n\nTL;DR – here is a one liner to install the packages detailed below.\n\n\npak::pak(c(\"TExPosition\", \"factoextra\", \"FactoMineR\", \"tidyverse\", \"ggrepel\", \"pheatmap\"))\n\n\nTExPosition for PLS-C, install with pak::pak(\"TExPosition\")\nFactoMineR and factoextra for PCA, CA, MCA and much much more, install with pak::pak(c(\"factoextra\", \"FactoMineR\"))\ntidyverse for plotting, data wrangling and so much more, install with pak::pak(\"tidyverse\")\nggrepel for adding labels to ggplots, install with pak::pak(\"ggrepel\")\npheatmap for nice heatmaps (but you might prefer ComplexHeatmap), install with pak::pak(\"pheatmap\")"
   },
   {
-    "objectID": "pages/spca.html#beers",
-    "href": "pages/spca.html#beers",
-    "title": "Sparse Principal Component Analysis",
-    "section": "Beers",
-    "text": "Beers\n\nLoad the Beers dataset.\n\n\n\nSolution\nlibrary(readxl)\nbeers &lt;- read_excel(\"beers.xlsx\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeer\nBitter\nAcid\nSweet\nAstringent\nAlcoholic\nHop\nCereal\nToasted\nYeast\nHay\nMalt\nFermented\n\n\n\n\nBruxelles\n3.190103\n2.250000\n2.002791\n2.486309\n3.237597\n3.813985\n3.341958\n2.858587\n3.305860\n2.774995\n3.693717\n3.314378\n\n\nFranzDunkel\n3.898867\n2.116649\n2.690365\n3.419777\n4.316269\n4.480046\n3.718364\n2.958749\n3.419777\n2.970115\n3.685813\n3.505336\n\n\nFranzNatur\n4.277778\n2.075397\n3.085289\n3.426917\n4.407831\n4.536122\n4.138244\n3.895192\n3.496122\n3.261656\n3.940780\n2.805860\n\n\nHofbrau\n4.399007\n3.087549\n0.000000\n3.158053\n3.984467\n4.674603\n3.706632\n3.395192\n3.630654\n3.616398\n4.023809\n3.731262\n\n\nPaulaner\n3.697283\n2.404388\n1.028142\n3.326382\n3.910490\n4.749270\n3.786054\n3.144253\n3.444692\n3.278671\n3.792303\n3.281101\n\n\nBlueMoon\n3.200000\n3.300000\n4.600000\n3.300000\n5.200000\n5.200000\n2.500000\n2.500000\n2.100000\n2.900000\n4.200000\n4.100000\n\n\n\n\n\nThe beers data has the following characteristics:\n\nthere are \\(I = 6\\) products,\nthere are \\(J = 12\\) descriptors."
+    "objectID": "pages/instructions.html#requirements",
+    "href": "pages/instructions.html#requirements",
+    "title": "Pre-tutorial instructions",
+    "section": "Requirements",
+    "text": "Requirements\nDuring the tutorial, we will extensively use dplyr and ggplot2, we therefore greatly recommend future attendees to refresh their memory on the use of these packages, for example with this course: https://swcarpentry.github.io/r-novice-gapminder"
   },
   {
-    "objectID": "pages/spca.html#regular-pca",
-    "href": "pages/spca.html#regular-pca",
-    "title": "Sparse Principal Component Analysis",
-    "section": "Regular PCA",
-    "text": "Regular PCA\n\nRun a PCA on the data and show the first two components.\n\n\n\nSolution\nlibrary(dplyr)\nlibrary(FactoMineR)\nlibrary(ggplot2)\nlibrary(ggrepel)\n\nres.pca &lt;- PCA(beers[, -1], graph = FALSE)\n\ndat.pca &lt;- data.frame(\n  Beer = beers$Beer,\n  res.pca$ind$coord\n)\n\ndat.pca %&gt;%\n  ggplot(aes(Dim.1, Dim.2)) +\n  geom_hline(yintercept = 0) + \n  geom_vline(xintercept = 0) +\n  geom_point() + \n  geom_text_repel(aes(label = Beer)) + \n  labs(x = \"PC1\", y = \"PC2\") +\n  theme_bw()"
-  },
-  {
-    "objectID": "pages/spca.html#sparse-pca",
-    "href": "pages/spca.html#sparse-pca",
-    "title": "Sparse Principal Component Analysis",
-    "section": "Sparse PCA",
-    "text": "Sparse PCA\n\nRun a sparse PCA on the data by following these steps.\n\ncenter the data,\nrun a sparse SVD with 2 components, with no “left” sparsity (\\(\\sqrt{I}\\)), and right sparsity equal to \\(0.5\\sqrt{J}\\),\nplot the components obtained by multiplying the data by the sparse singular vectors.\n\nWhat are the descriptors that are selected?\n\n\n\nSolution\nlibrary(sGSVD)\n\nI &lt;- nrow(beers)\nJ &lt;- ncol(beers)\n\ncentered.beers &lt;- scale(beers[, -1])\nres.spca &lt;- sparseSVD(X = centered.beers, k = 2L, rdsLeft = sqrt(I)*c(1, 1), rdsRight = 0.5*sqrt(J)*c(1, 1))\n\n# centered.beers %*% res.spca$v\n# res.spca$u"
-  },
-  {
-    "objectID": "pages/splsc.html",
-    "href": "pages/splsc.html",
-    "title": "Sparse PLS (Correlation)",
+    "objectID": "pages/sca.html",
+    "href": "pages/sca.html",
+    "title": "Sparse Correspondence Analysis",
     "section": "",
     "text": "Shared code\nData"
   },
   {
-    "objectID": "pages/splsc.html#links",
-    "href": "pages/splsc.html#links",
-    "title": "Sparse PLS (Correlation)",
+    "objectID": "pages/sca.html#links",
+    "href": "pages/sca.html#links",
+    "title": "Sparse Correspondence Analysis",
     "section": "",
     "text": "Shared code\nData"
   },
   {
-    "objectID": "pages/splsc.html#data",
-    "href": "pages/splsc.html#data",
-    "title": "Sparse PLS (Correlation)",
-    "section": "Data",
-    "text": "Data\n\nLoad the Wines dataset, and create two different blocks of data, one block containing only the “chemical” attributes (Acidity, Alcohol, Sugar, Tannin), and the other one containing only the sensory attributes (fruity, floral, vegetal, spicy, woody, sweet, astringent).\n\n\n\nSolution\nwines &lt;- read_excel(\"../data/wines.xlsx\")\nchemi &lt;- wines %&gt;% select(Acidity, Alcohol, Sugar, Tannin)\nsenso &lt;- wines %&gt;% select(fruity, floral, vegetal, \n           spicy, woody, sweet, astringent)\n\n\nThe whole dataset is displayed below.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWine\norigin\ncolor\nvarietal\nPrice\nAcidity\nAlcohol\nSugar\nTannin\nfruity\nfloral\nvegetal\nspicy\nwoody\nsweet\nastringent\nacidic\nhedonic\n\n\n\n\nA1\nArgentina\nred\nmerlot\n11\n5.33\n13.8\n2.75\n559\n6\n2\n1\n4\n5\n3\n5\n4\n2\n\n\nA2\nArgentina\nred\ncabernet\n5\n5.14\n13.9\n2.41\n672\n5\n3\n2\n3\n4\n2\n6\n3\n2\n\n\nA3\nArgentina\nred\nshiraz\n7\n5.16\n14.3\n2.20\n455\n7\n1\n2\n6\n5\n3\n4\n2\n2\n\n\nA4\nArgentina\nred\npinot\n16\n4.37\n13.5\n3.00\n348\n5\n3\n2\n2\n4\n1\n3\n4\n4\n\n\nA5\nArgentina\nwhite\nchardonnay\n14\n4.34\n13.3\n2.61\n46\n5\n4\n1\n3\n4\n2\n1\n4\n6\n\n\nA6\nArgentina\nwhite\nsauvignon\n8\n6.60\n13.3\n3.17\n54\n7\n5\n6\n1\n1\n4\n1\n5\n8\n\n\nA7\nArgentina\nwhite\nriesling\n9\n7.70\n12.3\n2.15\n42\n6\n7\n2\n2\n2\n3\n1\n6\n9\n\n\nA8\nArgentina\nwhite\ngewurzt\n11\n6.70\n12.5\n2.51\n51\n5\n8\n2\n1\n1\n4\n1\n4\n9\n\n\nA9\nArgentina\nrose\nmalbec\n4\n6.50\n13.0\n7.24\n84\n8\n4\n3\n2\n2\n6\n2\n3\n8\n\n\nA10\nArgentina\nrose\ncabernet\n3\n4.39\n12.0\n4.50\n90\n6\n3\n2\n1\n1\n5\n2\n3\n8\n\n\nA11\nArgentina\nrose\npinot\n6\n4.89\n12.0\n6.37\n76\n7\n2\n1\n1\n1\n4\n1\n4\n9\n\n\nA12\nArgentina\nrose\nsyrah\n5\n5.90\n13.5\n4.20\n80\n8\n4\n1\n3\n2\n5\n2\n3\n7\n\n\nC1\nCanada\nred\nmerlot\n20\n7.42\n14.9\n2.10\n483\n5\n3\n2\n3\n4\n3\n4\n4\n3\n\n\nC2\nCanada\nred\ncabernet\n15\n7.35\n14.5\n1.90\n698\n6\n3\n2\n2\n5\n2\n5\n4\n2\n\n\nC3\nCanada\nred\nshiraz\n20\n7.50\n14.5\n1.50\n413\n6\n2\n3\n4\n3\n3\n5\n1\n2\n\n\nC4\nCanada\nred\npinot\n25\n5.70\n13.3\n1.70\n320\n4\n2\n3\n1\n3\n2\n4\n4\n4\n\n\nC5\nCanada\nwhite\nchardonnay\n20\n6.00\n13.5\n3.00\n35\n4\n3\n2\n1\n3\n2\n2\n3\n5\n\n\nC6\nCanada\nwhite\nsauvignon\n15\n7.50\n12.0\n3.50\n40\n8\n4\n3\n2\n1\n3\n1\n4\n8\n\n\nC7\nCanada\nwhite\nriesling\n15\n7.00\n11.9\n3.40\n48\n7\n5\n1\n1\n3\n3\n1\n7\n8\n\n\nC8\nCanada\nwhite\ngewurzt\n18\n6.30\n13.9\n2.80\n39\n6\n5\n2\n2\n2\n3\n2\n5\n6\n\n\nC9\nCanada\nrose\nmalbec\n8\n5.90\n12.0\n5.50\n90\n6\n3\n3\n3\n2\n4\n2\n4\n8\n\n\nC10\nCanada\nrose\ncabernet\n6\n5.60\n12.5\n4.00\n85\n5\n4\n1\n3\n2\n4\n2\n4\n7\n\n\nC11\nCanada\nrose\npinot\n9\n6.20\n13.0\n6.00\n75\n5\n3\n2\n1\n2\n3\n2\n3\n7\n\n\nC12\nCanada\nrose\nsyrah\n9\n5.80\n13.0\n3.50\n83\n7\n3\n2\n3\n3\n4\n1\n4\n7\n\n\nU1\nUSA\nred\nmerlot\n25\n6.00\n13.6\n3.50\n578\n7\n2\n2\n5\n6\n3\n4\n3\n2\n\n\nU2\nUSA\nred\ncabernet\n15\n6.50\n14.6\n3.50\n710\n8\n3\n1\n4\n5\n3\n5\n3\n2\n\n\nU3\nUSA\nred\nshiraz\n25\n5.30\n13.9\n1.99\n610\n8\n2\n3\n7\n6\n4\n5\n3\n1\n\n\nU4\nUSA\nred\npinot\n28\n6.10\n14.0\n0.00\n340\n6\n3\n2\n2\n5\n2\n4\n4\n2\n\n\nU5\nUSA\nwhite\nchardonnay\n15\n7.20\n13.3\n1.10\n41\n6\n4\n2\n3\n6\n3\n2\n4\n5\n\n\nU6\nUSA\nwhite\nsauvignon\n8\n7.20\n13.5\n1.00\n50\n6\n5\n5\n1\n2\n4\n2\n4\n7\n\n\nU7\nUSA\nwhite\nriesling\n10\n8.60\n12.0\n1.65\n47\n5\n5\n3\n2\n2\n4\n2\n5\n8\n\n\nU8\nUSA\nwhite\ngewurzt\n20\n9.60\n12.0\n0.00\n45\n6\n6\n3\n2\n2\n4\n2\n3\n8\n\n\nU9\nUSA\nrose\nmalbec\n3\n6.20\n12.5\n4.00\n84\n8\n2\n1\n4\n3\n5\n2\n4\n7\n\n\nU10\nUSA\nrose\ncabernet\n4\n5.71\n12.5\n4.30\n93\n8\n3\n3\n3\n2\n6\n2\n3\n8\n\n\nU11\nUSA\nrose\npinot\n8\n5.40\n13.0\n3.10\n79\n6\n1\n1\n2\n3\n4\n1\n3\n6\n\n\nU12\nUSA\nrose\nsyrah\n6\n6.50\n13.5\n3.00\n89\n9\n3\n2\n5\n4\n3\n2\n3\n5"
+    "objectID": "pages/sca.html#salad-and-tv",
+    "href": "pages/sca.html#salad-and-tv",
+    "title": "Sparse Correspondence Analysis",
+    "section": "Salad and TV",
+    "text": "Salad and TV\n\nLoad the “salad and TV” dataset.\n\n\n\nSolution\ntv &lt;- read_excel(\"../data/salad_and_tv.xlsx\")\nknitr::kable(tv)\n\n\n\n\n\nHoursTV\nRarely\nSometimes\nOften\nEveryDay\n\n\n\n\n(0,1]\n337\n271\n83\n43\n\n\n(1,2]\n408\n331\n123\n75\n\n\n(2,3]\n283\n268\n116\n79\n\n\n(3,4]\n182\n194\n64\n51\n\n\n(4,5]\n104\n109\n36\n30\n\n\n(5,10]\n124\n102\n28\n46\n\n\n\n\n\nSolution\n## Make it into a matrix\ntvmat &lt;- as.matrix(tv[, -1])\nrownames(tvmat) &lt;- tv$HoursTV\n\n\n\nthe first column shows how many hours of TV the respondent watches (split into intervals),\nthe other column names are the frequency of “salad consumption” in the household,\nthe data is a contingency table, meaning that each cell is a count."
   },
   {
-    "objectID": "pages/splsc.html#regular-pls-c",
-    "href": "pages/splsc.html#regular-pls-c",
-    "title": "Sparse PLS (Correlation)",
-    "section": "Regular PLS-C",
-    "text": "Regular PLS-C\nThe goal of PLS-C is to create components that are the most correlation to one another while summing up the information in each block.\n\nUse the function tepPLS from package TExPosition to build a PLS-C model of the relationship between the sensory and chemical properties of the wines. Plot the first dimension of each block.\n\n\n\nSolution\nlibrary(TExPosition)\n\nres.pls &lt;- tepPLS(senso, chemi, graph = FALSE)\n\ndat.plsc &lt;- data.frame(\n  wines %&gt;% select(Wine, color),\n  Lx = res.pls$TExPosition.Data$lx,\n  Ly = res.pls$TExPosition.Data$ly)\n\ndat.plsc %&gt;%\n  ggplot(aes(Lx.1, Ly.1, color = color)) + \n  geom_point()"
+    "objectID": "pages/sca.html#regular-ca",
+    "href": "pages/sca.html#regular-ca",
+    "title": "Sparse Correspondence Analysis",
+    "section": "Regular CA",
+    "text": "Regular CA\n\nRun a regular CA.\n\n\n\nSolution\nlibrary(FactoMineR)\nres.ca &lt;- CA(tvmat)"
   },
   {
-    "objectID": "pages/splsc.html#sparse-pls-c",
-    "href": "pages/splsc.html#sparse-pls-c",
-    "title": "Sparse PLS (Correlation)",
-    "section": "Sparse PLS-C",
-    "text": "Sparse PLS-C\n\nUse the function sparsePLSC from package SPAFAC to build a sparse PLS-C model to explain the link between the sensory and chemical descriptors of the wines. Has the factor map map drastically changed? What are the main descriptors?\n\n\n\nSolution\nlibrary(sGSVD)\nlibrary(SPAFAC)\n\nJ1 &lt;- ncol(senso)\nJ2 &lt;- ncol(chemi)\n\nres.spls &lt;- sparsePLSC(\n  X = senso, # First block\n  Y = chemi, # Second block\n  components = 2L, # Number of dimensions\n  rdsLeft = 0.6 * sqrt(J1) * c(1, 1), # Medium sparsity\n  rdsRight = 0.6 * sqrt(J2) * c(1, 1) # Medium sparsity\n  )\n\ndat.splsc &lt;- data.frame(\n  wines %&gt;% select(Wine, color, origin),\n  Lx = res.spls$lx,\n  Ly = res.spls$ly)\n\ndat.splsc %&gt;%\n  ggplot(aes(Lx.1, Ly.1, color = color)) + \n  geom_point() + \n  labs(\n    x = \"First sparse sensory dimension\",\n    y = \"First sparse chemical dimension\")\n\nres.spls$fi\nres.spls$fj"
+    "objectID": "pages/sca.html#sparse-ca",
+    "href": "pages/sca.html#sparse-ca",
+    "title": "Sparse Correspondence Analysis",
+    "section": "Sparse CA",
+    "text": "Sparse CA\n\nUse the function sparseCA from the package SPAFAC to run a sparse CA.\n\n\n\nSolution\nlibrary(sGSVD)\nlibrary(SPAFAC)\n\nI &lt;- nrow(tv)\nJ &lt;- ncol(tv) - 1\nres.sca &lt;- sparseCA(\n  DATA = tvmat,\n  components = 3L,\n  rdsLeft = 0.5 * sqrt(I) * c(1, 1, 1),\n  rdsRight = 0.6 * sqrt(J) * c(1, 1, 1)\n  )\n\nknitr::kable(data.frame(Fi = res.sca$fi))\n\n\n\n\n\n\nFi.1\nFi.2\nFi.3\n\n\n\n\n(0,1]\n-0.1485171\n-0.0048933\n-0.0007687\n\n\n(1,2]\n0.0000000\n0.0000000\n0.0000000\n\n\n(2,3]\n0.0000000\n0.0918728\n-0.0006014\n\n\n(3,4]\n0.0000000\n0.0000000\n0.0545455\n\n\n(4,5]\n0.0000000\n0.0000000\n0.0000000\n\n\n(5,10]\n0.0622467\n-0.0285650\n-0.0044875\n\n\n\n\n\nSolution\nknitr::kable(data.frame(Fj = res.sca$fj))\n\n\n\n\n\n\nFj.1\nFj.2\nFj.3\n\n\n\n\nRarely\n-0.0248080\n-0.0118642\n-0.0303188\n\n\nSometimes\n0.0000000\n0.0000000\n0.0000000\n\n\nOften\n0.0000000\n0.1187506\n-0.0101999\n\n\nEveryDay\n0.2254452\n-0.0057943\n-0.0148073"
   },
   {
-    "objectID": "pages/about.html",
-    "href": "pages/about.html",
-    "title": "About us",
+    "objectID": "pages/pca.html",
+    "href": "pages/pca.html",
+    "title": "PCA: Principal Components Analysis",
     "section": "",
-    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+    "text": "A trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables.\n\nLoad the dataset\n\n\n\nsolution\nlibrary(readxl)\nturkey &lt;- read_excel(\"../data/turkey.xlsx\")\nknitr::kable(turkey)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProduct\nSweet.XEL\nNutmeg.XEL\nSpicy.XEL\nYeast.XEL\nSAL.XEL\nAcid.XEL\nUmami.XEL\nSalivating.XEL\nWhite meat.XEL\nJuicy.XEL\nCured.XEL\nFatty.XEL\nSweet.LALO\nNutmeg.LALO\nSpicy.LALO\nYeast.LALO\nSAL.LALO\nAcid.LALO\nUmami.LALO\nSalivating.LALO\nWhite meat.LALO\nJuicy.LALO\nCured.LALO\nFatty.LALO\nSweet.JUAN\nNutmeg.JUAN\nSpicy.JUAN\nYeast.JUAN\nSAL.JUAN\nAcid.JUAN\nUmami.JUAN\nSalivating.JUAN\nWhite meat.JUAN\nJuicy.JUAN\nCured.JUAN\nFatty.JUAN\nSweet.MARTHA\nNutmeg.MARTHA\nSpicy.MARTHA\nYeast.MARTHA\nSAL.MARTHA\nAcid.MARTHA\nUmami.MARTHA\nSalivating.MARTHA\nWhite meat.MARTHA\nJuicy.MARTHA\nCured.MARTHA\nFatty.MARTHA\nSweet.NERI\nNutmeg.NERI\nSpicy.NERI\nYeast.NERI\nSAL.NERI\nAcid.NERI\nUmami.NERI\nSalivating.NERI\nWhite meat.NERI\nJuicy.NERI\nCured.NERI\nFatty.NERI\nSweet.DIANA\nNutmeg.DIANA\nSpicy.DIANA\nYeast.DIANA\nSAL.DIANA\nAcid.DIANA\nUmami.DIANA\nSalivating.DIANA\nWhite meat.DIANA\nJuicy.DIANA\nCured.DIANA\nFatty.DIANA\nSweet.DULCE\nNutmeg.DULCE\nSpicy.DULCE\nYeast.DULCE\nSAL.DULCE\nAcid.DULCE\nUmami.DULCE\nSalivating.DULCE\nWhite meat.DULCE\nJuicy.DULCE\nCured.DULCE\nFatty.DULCE\nSweet.RAUL\nNutmeg.RAUL\nSpicy.RAUL\nYeast.RAUL\nSAL.RAUL\nAcid.RAUL\nUmami.RAUL\nSalivating.RAUL\nWhite meat.RAUL\nJuicy.RAUL\nCured.RAUL\nFatty.RAUL\n\n\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\n0\n0\n3\n0\n3\n1.0\n4\n5.0\n6\n5\n4\n3\n0.0\n0\n3.5\n0.0\n2.5\n1.5\n3.0\n3.5\n4.5\n2.5\n5.0\n2.5\n0\n0.0\n2\n0.0\n5\n1\n3\n3.0\n6\n4\n5\n2\n0\n0\n1\n0.0\n3\n0.5\n1\n5.0\n5\n1\n2\n2\n0.0\n0.0\n1.5\n0.0\n2.0\n1.5\n2.0\n3.0\n5\n3.5\n4.0\n2.0\n0.0\n0.0\n1.5\n0.0\n1.5\n0.5\n4.0\n1.5\n5\n3.0\n3.5\n3.0\n0\n0\n3.5\n0\n3\n2\n4\n5.0\n6\n4\n5\n4\n0\n0\n2\n0\n4\n3\n2\n2.0\n5\n3\n4\n2\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\n5\n4\n3\n3\n5\n2.0\n4\n5.0\n6\n6\n4\n3\n3.5\n4\n3.0\n3.0\n2.5\n3.0\n3.0\n4.0\n5.0\n4.0\n3.5\n3.0\n1\n2.0\n2\n2.0\n4\n2\n3\n3.0\n6\n4\n5\n2\n1\n3\n2\n3.0\n2\n0.4\n3\n6.0\n5\n2\n4\n4\n2.0\n2.0\n1.0\n0.0\n1.5\n2.0\n1.5\n3.0\n5\n3.5\n4.5\n2.0\n3.0\n3.5\n2.0\n4.0\n2.0\n1.5\n2.0\n2.0\n6\n2.5\n3.5\n2.5\n3\n5\n3.5\n3\n2\n3\n4\n5.0\n5\n6\n6\n4\n2\n3\n4\n0\n4\n3\n1\n2.0\n7\n4\n6\n3\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\n0\n0\n4\n4\n5\n2.0\n3\n5.0\n6\n6\n5\n3\n0.0\n0\n3.5\n3.5\n4.0\n2.5\n3.0\n4.5\n6.0\n3.5\n3.0\n1.5\n0\n0.0\n3\n2.0\n5\n1\n3\n3.0\n6\n4\n4\n2\n0\n0\n2\n3.0\n4\n2.0\n1\n6.0\n6\n3\n4\n3\n0.0\n0.0\n1.0\n2.5\n2.0\n2.5\n2.5\n3.5\n6\n4.0\n5.0\n1.5\n0.0\n0.0\n3.5\n3.0\n3.0\n4.0\n4.0\n4.5\n5\n4.5\n4.0\n2.5\n0\n0\n4.0\n3\n3\n2\n4\n5.0\n4\n4\n4\n2\n0\n0\n3\n3\n5\n3\n2\n3.0\n6\n4\n6\n2\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\n5\n4\n3\n3\n3\n0.0\n3\n5.5\n6\n6\n5\n4\n3.0\n4\n2.5\n2.0\n2.5\n2.0\n3.5\n4.0\n5.0\n3.5\n4.5\n4.0\n1\n1.5\n2\n1.0\n5\n3\n3\n2.5\n7\n4\n4\n3\n2\n2\n2\n1.0\n4\n1.0\n3\n5.5\n6\n4\n2\n2\n2.0\n1.5\n2.5\n1.0\n1.5\n1.0\n1.5\n3.5\n5\n3.0\n4.0\n2.0\n3.5\n3.5\n1.0\n3.0\n2.5\n1.5\n2.0\n3.0\n6\n5.0\n5.5\n3.0\n4\n4\n3.0\n2\n2\n1\n5\n5.5\n5\n2\n5\n4\n1\n2\n4\n2\n5\n3\n2\n2.5\n6\n3\n6\n2\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\n2\n0\n3\n2\n4\n1.5\n3\n4.0\n4\n3\n4\n2\n2.0\n0\n2.5\n3.0\n5.0\n2.0\n4.0\n5.5\n6.0\n2.0\n5.0\n2.0\n0\n0.0\n2\n1.0\n4\n1\n2\n3.0\n7\n1\n3\n2\n1\n0\n3\n0.5\n4\n1.0\n2\n5.5\n5\n3\n2\n3\n1.0\n0.0\n1.0\n1.5\n2.0\n2.0\n1.5\n3.0\n5\n3.0\n5.0\n2.0\n2.0\n0.0\n1.5\n0.0\n3.5\n2.5\n3.0\n1.5\n6\n2.5\n4.5\n4.0\n3\n0\n3.0\n2\n3\n0\n4\n5.0\n6\n3\n5\n2\n1\n0\n4\n3\n3\n1\n2\n3.0\n7\n3\n6\n2\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\n2\n0\n5\n3\n4\n1.0\n3\n4.0\n5\n5\n5\n3\n2.5\n0\n2.0\n3.0\n3.5\n2.0\n3.5\n4.5\n5.0\n3.0\n4.0\n1.5\n1\n0.0\n2\n0.5\n5\n1\n2\n2.0\n5\n3\n4\n1\n2\n0\n2\n1.0\n4\n1.0\n2\n5.0\n6\n2\n3\n3\n1.5\n0.0\n1.0\n0.0\n2.0\n1.5\n2.0\n2.5\n5\n2.5\n4.0\n1.5\n3.0\n0.0\n2.0\n3.0\n4.0\n2.0\n3.5\n3.5\n5\n2.5\n4.5\n3.0\n3\n0\n3.0\n3\n2\n1\n4\n5.0\n6\n3\n6\n3\n0\n0\n3\n2\n3\n2\n2\n2.0\n6\n3\n5\n2\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\n0\n0\n4\n1\n5\n2.0\n4\n6.0\n4\n4\n6\n4\n0.0\n0\n3.5\n2.5\n4.0\n3.0\n3.5\n5.0\n5.5\n3.0\n3.5\n2.0\n0\n0.0\n3\n3.0\n4\n1\n2\n3.0\n7\n3\n4\n3\n0\n0\n3\n1.0\n4\n1.0\n2\n6.0\n6\n1\n2\n2\n0.0\n0.0\n2.0\n1.0\n2.0\n2.0\n2.0\n3.0\n6\n3.5\n4.0\n2.5\n0.0\n0.0\n3.0\n4.5\n6.0\n2.5\n4.0\n4.0\n7\n4.5\n5.5\n4.5\n0\n0\n4.0\n2\n2\n1\n4\n5.0\n6\n4\n6\n3\n0\n0\n4\n2\n5\n3\n2\n3.0\n7\n3\n6\n2\n\n\nPECHUGA DE PAVO ALPINO\n3\n0\n0\n2\n6\n2.0\n4\n5.0\n5\n4\n6\n4\n2.5\n4\n0.0\n2.0\n4.0\n2.0\n4.5\n5.5\n6.0\n3.5\n4.5\n4.5\n1\n2.0\n0\n0.5\n5\n2\n3\n2.5\n7\n4\n5\n3\n1\n0\n0\n1.0\n3\n1.0\n4\n5.5\n5\n2\n4\n1\n1.0\n0.0\n0.0\n1.0\n2.5\n2.0\n1.5\n2.5\n5\n3.0\n4.0\n1.5\n3.5\n0.0\n0.0\n3.0\n2.5\n1.0\n4.0\n4.0\n6\n3.5\n5.0\n2.5\n2\n0\n2.0\n3\n2\n3\n4\n5.5\n7\n4\n5\n3\n0\n0\n0\n1\n4\n2\n1\n2.5\n5\n3\n2\n1\n\n\n\n\n\nFormatted as it is, the dataset contains a lot of different variables, as each one corresponds to a combination of an attribute and a panelist. To analyze this, let us format this dataset in “long form”: each line will correspond a combination of product and panelist (an “observation”) and we will then have 12 variables.\n\nFormat the dataset in long form\n\n\n\nsolution\nturkey %&lt;&gt;%\n    pivot_longer(cols=-Product,\n        names_to=c(\"tmp_var\", \"Panelist\"),\n        names_pattern=\"(.*)\\\\.(.*)\",\n        values_to=\"tmp_value\") %&gt;%\n    pivot_wider(names_from=\"tmp_var\",\n        values_from=\"tmp_value\")\nknitr::kable(turkey)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProduct\nPanelist\nSweet\nNutmeg\nSpicy\nYeast\nSAL\nAcid\nUmami\nSalivating\nWhite meat\nJuicy\nCured\nFatty\n\n\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nXEL\n0.0\n0.0\n3.0\n0.0\n3.0\n1.0\n4.0\n5.0\n6.0\n5.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nLALO\n0.0\n0.0\n3.5\n0.0\n2.5\n1.5\n3.0\n3.5\n4.5\n2.5\n5.0\n2.5\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nJUAN\n0.0\n0.0\n2.0\n0.0\n5.0\n1.0\n3.0\n3.0\n6.0\n4.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nMARTHA\n0.0\n0.0\n1.0\n0.0\n3.0\n0.5\n1.0\n5.0\n5.0\n1.0\n2.0\n2.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nNERI\n0.0\n0.0\n1.5\n0.0\n2.0\n1.5\n2.0\n3.0\n5.0\n3.5\n4.0\n2.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nDIANA\n0.0\n0.0\n1.5\n0.0\n1.5\n0.5\n4.0\n1.5\n5.0\n3.0\n3.5\n3.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nDULCE\n0.0\n0.0\n3.5\n0.0\n3.0\n2.0\n4.0\n5.0\n6.0\n4.0\n5.0\n4.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nRAUL\n0.0\n0.0\n2.0\n0.0\n4.0\n3.0\n2.0\n2.0\n5.0\n3.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nXEL\n5.0\n4.0\n3.0\n3.0\n5.0\n2.0\n4.0\n5.0\n6.0\n6.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nLALO\n3.5\n4.0\n3.0\n3.0\n2.5\n3.0\n3.0\n4.0\n5.0\n4.0\n3.5\n3.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nJUAN\n1.0\n2.0\n2.0\n2.0\n4.0\n2.0\n3.0\n3.0\n6.0\n4.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nMARTHA\n1.0\n3.0\n2.0\n3.0\n2.0\n0.4\n3.0\n6.0\n5.0\n2.0\n4.0\n4.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nNERI\n2.0\n2.0\n1.0\n0.0\n1.5\n2.0\n1.5\n3.0\n5.0\n3.5\n4.5\n2.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nDIANA\n3.0\n3.5\n2.0\n4.0\n2.0\n1.5\n2.0\n2.0\n6.0\n2.5\n3.5\n2.5\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nDULCE\n3.0\n5.0\n3.5\n3.0\n2.0\n3.0\n4.0\n5.0\n5.0\n6.0\n6.0\n4.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nRAUL\n2.0\n3.0\n4.0\n0.0\n4.0\n3.0\n1.0\n2.0\n7.0\n4.0\n6.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nXEL\n0.0\n0.0\n4.0\n4.0\n5.0\n2.0\n3.0\n5.0\n6.0\n6.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nLALO\n0.0\n0.0\n3.5\n3.5\n4.0\n2.5\n3.0\n4.5\n6.0\n3.5\n3.0\n1.5\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nJUAN\n0.0\n0.0\n3.0\n2.0\n5.0\n1.0\n3.0\n3.0\n6.0\n4.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nMARTHA\n0.0\n0.0\n2.0\n3.0\n4.0\n2.0\n1.0\n6.0\n6.0\n3.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nNERI\n0.0\n0.0\n1.0\n2.5\n2.0\n2.5\n2.5\n3.5\n6.0\n4.0\n5.0\n1.5\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nDIANA\n0.0\n0.0\n3.5\n3.0\n3.0\n4.0\n4.0\n4.5\n5.0\n4.5\n4.0\n2.5\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nDULCE\n0.0\n0.0\n4.0\n3.0\n3.0\n2.0\n4.0\n5.0\n4.0\n4.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nRAUL\n0.0\n0.0\n3.0\n3.0\n5.0\n3.0\n2.0\n3.0\n6.0\n4.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nXEL\n5.0\n4.0\n3.0\n3.0\n3.0\n0.0\n3.0\n5.5\n6.0\n6.0\n5.0\n4.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nLALO\n3.0\n4.0\n2.5\n2.0\n2.5\n2.0\n3.5\n4.0\n5.0\n3.5\n4.5\n4.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nJUAN\n1.0\n1.5\n2.0\n1.0\n5.0\n3.0\n3.0\n2.5\n7.0\n4.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nMARTHA\n2.0\n2.0\n2.0\n1.0\n4.0\n1.0\n3.0\n5.5\n6.0\n4.0\n2.0\n2.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nNERI\n2.0\n1.5\n2.5\n1.0\n1.5\n1.0\n1.5\n3.5\n5.0\n3.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nDIANA\n3.5\n3.5\n1.0\n3.0\n2.5\n1.5\n2.0\n3.0\n6.0\n5.0\n5.5\n3.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nDULCE\n4.0\n4.0\n3.0\n2.0\n2.0\n1.0\n5.0\n5.5\n5.0\n2.0\n5.0\n4.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nRAUL\n1.0\n2.0\n4.0\n2.0\n5.0\n3.0\n2.0\n2.5\n6.0\n3.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nXEL\n2.0\n0.0\n3.0\n2.0\n4.0\n1.5\n3.0\n4.0\n4.0\n3.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nLALO\n2.0\n0.0\n2.5\n3.0\n5.0\n2.0\n4.0\n5.5\n6.0\n2.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nJUAN\n0.0\n0.0\n2.0\n1.0\n4.0\n1.0\n2.0\n3.0\n7.0\n1.0\n3.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nMARTHA\n1.0\n0.0\n3.0\n0.5\n4.0\n1.0\n2.0\n5.5\n5.0\n3.0\n2.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nNERI\n1.0\n0.0\n1.0\n1.5\n2.0\n2.0\n1.5\n3.0\n5.0\n3.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nDIANA\n2.0\n0.0\n1.5\n0.0\n3.5\n2.5\n3.0\n1.5\n6.0\n2.5\n4.5\n4.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nDULCE\n3.0\n0.0\n3.0\n2.0\n3.0\n0.0\n4.0\n5.0\n6.0\n3.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nRAUL\n1.0\n0.0\n4.0\n3.0\n3.0\n1.0\n2.0\n3.0\n7.0\n3.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nXEL\n2.0\n0.0\n5.0\n3.0\n4.0\n1.0\n3.0\n4.0\n5.0\n5.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nLALO\n2.5\n0.0\n2.0\n3.0\n3.5\n2.0\n3.5\n4.5\n5.0\n3.0\n4.0\n1.5\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nJUAN\n1.0\n0.0\n2.0\n0.5\n5.0\n1.0\n2.0\n2.0\n5.0\n3.0\n4.0\n1.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nMARTHA\n2.0\n0.0\n2.0\n1.0\n4.0\n1.0\n2.0\n5.0\n6.0\n2.0\n3.0\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nNERI\n1.5\n0.0\n1.0\n0.0\n2.0\n1.5\n2.0\n2.5\n5.0\n2.5\n4.0\n1.5\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nDIANA\n3.0\n0.0\n2.0\n3.0\n4.0\n2.0\n3.5\n3.5\n5.0\n2.5\n4.5\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nDULCE\n3.0\n0.0\n3.0\n3.0\n2.0\n1.0\n4.0\n5.0\n6.0\n3.0\n6.0\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nRAUL\n0.0\n0.0\n3.0\n2.0\n3.0\n2.0\n2.0\n2.0\n6.0\n3.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nXEL\n0.0\n0.0\n4.0\n1.0\n5.0\n2.0\n4.0\n6.0\n4.0\n4.0\n6.0\n4.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nLALO\n0.0\n0.0\n3.5\n2.5\n4.0\n3.0\n3.5\n5.0\n5.5\n3.0\n3.5\n2.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nJUAN\n0.0\n0.0\n3.0\n3.0\n4.0\n1.0\n2.0\n3.0\n7.0\n3.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nMARTHA\n0.0\n0.0\n3.0\n1.0\n4.0\n1.0\n2.0\n6.0\n6.0\n1.0\n2.0\n2.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nNERI\n0.0\n0.0\n2.0\n1.0\n2.0\n2.0\n2.0\n3.0\n6.0\n3.5\n4.0\n2.5\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nDIANA\n0.0\n0.0\n3.0\n4.5\n6.0\n2.5\n4.0\n4.0\n7.0\n4.5\n5.5\n4.5\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nDULCE\n0.0\n0.0\n4.0\n2.0\n2.0\n1.0\n4.0\n5.0\n6.0\n4.0\n6.0\n3.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nRAUL\n0.0\n0.0\n4.0\n2.0\n5.0\n3.0\n2.0\n3.0\n7.0\n3.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO ALPINO\nXEL\n3.0\n0.0\n0.0\n2.0\n6.0\n2.0\n4.0\n5.0\n5.0\n4.0\n6.0\n4.0\n\n\nPECHUGA DE PAVO ALPINO\nLALO\n2.5\n4.0\n0.0\n2.0\n4.0\n2.0\n4.5\n5.5\n6.0\n3.5\n4.5\n4.5\n\n\nPECHUGA DE PAVO ALPINO\nJUAN\n1.0\n2.0\n0.0\n0.5\n5.0\n2.0\n3.0\n2.5\n7.0\n4.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO ALPINO\nMARTHA\n1.0\n0.0\n0.0\n1.0\n3.0\n1.0\n4.0\n5.5\n5.0\n2.0\n4.0\n1.0\n\n\nPECHUGA DE PAVO ALPINO\nNERI\n1.0\n0.0\n0.0\n1.0\n2.5\n2.0\n1.5\n2.5\n5.0\n3.0\n4.0\n1.5\n\n\nPECHUGA DE PAVO ALPINO\nDIANA\n3.5\n0.0\n0.0\n3.0\n2.5\n1.0\n4.0\n4.0\n6.0\n3.5\n5.0\n2.5\n\n\nPECHUGA DE PAVO ALPINO\nDULCE\n2.0\n0.0\n2.0\n3.0\n2.0\n3.0\n4.0\n5.5\n7.0\n4.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO ALPINO\nRAUL\n0.0\n0.0\n0.0\n1.0\n4.0\n2.0\n1.0\n2.5\n5.0\n3.0\n2.0\n1.0\n\n\n\n\n\n\n\n\n\n\nPCA is a dimension reduction methods which like other dimension reductions, aims to find a space of smaller dimension that summarizes the dataset in an informative way.\nMore precisely, PCA is linear, which means it finds a linear combination of variables. For a dataset \\(\\mathbf{X}\\) containing \\(n\\) samples (rows) and \\(p\\) variables (columns), and if we want a reduced space of dimension one (a line), this means finding weights \\(w_i\\) such that \\(\\mathbf{X}_{\\cdot 1} w_1 + \\ldots +\n\\mathbf{X}_{\\cdot p}w_p = \\mathbf{Xw}\\) contains information about the original dataset. If we wish to find a reduced space of dimension \\(r\\) (an hyperplane), we can make the \\(\\mathbf{w}\\in\\mathbb{R}^p\\) vector a matrix \\(\\mathbf{W}\\in\\mathbb{R}^{r\\times p}\\)\nThere are several ways to present how weights are determined in the PCA (see Vincent’s presentation later), but the most common one is that PCA finds an hyperplane that maximizes the variance of the reduced space: for one dimension, the weights maximize \\(\\mathrm{var}(\\mathbf{Xw})\\). For multiple dimensions, this is done iteratively, by “removing” the previously determined weights from the dataset (in technical terms it is done through an orthogonal projection). As an interesting last note, this is equivalent to computing the eigendecomposition of the variance-covariance matrix \\(\\mathbf{X}^\\top\\mathbf{X}\\)\n\n\n\n\n\nCompute the PCA of the dataset\n\n\n\nsolution\nlibrary(FactoMineR)\nlibrary(factoextra)\nturkey.pca &lt;- PCA(turkey[, -c(1, 2)], # the first 2 columns do not contain numerical data\n    scale.unit = TRUE,\n    graph = FALSE\n    ) \n\n\n\nPlot the scree plot of the PCA\n\n\n\nsolution\n# raw values are also accessible in turkey.pca$eig\nfviz_screeplot(turkey.pca, addlabels = TRUE)\n\n\n\n\n\n\n\n\n\nThe scree plot is a plot of the variance of the original dataset explained by each new dimension added. There is several methods to determine how many dimensions to keep from the scree plot, the most well known being the “elbow method”: taking the inflection point or “elbow” of the scree plot as the number of dimensions to keep. Another method is to set a variance threshold (for instance 95%) and keeping the minimal number of dimensions that exceeds this threshold. Here, as we are concerned by visual representation, we will keep the first 3 dimensions.\n\n\nWe can also plot the coordinates of the original variables in the new space, by plotting a correlation circle: a type of plot where each variable is drawn in the unit circle of the new, reduced variables. The closer the variables on this plot, the more correlated they are.\n\nPlot the corcircles of the first 3 dimensions\n\n\n\nsolution\nfviz_pca_var(turkey.pca, repel = TRUE) # axes 1 and 2 by default\n\n\n\n\n\n\n\n\n\nsolution\nfviz_pca_var(turkey.pca, axes = c(2, 3), repel = TRUE)\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot the position of the “individuals” (i.e. rows of the datasets) in the new reduced space\n\n\n\nsolution\np1 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    ggplot(aes(x=Dim.1, y=Dim.2)) +\n    geom_point()\np2 &lt;- turkey.pca$ind$coord %&gt;%\n    ggplot(aes(x=Dim.2, y=Dim.3)) +\n    geom_point()\nggarrange(p1, p2)\n\n\n\n\n\n\n\n\n\nAs each row corresponds to a product - panelist, these are hard to interpret and not really insightful. Let us color them by products and panelists.\n\nColor the plot by product and panelist\n\n\n\nsolution\np1 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Product = str_sub(turkey$Product, 17L, 28L)) %&gt;% # cut for representation\n    ggscatter(x = \"Dim.1\", y = \"Dim.2\", color = \"Product\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\np2 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Product = str_sub(turkey$Product, 17L, 28L)) %&gt;%\n    ggscatter(x = \"Dim.2\", y = \"Dim.3\", color = \"Product\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\nggarrange(p1, p2, common.legend = TRUE, legend = \"bottom\")\n\n\n\n\n\n\n\n\n\n\n\nsolution\np1 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Panelist = turkey$Panelist) %&gt;%\n    ggscatter(x = \"Dim.1\", y = \"Dim.2\", color = \"Panelist\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\np2 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Panelist = turkey$Panelist) %&gt;%\n    ggscatter(x = \"Dim.2\", y = \"Dim.3\", color = \"Panelist\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\nggarrange(p1, p2, common.legend = TRUE, legend = \"bottom\")\n\n\n\n\n\n\n\n\n\n\n\n\nWe can also combine all this information on a single plot, a biplot.\n\nDraw the biplots associated to the previous plots\n\n\n\nsolution\nProduct2 &lt;- str_sub(turkey$Product, 17L, 28L)\np1 &lt;- fviz_pca_biplot(turkey.pca,\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = Product2,\n    addEllipses = TRUE,\n    ellipse.level = 0.95,\n    ellipse.type = \"confidence\",\n    mean.point = FALSE,\n    pointshape = 19)\np1\n\n\n\n\n\n\n\n\n\nsolution\np2 &lt;- fviz_pca_biplot(turkey.pca, \n    axes = c(2, 3),\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = Product2,\n    addEllipses = TRUE, \n    ellipse.type = \"confidence\",\n    ellipse.level = 0.95,\n    mean.point = FALSE,\n    pointshape = 19)\np2\n\n\n\n\n\n\n\n\n\n\n\nsolution\np1 &lt;- fviz_pca_biplot(turkey.pca,\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = turkey$Panelist,\n    addEllipses = TRUE,\n    ellipse.level = 0.95,\n    ellipse.type = \"confidence\",\n    mean.point = FALSE,\n    pointshape = 19)\np1\n\n\n\n\n\n\n\n\n\nsolution\np2 &lt;- fviz_pca_biplot(turkey.pca, \n    axes = c(2, 3),\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = turkey$Panelist,\n    addEllipses = TRUE, \n    ellipse.type = \"confidence\",\n    ellipse.level = 0.95,\n    mean.point = FALSE,\n    pointshape = 19)\np2"
   },
   {
-    "objectID": "pages/about.html#ju-chi-yu",
-    "href": "pages/about.html#ju-chi-yu",
-    "title": "About us",
+    "objectID": "pages/pca.html#the-dataset",
+    "href": "pages/pca.html#the-dataset",
+    "title": "PCA: Principal Components Analysis",
     "section": "",
-    "text": "I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data)."
+    "text": "A trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables.\n\nLoad the dataset\n\n\n\nsolution\nlibrary(readxl)\nturkey &lt;- read_excel(\"../data/turkey.xlsx\")\nknitr::kable(turkey)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProduct\nSweet.XEL\nNutmeg.XEL\nSpicy.XEL\nYeast.XEL\nSAL.XEL\nAcid.XEL\nUmami.XEL\nSalivating.XEL\nWhite meat.XEL\nJuicy.XEL\nCured.XEL\nFatty.XEL\nSweet.LALO\nNutmeg.LALO\nSpicy.LALO\nYeast.LALO\nSAL.LALO\nAcid.LALO\nUmami.LALO\nSalivating.LALO\nWhite meat.LALO\nJuicy.LALO\nCured.LALO\nFatty.LALO\nSweet.JUAN\nNutmeg.JUAN\nSpicy.JUAN\nYeast.JUAN\nSAL.JUAN\nAcid.JUAN\nUmami.JUAN\nSalivating.JUAN\nWhite meat.JUAN\nJuicy.JUAN\nCured.JUAN\nFatty.JUAN\nSweet.MARTHA\nNutmeg.MARTHA\nSpicy.MARTHA\nYeast.MARTHA\nSAL.MARTHA\nAcid.MARTHA\nUmami.MARTHA\nSalivating.MARTHA\nWhite meat.MARTHA\nJuicy.MARTHA\nCured.MARTHA\nFatty.MARTHA\nSweet.NERI\nNutmeg.NERI\nSpicy.NERI\nYeast.NERI\nSAL.NERI\nAcid.NERI\nUmami.NERI\nSalivating.NERI\nWhite meat.NERI\nJuicy.NERI\nCured.NERI\nFatty.NERI\nSweet.DIANA\nNutmeg.DIANA\nSpicy.DIANA\nYeast.DIANA\nSAL.DIANA\nAcid.DIANA\nUmami.DIANA\nSalivating.DIANA\nWhite meat.DIANA\nJuicy.DIANA\nCured.DIANA\nFatty.DIANA\nSweet.DULCE\nNutmeg.DULCE\nSpicy.DULCE\nYeast.DULCE\nSAL.DULCE\nAcid.DULCE\nUmami.DULCE\nSalivating.DULCE\nWhite meat.DULCE\nJuicy.DULCE\nCured.DULCE\nFatty.DULCE\nSweet.RAUL\nNutmeg.RAUL\nSpicy.RAUL\nYeast.RAUL\nSAL.RAUL\nAcid.RAUL\nUmami.RAUL\nSalivating.RAUL\nWhite meat.RAUL\nJuicy.RAUL\nCured.RAUL\nFatty.RAUL\n\n\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\n0\n0\n3\n0\n3\n1.0\n4\n5.0\n6\n5\n4\n3\n0.0\n0\n3.5\n0.0\n2.5\n1.5\n3.0\n3.5\n4.5\n2.5\n5.0\n2.5\n0\n0.0\n2\n0.0\n5\n1\n3\n3.0\n6\n4\n5\n2\n0\n0\n1\n0.0\n3\n0.5\n1\n5.0\n5\n1\n2\n2\n0.0\n0.0\n1.5\n0.0\n2.0\n1.5\n2.0\n3.0\n5\n3.5\n4.0\n2.0\n0.0\n0.0\n1.5\n0.0\n1.5\n0.5\n4.0\n1.5\n5\n3.0\n3.5\n3.0\n0\n0\n3.5\n0\n3\n2\n4\n5.0\n6\n4\n5\n4\n0\n0\n2\n0\n4\n3\n2\n2.0\n5\n3\n4\n2\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\n5\n4\n3\n3\n5\n2.0\n4\n5.0\n6\n6\n4\n3\n3.5\n4\n3.0\n3.0\n2.5\n3.0\n3.0\n4.0\n5.0\n4.0\n3.5\n3.0\n1\n2.0\n2\n2.0\n4\n2\n3\n3.0\n6\n4\n5\n2\n1\n3\n2\n3.0\n2\n0.4\n3\n6.0\n5\n2\n4\n4\n2.0\n2.0\n1.0\n0.0\n1.5\n2.0\n1.5\n3.0\n5\n3.5\n4.5\n2.0\n3.0\n3.5\n2.0\n4.0\n2.0\n1.5\n2.0\n2.0\n6\n2.5\n3.5\n2.5\n3\n5\n3.5\n3\n2\n3\n4\n5.0\n5\n6\n6\n4\n2\n3\n4\n0\n4\n3\n1\n2.0\n7\n4\n6\n3\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\n0\n0\n4\n4\n5\n2.0\n3\n5.0\n6\n6\n5\n3\n0.0\n0\n3.5\n3.5\n4.0\n2.5\n3.0\n4.5\n6.0\n3.5\n3.0\n1.5\n0\n0.0\n3\n2.0\n5\n1\n3\n3.0\n6\n4\n4\n2\n0\n0\n2\n3.0\n4\n2.0\n1\n6.0\n6\n3\n4\n3\n0.0\n0.0\n1.0\n2.5\n2.0\n2.5\n2.5\n3.5\n6\n4.0\n5.0\n1.5\n0.0\n0.0\n3.5\n3.0\n3.0\n4.0\n4.0\n4.5\n5\n4.5\n4.0\n2.5\n0\n0\n4.0\n3\n3\n2\n4\n5.0\n4\n4\n4\n2\n0\n0\n3\n3\n5\n3\n2\n3.0\n6\n4\n6\n2\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\n5\n4\n3\n3\n3\n0.0\n3\n5.5\n6\n6\n5\n4\n3.0\n4\n2.5\n2.0\n2.5\n2.0\n3.5\n4.0\n5.0\n3.5\n4.5\n4.0\n1\n1.5\n2\n1.0\n5\n3\n3\n2.5\n7\n4\n4\n3\n2\n2\n2\n1.0\n4\n1.0\n3\n5.5\n6\n4\n2\n2\n2.0\n1.5\n2.5\n1.0\n1.5\n1.0\n1.5\n3.5\n5\n3.0\n4.0\n2.0\n3.5\n3.5\n1.0\n3.0\n2.5\n1.5\n2.0\n3.0\n6\n5.0\n5.5\n3.0\n4\n4\n3.0\n2\n2\n1\n5\n5.5\n5\n2\n5\n4\n1\n2\n4\n2\n5\n3\n2\n2.5\n6\n3\n6\n2\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\n2\n0\n3\n2\n4\n1.5\n3\n4.0\n4\n3\n4\n2\n2.0\n0\n2.5\n3.0\n5.0\n2.0\n4.0\n5.5\n6.0\n2.0\n5.0\n2.0\n0\n0.0\n2\n1.0\n4\n1\n2\n3.0\n7\n1\n3\n2\n1\n0\n3\n0.5\n4\n1.0\n2\n5.5\n5\n3\n2\n3\n1.0\n0.0\n1.0\n1.5\n2.0\n2.0\n1.5\n3.0\n5\n3.0\n5.0\n2.0\n2.0\n0.0\n1.5\n0.0\n3.5\n2.5\n3.0\n1.5\n6\n2.5\n4.5\n4.0\n3\n0\n3.0\n2\n3\n0\n4\n5.0\n6\n3\n5\n2\n1\n0\n4\n3\n3\n1\n2\n3.0\n7\n3\n6\n2\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\n2\n0\n5\n3\n4\n1.0\n3\n4.0\n5\n5\n5\n3\n2.5\n0\n2.0\n3.0\n3.5\n2.0\n3.5\n4.5\n5.0\n3.0\n4.0\n1.5\n1\n0.0\n2\n0.5\n5\n1\n2\n2.0\n5\n3\n4\n1\n2\n0\n2\n1.0\n4\n1.0\n2\n5.0\n6\n2\n3\n3\n1.5\n0.0\n1.0\n0.0\n2.0\n1.5\n2.0\n2.5\n5\n2.5\n4.0\n1.5\n3.0\n0.0\n2.0\n3.0\n4.0\n2.0\n3.5\n3.5\n5\n2.5\n4.5\n3.0\n3\n0\n3.0\n3\n2\n1\n4\n5.0\n6\n3\n6\n3\n0\n0\n3\n2\n3\n2\n2\n2.0\n6\n3\n5\n2\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\n0\n0\n4\n1\n5\n2.0\n4\n6.0\n4\n4\n6\n4\n0.0\n0\n3.5\n2.5\n4.0\n3.0\n3.5\n5.0\n5.5\n3.0\n3.5\n2.0\n0\n0.0\n3\n3.0\n4\n1\n2\n3.0\n7\n3\n4\n3\n0\n0\n3\n1.0\n4\n1.0\n2\n6.0\n6\n1\n2\n2\n0.0\n0.0\n2.0\n1.0\n2.0\n2.0\n2.0\n3.0\n6\n3.5\n4.0\n2.5\n0.0\n0.0\n3.0\n4.5\n6.0\n2.5\n4.0\n4.0\n7\n4.5\n5.5\n4.5\n0\n0\n4.0\n2\n2\n1\n4\n5.0\n6\n4\n6\n3\n0\n0\n4\n2\n5\n3\n2\n3.0\n7\n3\n6\n2\n\n\nPECHUGA DE PAVO ALPINO\n3\n0\n0\n2\n6\n2.0\n4\n5.0\n5\n4\n6\n4\n2.5\n4\n0.0\n2.0\n4.0\n2.0\n4.5\n5.5\n6.0\n3.5\n4.5\n4.5\n1\n2.0\n0\n0.5\n5\n2\n3\n2.5\n7\n4\n5\n3\n1\n0\n0\n1.0\n3\n1.0\n4\n5.5\n5\n2\n4\n1\n1.0\n0.0\n0.0\n1.0\n2.5\n2.0\n1.5\n2.5\n5\n3.0\n4.0\n1.5\n3.5\n0.0\n0.0\n3.0\n2.5\n1.0\n4.0\n4.0\n6\n3.5\n5.0\n2.5\n2\n0\n2.0\n3\n2\n3\n4\n5.5\n7\n4\n5\n3\n0\n0\n0\n1\n4\n2\n1\n2.5\n5\n3\n2\n1\n\n\n\n\n\nFormatted as it is, the dataset contains a lot of different variables, as each one corresponds to a combination of an attribute and a panelist. To analyze this, let us format this dataset in “long form”: each line will correspond a combination of product and panelist (an “observation”) and we will then have 12 variables.\n\nFormat the dataset in long form\n\n\n\nsolution\nturkey %&lt;&gt;%\n    pivot_longer(cols=-Product,\n        names_to=c(\"tmp_var\", \"Panelist\"),\n        names_pattern=\"(.*)\\\\.(.*)\",\n        values_to=\"tmp_value\") %&gt;%\n    pivot_wider(names_from=\"tmp_var\",\n        values_from=\"tmp_value\")\nknitr::kable(turkey)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProduct\nPanelist\nSweet\nNutmeg\nSpicy\nYeast\nSAL\nAcid\nUmami\nSalivating\nWhite meat\nJuicy\nCured\nFatty\n\n\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nXEL\n0.0\n0.0\n3.0\n0.0\n3.0\n1.0\n4.0\n5.0\n6.0\n5.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nLALO\n0.0\n0.0\n3.5\n0.0\n2.5\n1.5\n3.0\n3.5\n4.5\n2.5\n5.0\n2.5\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nJUAN\n0.0\n0.0\n2.0\n0.0\n5.0\n1.0\n3.0\n3.0\n6.0\n4.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nMARTHA\n0.0\n0.0\n1.0\n0.0\n3.0\n0.5\n1.0\n5.0\n5.0\n1.0\n2.0\n2.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nNERI\n0.0\n0.0\n1.5\n0.0\n2.0\n1.5\n2.0\n3.0\n5.0\n3.5\n4.0\n2.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nDIANA\n0.0\n0.0\n1.5\n0.0\n1.5\n0.5\n4.0\n1.5\n5.0\n3.0\n3.5\n3.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nDULCE\n0.0\n0.0\n3.5\n0.0\n3.0\n2.0\n4.0\n5.0\n6.0\n4.0\n5.0\n4.0\n\n\nPECHUGA DE PAVO HORNEADO SAN RAFAEL\nRAUL\n0.0\n0.0\n2.0\n0.0\n4.0\n3.0\n2.0\n2.0\n5.0\n3.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nXEL\n5.0\n4.0\n3.0\n3.0\n5.0\n2.0\n4.0\n5.0\n6.0\n6.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nLALO\n3.5\n4.0\n3.0\n3.0\n2.5\n3.0\n3.0\n4.0\n5.0\n4.0\n3.5\n3.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nJUAN\n1.0\n2.0\n2.0\n2.0\n4.0\n2.0\n3.0\n3.0\n6.0\n4.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nMARTHA\n1.0\n3.0\n2.0\n3.0\n2.0\n0.4\n3.0\n6.0\n5.0\n2.0\n4.0\n4.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nNERI\n2.0\n2.0\n1.0\n0.0\n1.5\n2.0\n1.5\n3.0\n5.0\n3.5\n4.5\n2.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nDIANA\n3.0\n3.5\n2.0\n4.0\n2.0\n1.5\n2.0\n2.0\n6.0\n2.5\n3.5\n2.5\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nDULCE\n3.0\n5.0\n3.5\n3.0\n2.0\n3.0\n4.0\n5.0\n5.0\n6.0\n6.0\n4.0\n\n\nPECHUGA DE PAVO SABORI PARM RED GRASA Y SODIO\nRAUL\n2.0\n3.0\n4.0\n0.0\n4.0\n3.0\n1.0\n2.0\n7.0\n4.0\n6.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nXEL\n0.0\n0.0\n4.0\n4.0\n5.0\n2.0\n3.0\n5.0\n6.0\n6.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nLALO\n0.0\n0.0\n3.5\n3.5\n4.0\n2.5\n3.0\n4.5\n6.0\n3.5\n3.0\n1.5\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nJUAN\n0.0\n0.0\n3.0\n2.0\n5.0\n1.0\n3.0\n3.0\n6.0\n4.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nMARTHA\n0.0\n0.0\n2.0\n3.0\n4.0\n2.0\n1.0\n6.0\n6.0\n3.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nNERI\n0.0\n0.0\n1.0\n2.5\n2.0\n2.5\n2.5\n3.5\n6.0\n4.0\n5.0\n1.5\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nDIANA\n0.0\n0.0\n3.5\n3.0\n3.0\n4.0\n4.0\n4.5\n5.0\n4.5\n4.0\n2.5\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nDULCE\n0.0\n0.0\n4.0\n3.0\n3.0\n2.0\n4.0\n5.0\n4.0\n4.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA DE FUD BAJA EN GRASA\nRAUL\n0.0\n0.0\n3.0\n3.0\n5.0\n3.0\n2.0\n3.0\n6.0\n4.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nXEL\n5.0\n4.0\n3.0\n3.0\n3.0\n0.0\n3.0\n5.5\n6.0\n6.0\n5.0\n4.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nLALO\n3.0\n4.0\n2.5\n2.0\n2.5\n2.0\n3.5\n4.0\n5.0\n3.5\n4.5\n4.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nJUAN\n1.0\n1.5\n2.0\n1.0\n5.0\n3.0\n3.0\n2.5\n7.0\n4.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nMARTHA\n2.0\n2.0\n2.0\n1.0\n4.0\n1.0\n3.0\n5.5\n6.0\n4.0\n2.0\n2.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nNERI\n2.0\n1.5\n2.5\n1.0\n1.5\n1.0\n1.5\n3.5\n5.0\n3.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nDIANA\n3.5\n3.5\n1.0\n3.0\n2.5\n1.5\n2.0\n3.0\n6.0\n5.0\n5.5\n3.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nDULCE\n4.0\n4.0\n3.0\n2.0\n2.0\n1.0\n5.0\n5.5\n5.0\n2.0\n5.0\n4.0\n\n\nPECHUGA DE PAVO CAMPESTRE DE PARMA\nRAUL\n1.0\n2.0\n4.0\n2.0\n5.0\n3.0\n2.0\n2.5\n6.0\n3.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nXEL\n2.0\n0.0\n3.0\n2.0\n4.0\n1.5\n3.0\n4.0\n4.0\n3.0\n4.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nLALO\n2.0\n0.0\n2.5\n3.0\n5.0\n2.0\n4.0\n5.5\n6.0\n2.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nJUAN\n0.0\n0.0\n2.0\n1.0\n4.0\n1.0\n2.0\n3.0\n7.0\n1.0\n3.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nMARTHA\n1.0\n0.0\n3.0\n0.5\n4.0\n1.0\n2.0\n5.5\n5.0\n3.0\n2.0\n3.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nNERI\n1.0\n0.0\n1.0\n1.5\n2.0\n2.0\n1.5\n3.0\n5.0\n3.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nDIANA\n2.0\n0.0\n1.5\n0.0\n3.5\n2.5\n3.0\n1.5\n6.0\n2.5\n4.5\n4.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nDULCE\n3.0\n0.0\n3.0\n2.0\n3.0\n0.0\n4.0\n5.0\n6.0\n3.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO VIRGINIA ZWAN PREMIUM\nRAUL\n1.0\n0.0\n4.0\n3.0\n3.0\n1.0\n2.0\n3.0\n7.0\n3.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nXEL\n2.0\n0.0\n5.0\n3.0\n4.0\n1.0\n3.0\n4.0\n5.0\n5.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nLALO\n2.5\n0.0\n2.0\n3.0\n3.5\n2.0\n3.5\n4.5\n5.0\n3.0\n4.0\n1.5\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nJUAN\n1.0\n0.0\n2.0\n0.5\n5.0\n1.0\n2.0\n2.0\n5.0\n3.0\n4.0\n1.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nMARTHA\n2.0\n0.0\n2.0\n1.0\n4.0\n1.0\n2.0\n5.0\n6.0\n2.0\n3.0\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nNERI\n1.5\n0.0\n1.0\n0.0\n2.0\n1.5\n2.0\n2.5\n5.0\n2.5\n4.0\n1.5\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nDIANA\n3.0\n0.0\n2.0\n3.0\n4.0\n2.0\n3.5\n3.5\n5.0\n2.5\n4.5\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nDULCE\n3.0\n0.0\n3.0\n3.0\n2.0\n1.0\n4.0\n5.0\n6.0\n3.0\n6.0\n3.0\n\n\nPECHUGA DE PAVO NATURAL ZWAN PREMIUM\nRAUL\n0.0\n0.0\n3.0\n2.0\n3.0\n2.0\n2.0\n2.0\n6.0\n3.0\n5.0\n2.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nXEL\n0.0\n0.0\n4.0\n1.0\n5.0\n2.0\n4.0\n6.0\n4.0\n4.0\n6.0\n4.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nLALO\n0.0\n0.0\n3.5\n2.5\n4.0\n3.0\n3.5\n5.0\n5.5\n3.0\n3.5\n2.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nJUAN\n0.0\n0.0\n3.0\n3.0\n4.0\n1.0\n2.0\n3.0\n7.0\n3.0\n4.0\n3.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nMARTHA\n0.0\n0.0\n3.0\n1.0\n4.0\n1.0\n2.0\n6.0\n6.0\n1.0\n2.0\n2.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nNERI\n0.0\n0.0\n2.0\n1.0\n2.0\n2.0\n2.0\n3.0\n6.0\n3.5\n4.0\n2.5\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nDIANA\n0.0\n0.0\n3.0\n4.5\n6.0\n2.5\n4.0\n4.0\n7.0\n4.5\n5.5\n4.5\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nDULCE\n0.0\n0.0\n4.0\n2.0\n2.0\n1.0\n4.0\n5.0\n6.0\n4.0\n6.0\n3.0\n\n\nPECHUGA DE PAVO CLÁSICA SAN RAFAEL\nRAUL\n0.0\n0.0\n4.0\n2.0\n5.0\n3.0\n2.0\n3.0\n7.0\n3.0\n6.0\n2.0\n\n\nPECHUGA DE PAVO ALPINO\nXEL\n3.0\n0.0\n0.0\n2.0\n6.0\n2.0\n4.0\n5.0\n5.0\n4.0\n6.0\n4.0\n\n\nPECHUGA DE PAVO ALPINO\nLALO\n2.5\n4.0\n0.0\n2.0\n4.0\n2.0\n4.5\n5.5\n6.0\n3.5\n4.5\n4.5\n\n\nPECHUGA DE PAVO ALPINO\nJUAN\n1.0\n2.0\n0.0\n0.5\n5.0\n2.0\n3.0\n2.5\n7.0\n4.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO ALPINO\nMARTHA\n1.0\n0.0\n0.0\n1.0\n3.0\n1.0\n4.0\n5.5\n5.0\n2.0\n4.0\n1.0\n\n\nPECHUGA DE PAVO ALPINO\nNERI\n1.0\n0.0\n0.0\n1.0\n2.5\n2.0\n1.5\n2.5\n5.0\n3.0\n4.0\n1.5\n\n\nPECHUGA DE PAVO ALPINO\nDIANA\n3.5\n0.0\n0.0\n3.0\n2.5\n1.0\n4.0\n4.0\n6.0\n3.5\n5.0\n2.5\n\n\nPECHUGA DE PAVO ALPINO\nDULCE\n2.0\n0.0\n2.0\n3.0\n2.0\n3.0\n4.0\n5.5\n7.0\n4.0\n5.0\n3.0\n\n\nPECHUGA DE PAVO ALPINO\nRAUL\n0.0\n0.0\n0.0\n1.0\n4.0\n2.0\n1.0\n2.5\n5.0\n3.0\n2.0\n1.0"
   },
   {
-    "objectID": "pages/about.html#vincent-le-goff",
-    "href": "pages/about.html#vincent-le-goff",
-    "title": "About us",
-    "section": "Vincent Le Goff",
-    "text": "Vincent Le Goff\n\n\n\n\n\n\n\n\n\nI am a bioinformatics engineer with a degree from INSA Lyon (2022) and a double degree in Life Sciences and Chemistry from UVSQ (2019). In 2023, I worked as a research engineer in bioinformatics at CEA in Évry and completed a seven-month internship at Limagrain Europe, analyzing satellite images to quantify corn water stress. In 2021, I interned at INRAE, studying the performance of wheat variety mixtures. Since late 2023, I have been pursuing a PhD at CNRGH on multi-omics data integration. I am skilled in R and Python, focusing on bioinformatics, biostatistics, and machine learning."
-  },
-  {
-    "objectID": "pages/about.html#vincent-guillemot",
-    "href": "pages/about.html#vincent-guillemot",
-    "title": "About us",
-    "section": "Vincent Guillemot",
-    "text": "Vincent Guillemot\n\n\n\n\n\n\nI am currently a biostatistician in the Hub of Bioinformatics and Biostatistics. Before that, I worked at the Brain and Spine Institute (Paris, France), NeuroSpin (Saclay, France) and in the Ludwig Maximilian University (Munich, Germany). My fields of expertise include biostatistics, multivariate statistics, data visualization, statistical data integration and machine learning. My teaching activities range from the introduction to basic concepts in statistics to theoretical aspects in convex optimization."
-  },
-  {
-    "objectID": "pages/about.html#hervé-abdi",
-    "href": "pages/about.html#hervé-abdi",
-    "title": "About us",
-    "section": "Hervé Abdi",
-    "text": "Hervé Abdi\n\n\n\n\n\n\n\n\n\nI am a Professor at the University of Texas at Dallas in the School of Behavioral and Brain Sciences. My recent work focuses on face and person perception, odor perception, and computational modeling of these processes. I have developed statistical techniques to analyze large data sets, such as those found in genomics, brain imaging, and sensory evaluation, including principal component analysis and multiple factor analysis."
-  },
-  {
-    "objectID": "pages/datasets.html",
-    "href": "pages/datasets.html",
-    "title": "Datasets",
+    "objectID": "pages/pca.html#principal-components-analysis",
+    "href": "pages/pca.html#principal-components-analysis",
+    "title": "PCA: Principal Components Analysis",
     "section": "",
-    "text": "This is the page presenting all the data used during the tutorial."
+    "text": "PCA is a dimension reduction methods which like other dimension reductions, aims to find a space of smaller dimension that summarizes the dataset in an informative way.\nMore precisely, PCA is linear, which means it finds a linear combination of variables. For a dataset \\(\\mathbf{X}\\) containing \\(n\\) samples (rows) and \\(p\\) variables (columns), and if we want a reduced space of dimension one (a line), this means finding weights \\(w_i\\) such that \\(\\mathbf{X}_{\\cdot 1} w_1 + \\ldots +\n\\mathbf{X}_{\\cdot p}w_p = \\mathbf{Xw}\\) contains information about the original dataset. If we wish to find a reduced space of dimension \\(r\\) (an hyperplane), we can make the \\(\\mathbf{w}\\in\\mathbb{R}^p\\) vector a matrix \\(\\mathbf{W}\\in\\mathbb{R}^{r\\times p}\\)\nThere are several ways to present how weights are determined in the PCA (see Vincent’s presentation later), but the most common one is that PCA finds an hyperplane that maximizes the variance of the reduced space: for one dimension, the weights maximize \\(\\mathrm{var}(\\mathbf{Xw})\\). For multiple dimensions, this is done iteratively, by “removing” the previously determined weights from the dataset (in technical terms it is done through an orthogonal projection). As an interesting last note, this is equivalent to computing the eigendecomposition of the variance-covariance matrix \\(\\mathbf{X}^\\top\\mathbf{X}\\)"
   },
   {
-    "objectID": "pages/datasets.html#beers",
-    "href": "pages/datasets.html#beers",
-    "title": "Datasets",
-    "section": "Beers",
-    "text": "Beers\nTen tasters evaluated the intensity of twelve descriptors for six beers. The data are the averages (computed over the 10 judges) of the intensity ratings of the descriptors for the beers.\nA data frame of dimension 6 rows (Beers) by 12 columns (descriptors) with the average intensity ratings performed using a 0 to 7 Likert rating scale.\n\nAbdi, H., Gomez, C., & Delmas, M. (2022). Méthodes Statistiques Multivariées pour l’Analyse Sensorielle et les Etudes Consommateurs."
-  },
-  {
-    "objectID": "pages/datasets.html#turkey",
-    "href": "pages/datasets.html#turkey",
-    "title": "Datasets",
-    "section": "Turkey",
-    "text": "Turkey\nA trained sensory panel of 8 persons rated the same 8 turkey breast products from Mexico on 12 attributes. These panelists had been trained to identify and measure specific attributes of products. These attributes were rated on a 0 to 9 10-point Likert scale and included sweet, nutmeg, spicy, yeast, salty, acid, umami, salivating, white meat, juicy, cured, and fatty. Each table corresponds to a panelist and describes the 8 products (rows) by the 12 attributes (columns), with rows and columns organized in the same order across tables."
-  },
-  {
-    "objectID": "pages/datasets.html#tv-and-salad",
-    "href": "pages/datasets.html#tv-and-salad",
-    "title": "Datasets",
-    "section": "TV and salad",
-    "text": "TV and salad\nData from the INCA 3 study, where more than 5,800 people (3,157 adults aged 18 to 79 years and 2,698 children aged 0 to 17 years) participated in a national study conducted in 2014 and 2015. Participants answered 150 questions on their habits and lifestyles, resulting in data on 320,000 food items consumed over 13,600 consumption days. The variables retained for this dataset are “hours spent watching TV” and “salad consumption.”\n\nCarine Dubuisson, Ariane Dufour, Sandrine Carrillo, Peggy Drouillet-Pinard, Sabrina Havard, Jean-Luc Volatier (2019). The Third French Individual and National Food Consumption (INCA3) Survey 2014-2015: method, design and participation rate in the framework of a European harmonization process. Public Health Nutrition: 22(4), 584–600. doi:10.1017/S1368980018002896."
-  },
-  {
-    "objectID": "pages/datasets.html#wines",
-    "href": "pages/datasets.html#wines",
-    "title": "Datasets",
-    "section": "Wines",
-    "text": "Wines\n36 wines from three countries (Argentina, Canada, and the USA) and three colors (Red, Rosé, and White) are evaluated on several dimensions organized into four blocks. An additional mystery wine (a French red pinot noir) is included to be projected as a supplementary observation.\n\nAbdi, H., Eslami, A., & Guillemot, V. (2018). Canonical correlation analysis (CCA). In R. Alhajj and J. Rokne (Eds.), Encyclopedia of Social Networks and Mining (2nd Edition). New York: Springer Verlag.\nAbdi, H., & Williams, L.J. (2013). Partial least squares methods: Partial least squares correlation and partial least square regression. In: B. Reisfeld & A. Mayeno (Eds.), Methods in Molecular Biology: Computational Toxicology. New York: Springer Verlag. pp. 549-579."
+    "objectID": "pages/pca.html#pca-of-the-turkey-dataset",
+    "href": "pages/pca.html#pca-of-the-turkey-dataset",
+    "title": "PCA: Principal Components Analysis",
+    "section": "",
+    "text": "Compute the PCA of the dataset\n\n\n\nsolution\nlibrary(FactoMineR)\nlibrary(factoextra)\nturkey.pca &lt;- PCA(turkey[, -c(1, 2)], # the first 2 columns do not contain numerical data\n    scale.unit = TRUE,\n    graph = FALSE\n    ) \n\n\n\nPlot the scree plot of the PCA\n\n\n\nsolution\n# raw values are also accessible in turkey.pca$eig\nfviz_screeplot(turkey.pca, addlabels = TRUE)\n\n\n\n\n\n\n\n\n\nThe scree plot is a plot of the variance of the original dataset explained by each new dimension added. There is several methods to determine how many dimensions to keep from the scree plot, the most well known being the “elbow method”: taking the inflection point or “elbow” of the scree plot as the number of dimensions to keep. Another method is to set a variance threshold (for instance 95%) and keeping the minimal number of dimensions that exceeds this threshold. Here, as we are concerned by visual representation, we will keep the first 3 dimensions.\n\n\nWe can also plot the coordinates of the original variables in the new space, by plotting a correlation circle: a type of plot where each variable is drawn in the unit circle of the new, reduced variables. The closer the variables on this plot, the more correlated they are.\n\nPlot the corcircles of the first 3 dimensions\n\n\n\nsolution\nfviz_pca_var(turkey.pca, repel = TRUE) # axes 1 and 2 by default\n\n\n\n\n\n\n\n\n\nsolution\nfviz_pca_var(turkey.pca, axes = c(2, 3), repel = TRUE)\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot the position of the “individuals” (i.e. rows of the datasets) in the new reduced space\n\n\n\nsolution\np1 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    ggplot(aes(x=Dim.1, y=Dim.2)) +\n    geom_point()\np2 &lt;- turkey.pca$ind$coord %&gt;%\n    ggplot(aes(x=Dim.2, y=Dim.3)) +\n    geom_point()\nggarrange(p1, p2)\n\n\n\n\n\n\n\n\n\nAs each row corresponds to a product - panelist, these are hard to interpret and not really insightful. Let us color them by products and panelists.\n\nColor the plot by product and panelist\n\n\n\nsolution\np1 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Product = str_sub(turkey$Product, 17L, 28L)) %&gt;% # cut for representation\n    ggscatter(x = \"Dim.1\", y = \"Dim.2\", color = \"Product\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\np2 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Product = str_sub(turkey$Product, 17L, 28L)) %&gt;%\n    ggscatter(x = \"Dim.2\", y = \"Dim.3\", color = \"Product\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\nggarrange(p1, p2, common.legend = TRUE, legend = \"bottom\")\n\n\n\n\n\n\n\n\n\n\n\nsolution\np1 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Panelist = turkey$Panelist) %&gt;%\n    ggscatter(x = \"Dim.1\", y = \"Dim.2\", color = \"Panelist\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\np2 &lt;- turkey.pca$ind$coord %&gt;% # coordinates of the individuals\n    as.data.frame() %&gt;%\n    mutate(Panelist = turkey$Panelist) %&gt;%\n    ggscatter(x = \"Dim.2\", y = \"Dim.3\", color = \"Panelist\",\n        ellipse = TRUE, ellipse.type = \"confidence\") +\n    theme_bw()\nggarrange(p1, p2, common.legend = TRUE, legend = \"bottom\")\n\n\n\n\n\n\n\n\n\n\n\n\nWe can also combine all this information on a single plot, a biplot.\n\nDraw the biplots associated to the previous plots\n\n\n\nsolution\nProduct2 &lt;- str_sub(turkey$Product, 17L, 28L)\np1 &lt;- fviz_pca_biplot(turkey.pca,\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = Product2,\n    addEllipses = TRUE,\n    ellipse.level = 0.95,\n    ellipse.type = \"confidence\",\n    mean.point = FALSE,\n    pointshape = 19)\np1\n\n\n\n\n\n\n\n\n\nsolution\np2 &lt;- fviz_pca_biplot(turkey.pca, \n    axes = c(2, 3),\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = Product2,\n    addEllipses = TRUE, \n    ellipse.type = \"confidence\",\n    ellipse.level = 0.95,\n    mean.point = FALSE,\n    pointshape = 19)\np2\n\n\n\n\n\n\n\n\n\n\n\nsolution\np1 &lt;- fviz_pca_biplot(turkey.pca,\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = turkey$Panelist,\n    addEllipses = TRUE,\n    ellipse.level = 0.95,\n    ellipse.type = \"confidence\",\n    mean.point = FALSE,\n    pointshape = 19)\np1\n\n\n\n\n\n\n\n\n\nsolution\np2 &lt;- fviz_pca_biplot(turkey.pca, \n    axes = c(2, 3),\n    repel = TRUE,\n    geom = \"point\",\n    col.ind = turkey$Panelist,\n    addEllipses = TRUE, \n    ellipse.type = \"confidence\",\n    ellipse.level = 0.95,\n    mean.point = FALSE,\n    pointshape = 19)\np2"
   }
 ]
