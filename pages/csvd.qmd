@@ -30,7 +30,7 @@ group_colors <- c("A" = "#F8766D", "B" = "#00BA38", "C" = "#619CFF")
 ## Links
 
   * [Shared code](https://docs.google.com/document/d/1r6d6LNm5QZmlMsBdban5cMtH43wHc6k5KKmvIZLJxG8/edit?usp=sharing)
-  * [Slides](../material/)
+  * [Slides](../material/SparseGSVD.pdf)
   * [Data](../data/simul.xlsx)
   
 Singular Value Decomposition (SVD) is the core of many multivariate methods. We will see in this section, on simulated data, a short description of what SVD is and does, and how to introduce "sparsity" in SVD.
