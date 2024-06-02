@@ -1,7 +1,8 @@
 ---
-title: "Singular Value Decomposition"
-author: "Vincent Guillemot"
+title: "Sparse Generalized Singular Value Decomposition"
+author: "Vincent Guillemot, Vincent Le Goff, Ju-Chi Yu, Hervé Abdi"
 output: powerpoint_presentation
+bibliography: ../pages/refs.bib
 ---
 
 \newcommand{\X}{\mathbf{X}}
@@ -35,12 +36,13 @@ theme_set(theme_bw())
 ## Whale versus krill: this is you (credit: Allison Horst)
 
 ![Eat the most krill (put on your 3D glasses)](../img/WideMouthShark1.png)
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
+
+Artwork by `@allison_horst` https://twitter.com/allison_horst
 
 ## Whale versus krill: this is your data (credit: Allison Horst)
 
 ![Eat the most krill (put on your 3D glasses)](../img/WideMouthShark2.png)
-[Artwork by @allison_horst](https://twitter.com/allison_horst)
+Artwork by `@allison_horst` https://twitter.com/allison_horst
 
 # The tri-force of PCA
 
@@ -60,6 +62,7 @@ rownames(x) <- xtmp$Ind
 ```{r pca of mini data}
 res.pca.ex <- PCA(x, scale.unit = TRUE, graph = FALSE)
 ```
+
 ## Example screeplot
 
 ```{r scree-ex}
@@ -82,7 +85,7 @@ fviz_pca_var(res.pca.ex, repel = TRUE)
 
 ## French versus English
 
-> "Aaaaah, mais ACP en fait c'est la PCA !"
+> "Aaaaah, mais acépé en fait c'est la pisci-aïe !"
 
 *(Anonymous student, after 6 hours of teaching PCA in French)*
 
@@ -112,7 +115,9 @@ Nice packages:
 
 ## And a few nice books and papers
 
-books and papers
+  * MOOC multivariate data analysis by François Husson: https://husson.github.io/MOOC_AnaDo/index.html
+(FR/EN)
+  * PCA paper(s) by Hervé Abdi: https://personal.utdallas.edu/~herve/abdi-awPCA2010.pdf
 
 # A little bit of Math
 
@@ -128,7 +133,7 @@ books and papers
 
 ## A little detour: matrix multiplication
 
-Take a pen and paper, and do this multiplication:
+Take a pen and paper (or R), and do this multiplication:
 
 \[
   \left[ \begin{array}{cc} 1 & -1 \\ 0 & 1 \\ 2 & 1\end{array} \right] \times \left[ \begin{array}{ccc} 1 & 2 & 3 & 4 \\ -1 & 0 & 0 & 1\end{array} \right]
@@ -236,7 +241,7 @@ ggpubr::ggarrange(before, after, ncol = 2, legend = "none")
 
 ## We can do the same kind of magic with the data itself
 
-> Singular value decomposition can be used to approximate a rectangular matrix with a lower ranked matrix of the same dimension
+> Singular value decomposition can be used to approximate a rectangular matrix with a lower ranked matrix of the same dimension.
 
 \[
   \arg\min_{\|\u\|_2^2=\|\w\|_2^2=1} \left\| \X - \delta\u\w^\top \right\|_F^2
@@ -339,5 +344,16 @@ $$
 
   * $\mathbf M$ and $\mathbf W$ = masses, weights... so metrics
   * $s_{\mathbf{p},\ell}$ and $s_{\mathbf{q},\ell}$ = sparsity parameters, between 1 (strong sparsity), and $\sqrt{\text{dimension}}$ (no sparsity)
-  * 
 
+
+## A few fun papers
+
+We belong to the fan club of: [@Witten2009; @Trendafilov2014, Journee2010].
+
+Our work on:
+
+  * Constrained Singular Value Decomposition [@Guillemot2019]
+  * Sparse Correspondence Analysis [@Abdi2024]
+  * Sparse Multiple Correspondence Analysis [@Guillemot2020; @Yu2024]
+  
+## References
