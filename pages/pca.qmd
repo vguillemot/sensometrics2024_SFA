@@ -30,10 +30,10 @@ to a panelist and describes the 8 products (rows) by the 12 attributes
 ```{r load_data, echo=TRUE}
 library(readxl)
 turkey <- read_excel("../data/turkey.xlsx")
-knitr::kable(turkey)
+head(turkey)
 ```
 
-Formatted as it is, the dataset contains a lot of different variables, as each
+Formatted as it is, the dataset contains a lot of redudant variables, as each
 one corresponds to a combination of an attribute and a panelist. To analyze
 this, let us format this dataset in "long form": each line will correspond a
 combination of product and panelist (an "observation") and we will then have 12
@@ -49,7 +49,7 @@ turkey %<>%
         values_to="tmp_value") %>%
     pivot_wider(names_from="tmp_var",
         values_from="tmp_value")
-knitr::kable(turkey)
+head(turkey)
 ```
 
 ## Principal Components Analysis
