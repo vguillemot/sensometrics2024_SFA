@@ -7,7 +7,7 @@ title: "About us"
 :::: {layout="[ 70, 30 ]"}
 
 ::: {#first-column}
-I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where she focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data).
+I am a post-doctoral research fellow at Centre for Addiction and Mental Health (CAMH). My work focuses on developing advanced multivariate methods to integrate and examine the relationships between structural and functional brain connectivity. Prior to joining CAMH, I received my Ph.D. in Cognition & Neuroscience from the University of Texas at Dallas, where I focused on developing advanced multivariate methods (with sparsification and for novel applications) to analyze neuroscience data (including behavioral data, genetics data, fMRI data, and resting-state fMRI data).
 :::
 
 ::: {#second-column}
