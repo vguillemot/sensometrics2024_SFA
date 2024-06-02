@@ -10,16 +10,16 @@ website:
         text: Instructions
       - href: pages/datasets.qmd
         text: Datasets
-      - href: pages/csvd.qmd
-        text: PCA
       - href: pages/pca.qmd
+        text: PCA -- Turkey
+      - href: pages/csvd.qmd
         text: CSVD
       - href: pages/spca.qmd
-        text: Sparse PCA
+        text: Sparse PCA -- Beers
       - href: pages/sca.qmd
-        text: Sparse CA
+        text: Sparse CA -- TV
       - href: pages/splsc.qmd
-        text: Sparse PLSC
+        text: Sparse PLSC -- Wines
       - href: pages/about.qmd
         text: About us
       - icon: github
