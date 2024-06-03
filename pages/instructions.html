@@ -250,9 +250,9 @@ window.Quarto = {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The whole tutorial revolves around the use of two packages: <code>sGSVD</code> and <code>SPAFAC</code>. Install them with <code>pak</code>:</p>
+<p>The whole tutorial revolves around the use of five packages: <code>sGSVD</code>, <code>GSVD</code>, <code>PTCA4CATA</code>, <code>data4PCCAR</code>, and <code>SPAFAC</code>. Install them with <code>pak</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="fu">c</span>(<span class="st">"vguillemot/sGSVD"</span>, <span class="st">"juchiyu/SPAFAC"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="fu">c</span>(<span class="st">"vguillemot/sGSVD"</span>, <span class="st">"derekbeaton/GSVD"</span>, <span class="st">"HerveAbdi/PTCA4CATA"</span>, <span class="st">"HerveAbdi/data4PCCAR"</span>, <span class="st">"juchiyu/SPAFAC"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Depending on what is already installed on your machine, <code>pak</code> will detect what needs to be installed, and give you a summary.</p>
 <section id="other-useful-packages" class="level3">

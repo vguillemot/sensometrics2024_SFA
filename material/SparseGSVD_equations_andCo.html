@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Vincent Guillemot">
+<meta name="author" content="Vincent Guillemot, Vincent Le Goff, Ju-Chi Yu, Hervé Abdi">
 
-<title>SFA - Singular Value Decomposition</title>
+<title>SFA - Sparse Generalized Singular Value Decomposition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -249,6 +269,8 @@ window.Quarto = {
   <li><a href="#lasso" id="toc-lasso" class="nav-link" data-scroll-target="#lasso">LASSO</a></li>
   <li><a href="#optimization-problem" id="toc-optimization-problem" class="nav-link" data-scroll-target="#optimization-problem">Optimization problem</a></li>
   <li><a href="#what-are-the-parameters" id="toc-what-are-the-parameters" class="nav-link" data-scroll-target="#what-are-the-parameters">What are the parameters?</a></li>
+  <li><a href="#a-few-fun-papers" id="toc-a-few-fun-papers" class="nav-link" data-scroll-target="#a-few-fun-papers">A few fun papers</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -258,7 +280,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Singular Value Decomposition</h1>
+<h1 class="title">Sparse Generalized Singular Value Decomposition</h1>
 </div>
 
 
@@ -268,7 +290,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Vincent Guillemot </p>
+             <p>Vincent Guillemot, Vincent Le Goff, Ju-Chi Yu, Hervé Abdi </p>
           </div>
   </div>
     
@@ -294,11 +316,17 @@ window.Quarto = {
 </section>
 <section id="whale-versus-krill-this-is-you-credit-allison-horst" class="level2">
 <h2 class="anchored" data-anchor-id="whale-versus-krill-this-is-you-credit-allison-horst">Whale versus krill: this is you (credit: Allison Horst)</h2>
-<p><img src="../img/WideMouthShark1.png" class="img-fluid" alt="Eat the most krill (put on your 3D glasses)"> <a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/WideMouthShark1.png" class="img-fluid figure-img"></p>
+<figcaption>Eat the most krill (put on your 3D glasses)</figcaption>
+</figure>
+</div>
+<p>Artwork by <code>@allison_horst</code> https://twitter.com/allison_horst</p>
 </section>
 <section id="whale-versus-krill-this-is-your-data-credit-allison-horst" class="level2">
 <h2 class="anchored" data-anchor-id="whale-versus-krill-this-is-your-data-credit-allison-horst">Whale versus krill: this is your data (credit: Allison Horst)</h2>
-<p><img src="../img/WideMouthShark2.png" class="img-fluid" alt="Eat the most krill (put on your 3D glasses)"> <a href="https://twitter.com/allison_horst">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p>
+<p><img src="../img/WideMouthShark2.png" class="img-fluid" alt="Eat the most krill (put on your 3D glasses)"> Artwork by <code>@allison_horst</code> https://twitter.com/allison_horst</p>
 </section>
 </section>
 <section id="the-tri-force-of-pca" class="level1">
@@ -357,7 +385,7 @@ window.Quarto = {
 <section id="french-versus-english" class="level2">
 <h2 class="anchored" data-anchor-id="french-versus-english">French versus English</h2>
 <blockquote class="blockquote">
-<p>“Aaaaah, mais ACP en fait c’est la PCA !”</p>
+<p>“Aaaaah, mais acépé en fait c’est la pisci-aïe !”</p>
 </blockquote>
 <p><em>(Anonymous student, after 6 hours of teaching PCA in French)</em></p>
 <table class="table">
@@ -413,7 +441,10 @@ window.Quarto = {
 </section>
 <section id="and-a-few-nice-books-and-papers" class="level2">
 <h2 class="anchored" data-anchor-id="and-a-few-nice-books-and-papers">And a few nice books and papers</h2>
-<p>books and papers</p>
+<ul>
+<li>MOOC multivariate data analysis by François Husson: https://husson.github.io/MOOC_AnaDo/index.html (FR/EN)</li>
+<li>PCA paper(s) by Hervé Abdi: https://personal.utdallas.edu/~herve/abdi-awPCA2010.pdf</li>
+</ul>
 </section>
 </section>
 <section id="a-little-bit-of-math" class="level1">
@@ -431,7 +462,7 @@ window.Quarto = {
 </section>
 <section id="a-little-detour-matrix-multiplication" class="level2">
 <h2 class="anchored" data-anchor-id="a-little-detour-matrix-multiplication">A little detour: matrix multiplication</h2>
-<p>Take a pen and paper, and do this multiplication:</p>
+<p>Take a pen and paper (or R), and do this multiplication:</p>
 <p>[ ]</p>
 <p><a href="https://www.youtube.com/watch?v=Zbj-nyJyP-Q">Cool video: 5 ways to see matrix multiplication</a></p>
 </section>
@@ -505,7 +536,7 @@ window.Quarto = {
 <section id="we-can-do-the-same-kind-of-magic-with-the-data-itself" class="level2">
 <h2 class="anchored" data-anchor-id="we-can-do-the-same-kind-of-magic-with-the-data-itself">We can do the same kind of magic with the data itself</h2>
 <blockquote class="blockquote">
-<p>Singular value decomposition can be used to approximate a rectangular matrix with a lower ranked matrix of the same dimension</p>
+<p>Singular value decomposition can be used to approximate a rectangular matrix with a lower ranked matrix of the same dimension.</p>
 </blockquote>
 <p>[ _{|_2^2=||_2^2=1} | - ^|_F^2 ]</p>
 <ul>
@@ -571,14 +602,46 @@ window.Quarto = {
 <ul>
 <li><span class="math inline">\(\mathbf M\)</span> and <span class="math inline">\(\mathbf W\)</span> = masses, weights… so metrics</li>
 <li><span class="math inline">\(s_{\mathbf{p},\ell}\)</span> and <span class="math inline">\(s_{\mathbf{q},\ell}\)</span> = sparsity parameters, between 1 (strong sparsity), and <span class="math inline">\(\sqrt{\text{dimension}}\)</span> (no sparsity)</li>
-<li></li>
 </ul>
+</section>
+<section id="a-few-fun-papers" class="level2">
+<h2 class="anchored" data-anchor-id="a-few-fun-papers">A few fun papers</h2>
+<p>We belong to the fan club of: <span class="citation" data-cites="Witten2009 Trendafilov2014">(<a href="#ref-Witten2009" role="doc-biblioref">Witten, Tibshirani, and Hastie 2009</a>; <a href="#ref-Trendafilov2014" role="doc-biblioref">Trendafilov 2014, Journee2010</a>)</span>.</p>
+<p>Our work on:</p>
+<ul>
+<li>Constrained Singular Value Decomposition <span class="citation" data-cites="Guillemot2019">(<a href="#ref-Guillemot2019" role="doc-biblioref">Guillemot et al. 2019</a>)</span></li>
+<li>Sparse Correspondence Analysis <span class="citation" data-cites="Abdi2024">(<a href="#ref-Abdi2024" role="doc-biblioref">Abdi et al. 2024</a>)</span></li>
+<li>Sparse Multiple Correspondence Analysis <span class="citation" data-cites="Guillemot2020 Yu2024">(<a href="#ref-Guillemot2020" role="doc-biblioref">Guillemot et al. 2020</a>; <a href="#ref-Yu2024" role="doc-biblioref">Yu et al. 2024</a>)</span></li>
+</ul>
+</section>
+<section id="references" class="level2">
+
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Abdi2024" class="csl-entry" role="listitem">
+Abdi, Hervé, Vincent Guillemot, Ruiping Liu, Ndèye Niang, Gilbert Saporta, and Ju-chi Yu. 2024. <span>“<span class="nocase">From Plain to Sparse Correspondence Analysis: a Generalized SVD Approach</span>.”</span> <em><span>Statistica Applicata - Italian Journal of Applied Statistics</span></em> 35 (3): 1–39. <a href="https://doi.org/10.26398/IJAS.0035-014">https://doi.org/10.26398/IJAS.0035-014</a>.
+</div>
+<div id="ref-Guillemot2019" class="csl-entry" role="listitem">
+Guillemot, Vincent, Derek Beaton, Arnaud Gloaguen, Tommy Löfstedt, Brian Levine, Nicolas Raymond, Arthur Tenenhaus, and Hervé Abdi. 2019. <span>“<span class="nocase">A constrained singular value decomposition method that integrates sparsity and orthogonality</span>.”</span> Edited by Shyamal D Peddada. <em>PLOS ONE</em> 14 (3): e0211463. <a href="https://doi.org/10.1371/journal.pone.0211463">https://doi.org/10.1371/journal.pone.0211463</a>.
+</div>
+<div id="ref-Guillemot2020" class="csl-entry" role="listitem">
+Guillemot, Vincent, Julie Le Borgne, Arnaud Gloaguen, Arthur Tenenhaus, Gilbert Saporta, Sylvie Chollet, Derek Beaton, and Hervé Abdi. 2020. <span>“<span>Sparse Multiple Correspondence Analysis</span>.”</span> In <em><span class="nocase">52<span class="nocase">è</span>mes Journ<span class="nocase">é</span>es de Statistique</span></em>, 830–35. 52<span>è</span>mes Journ<span>é</span>es de Statistiques de La Soci<span>é</span>t<span>é</span> Fran<span>ç</span>aise de Statistique (SFdS). Nice, France: <span>Soci<span>é</span>t<span>é</span> Fran<span>ç</span>aise de Statistique (SFdS)</span>. <a href="https://pasteur.hal.science/pasteur-03037346">https://pasteur.hal.science/pasteur-03037346</a>.
+</div>
+<div id="ref-Trendafilov2014" class="csl-entry" role="listitem">
+Trendafilov, Nickolay T. 2014. <span>“From Simple Structure to Sparse Components: A Review.”</span> <em>Computational Statistics</em> 29 (3-4): 431–54.
+</div>
+<div id="ref-Witten2009" class="csl-entry" role="listitem">
+Witten, Daniela M, Robert Tibshirani, and Trevor Hastie. 2009. <span>“A Penalized Matrix Decomposition, with Applications to Sparse Principal Components and Canonical Correlation Analysis.”</span> <em>Biostatistics</em> 10 (3): 515–34.
+</div>
+<div id="ref-Yu2024" class="csl-entry" role="listitem">
+Yu, Ju-Chi, Julie Le Borgne, Anjali Krishnan, Arnaud Gloaguen, Cheng-Ta Yang, Laura A. Rabin, Hervé Abdi, and Vincent Guillemot. 2024. <span>“Sparse Factor Analysis for Categorical Data with the Group-Sparse Generalized Singular Value Decomposition.”</span> <em>Computational Statistics and Data Analysis</em>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
