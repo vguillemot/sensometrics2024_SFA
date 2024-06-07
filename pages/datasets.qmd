@@ -4,10 +4,10 @@ title: "Datasets"
 
 This is the page presenting all the data used during the tutorial.
 
-  * [Beers](data/beers.xlsx): Ten tasters rated the intensity of twelve descriptors for six beers,
-  * [Turkey products](data/turkey.xlsx): A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale
-  * [TV and salad](data/salad_and_tv.xlsx): Data from the INCA 3 study include responses from over 5,800 people on dietary habits, focusing on "hours spent watching TV" and "salad consumption."
-  * [Wines](data/wines.xlsx): 36 wines from Argentina, Canada, and the USA, along with a mystery French wine, are evaluated on descriptors, price, chemistry, and sensory properties, organized into four data blocks.
+  * [Beers](../data/beers.xlsx): Ten tasters rated the intensity of twelve descriptors for six beers,
+  * [Turkey products](../data/turkey.xlsx): A trained sensory panel of 8 rated 8 turkey breast products from Mexico on 12 attributes using a 10-point Likert scale
+  * [TV and salad](../data/salad_and_tv.xlsx): Data from the INCA 3 study include responses from over 5,800 people on dietary habits, focusing on "hours spent watching TV" and "salad consumption."
+  * [Wines](../data/wines.xlsx): 36 wines from Argentina, Canada, and the USA, along with a mystery French wine, are evaluated on descriptors, price, chemistry, and sensory properties, organized into four data blocks.
 
 
 
